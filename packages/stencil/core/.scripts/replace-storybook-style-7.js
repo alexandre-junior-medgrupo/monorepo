@@ -3,7 +3,7 @@ const replace = require('replace-in-file');
 // replaces storybook manager-head for ionic 7
 
 const storybook = {
-  files: 'packages/stencil/core/.storybook/manager-head.html',
+  files: '.storybook/manager-head.html',
   from: '-7',
   to: '-6',
 };

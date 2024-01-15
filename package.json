@@ -11,7 +11,8 @@
     "commit": "cz",
     "start": "templarios --start",
     "dev": "templarios --development",
-    "lint": "sh .scripts/bash/lint.sh"
+    "prod": "templarios --production",
+    "lint": "npx prettier . --write --cache --cache-location .prettiercache"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.4",
@@ -20,8 +21,8 @@
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^8.0.3",
     "lerna": "^8.0.2",
+    "npx": "^10.2.2",
     "prettier": "^3.1.1",
-    "replace-in-file": "^7.1.0",
     "templarios-monorepo-cli": "*"
   }
 }

@@ -4,8 +4,8 @@ const replace = require('replace-in-file');
 
 const storybook = {
   files: 'package.json',
-  from: '"build": "npm-run-all ionic:install:6',
-  to: '"build": "npm-run-all ionic:install:7',
+  from: '"build": "npm-run-all ionic:install:6 stencil:build styles:clean sass:build styles:move node:replace:storybook:style:6 node:replace:storybook:6 storybook:build",',
+  to: '"build": "npm-run-all ionic:install:7 stencil:build styles:clean sass:build styles:move node:replace:storybook:style:7 node:replace:storybook:7 storybook:build",',
 };
 
 replace(storybook)

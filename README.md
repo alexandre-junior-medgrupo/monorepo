@@ -78,17 +78,6 @@ Compila os pacotes escolhidos.
 npm run build
 ```
 
-- api
-- monorepo-cli
-- stencil
-  - core
-  - angular-library (core + angular-library)
-  - react-library (core + angular-library)
-  - vue-library (core + angular-library)
-- websites
-  - docs
-  - processos
-
 ### Distribuição
 
 Compila os pacotes escolhidos e move os compilados para a pasta `dist` no `root` do monorepo.
@@ -96,29 +85,6 @@ Compila os pacotes escolhidos e move os compilados para a pasta `dist` no `root`
 ```bash
 npm run dist
 ```
-
-elementor
-
-- all
-- ecommerce
-- institucional
-- website
-
-web-components
-
-- all
-- core
-- angular-library
-- react-library
-- vue-library
-
-websites
-
-- all
-- docs
-- processos
-- storybook-templarios-7
-- storybook-templarios-6
 
 ### Publish
 
@@ -128,32 +94,13 @@ Prepara os pacotes relevantes para publicação, incrementando suas versões, co
 npm run publish
 ```
 
-- elementor
-  - all
-- web-components
-  - all
-- websites
-  - docs
-  - storybook-templarios-7
-  - storybook-templarios-6
-
 ### Linting
 
-Executa o lint dos pacotes escolhidos.
+Executa o lint dos pacotes.
 
 ```bash
 npm run lint
 ```
-
-- root
-- api
-- elementor
-- monorepo-cli
-- stencil
-  - com..
-  - core
-- websites
-  - ...
 
 ### Committing
 

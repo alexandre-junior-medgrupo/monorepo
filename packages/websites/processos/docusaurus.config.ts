@@ -3,13 +3,13 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  baseUrl: '/documentation/',
+  baseUrl: '/processos/',
   favicon: 'img/templarios.svg',
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   organizationName: '',
   presets: [

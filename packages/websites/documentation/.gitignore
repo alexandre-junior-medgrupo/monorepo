@@ -3,6 +3,7 @@
 
 # Production
 /build
+!/build/.gitkeep
 
 # Generated files
 .docusaurus

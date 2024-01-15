@@ -99,13 +99,13 @@ const preview: Preview = {
   },
   decorators: [
     (story) => html`
-<ion-app>
-  <ion-content class="story">
-    <!-- story markdown -->
-    ${story()}
-    <!-- story markdown -->
-  </ion-content>
-</ion-app>
+      <ion-app>
+        <ion-content class="story">
+          <!-- story markdown -->
+          ${story()}
+          <!-- story markdown -->
+        </ion-content>
+      </ion-app>
     `,
   ],
 };

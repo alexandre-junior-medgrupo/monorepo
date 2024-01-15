@@ -1,7 +1,8 @@
 {
   "name": "templarios-core",
   "version": "0.0.4",
-  "license": "MIT",
+  "description": "Templários web components core.",
+  "license": "UNLICENSED",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "es2015": "dist/esm/index.js",
@@ -39,15 +40,15 @@
     "styles:clean": "shx rm -rf styles/css/* styles/scss/*",
     "styles:move": "shx cp -r src/styles/* styles/scss",
     "lint:prettier": "npx prettier . --write --cache --cache-location .prettiercache",
-    "start": "npm-run-all ionic:install:7 --parallel sass:start stencil:start storybook:start",
-    "build": "npm-run-all ionic:install:6 sass:build stencil:build storybook:build",
+    "start": "npm-run-all ionic:install:6 node:replace:storybook:style:6 node:replace:storybook:6 styles:clean sass:build styles:move --parallel sass:start stencil:start storybook:start",
+    "build": "npm-run-all ionic:install:7 stencil:build styles:clean sass:build styles:move node:replace:storybook:style:7 node:replace:storybook:7 storybook:build",
     "lint": "npm-run-all lint:prettier"
   },
   "dependencies": {
     "@stencil/core": "^4.8.2"
   },
   "devDependencies": {
-    "@ionic/core": "^6.7.5",
+    "@ionic/core": "^7.6.4",
     "@stencil/angular-output-target": "^0.8.2",
     "@stencil/sass": "^3.0.6",
     "@storybook/addon-essentials": "^7.4.6",
@@ -69,6 +70,7 @@
     "puppeteer": "21.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "replace-in-file": "^7.1.0",
     "sass": "1.49.9",
     "shx": "^0.3.4",
     "storybook": "^7.4.6",

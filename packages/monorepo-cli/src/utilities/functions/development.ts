@@ -62,6 +62,7 @@ export const development = () => {
         name: 'inquire',
         message: 'Escolha uma das opções:',
         choices: options,
+        loop: false,
         validate(answer) {
           if (answer.length < 1) {
             return 'Escolha pelo menos uma das opções.';

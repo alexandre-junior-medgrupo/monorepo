@@ -9,7 +9,7 @@ function Hero() {
         <h1 className="hero__title">
           <span className="hero__highlight">Templários</span>
         </h1>
-        <p className="hero__subtitle">MEDGRUPO Component Library</p>
+        <p className="hero__subtitle">Processos do time</p>
         <div className="hero__button-container">
           <Link className="button button--custom" to="docs/example">
             Get Started

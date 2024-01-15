@@ -1,8 +1,9 @@
 {
   "name": "templarios-monorepo-cli",
   "version": "0.0.0",
-  "private": true,
   "description": "Templários monorepo CLI.",
+  "private": true,
+  "license": "UNLICENSED",
   "type": "module",
   "bin": {
     "templarios": "./bin/index.js"
@@ -24,6 +25,7 @@
   },
   "dependencies": {
     "commander": "^11.1.0",
+    "concurrently": "^8.2.2",
     "figlet": "^1.7.0",
     "inquirer": "^9.2.12"
   }

@@ -1,6 +1,10 @@
 import inquirer from 'inquirer';
 import { log, start as options } from '../constants/constants';
 import { development } from './development';
+import { distribution } from './distribution';
+import { lint } from './lint';
+import { production } from './production';
+import { publish } from './publish';
 import { printWelcomeMessage } from './utilities';
 
 /**
@@ -16,21 +20,21 @@ export const start = () => {
       development();
     }
 
-    /* if (inquire === 'Produção') {
+    if (inquire === 'Produção') {
       production();
-    } */
+    }
 
-    /* if (inquire === 'Distribuição') {
+    if (inquire === 'Distribuição') {
       distribution();
-    } */
+    }
 
-    /* if (inquire === 'Publicação') {
+    if (inquire === 'Publicação') {
       publish();
-    } */
+    }
 
-    /* if (inquire === 'Lint') {
+    if (inquire === 'Lint') {
       lint();
-    } */
+    }
   };
 
   inquirer

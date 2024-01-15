@@ -1,0 +1,7 @@
+{
+  "name": "vue-library",
+  "version": "0.0.4",
+  "description": "Templários web components vue wrapper.",
+  "license": "UNLICENSED",
+  "private": true
+}

@@ -5,11 +5,11 @@
 
 ## Properties
 
-| Property | Attribute | Description                                  | Type                                                                                                                                                | Default     |
-| -------- | --------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| `color`  | `color`   | Define a variação de cor do componente.      | `"orange" \| "orange-1" \| "orange-2" \| "orange-3" \| "orange-4" \| "orange-5" \| TpColors \| TpColorsMedgrupo \| (string & Record<never, never>)` | `undefined` |
-| `items`  | --        | Define o valor representado pelo componente. | `TpChartRadialItem[]`                                                                                                                               | `[]`        |
-| `size`   | `size`    | Define a variação de tamanho do componente.  | `TpChartRadialSize.LG \| TpChartRadialSize.MD \| TpChartRadialSize.SM \| TpChartRadialSize.XS`                                                      | `undefined` |
+| Property | Attribute | Description                                      | Type                                                                                                                                                | Default     |
+| -------- | --------- | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| `color`  | `color`   | Define a variação de cor do componente.          | `"orange" \| "orange-1" \| "orange-2" \| "orange-3" \| "orange-4" \| "orange-5" \| TpColors \| TpColorsMedgrupo \| (string & Record<never, never>)` | `undefined` |
+| `items`  | --        | Define os valores representados pelo componente. | `TpChartRadialItem[]`                                                                                                                               | `[]`        |
+| `size`   | `size`    | Define a variação de tamanho do componente.      | `TpChartRadialSize.LG \| TpChartRadialSize.MD \| TpChartRadialSize.SM \| TpChartRadialSize.XS`                                                      | `undefined` |
 
 
 ## CSS Custom Properties

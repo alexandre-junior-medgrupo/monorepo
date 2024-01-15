@@ -5,6 +5,7 @@ export const DIRECTIVES = [
   d.DialogExample,
   d.ModalExample,
   d.SheetExample,
+  d.SnackbarExample,
   d.TpAlert,
   d.TpButtonCluster,
   d.TpChartBar,

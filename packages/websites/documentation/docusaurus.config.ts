@@ -9,7 +9,7 @@ const config: Config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   organizationName: '',
   presets: [

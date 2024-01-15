@@ -6,5 +6,12 @@ export default {
     file: 'dist/index.js',
   },
   plugins: [typescript({ tsconfig: './tsconfig.json' })],
-  external: ['chalk', 'commander', 'inquirer', 'figlet', 'child_process'],
+  external: [
+    'chalk',
+    'commander',
+    'inquirer',
+    'figlet',
+    'child_process',
+    'concurrently',
+  ],
 };
