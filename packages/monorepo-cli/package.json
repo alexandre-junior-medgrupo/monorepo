@@ -1,0 +1,22 @@
+{
+  "name": "templarios-monorepo-cli",
+  "version": "1.0.0-alpha.0",
+  "description": "Templários monorepo CLI.",
+  "type": "module",
+  "scripts": {
+    "lint": "sh .scripts/lint.sh",
+    "build": "rollup --config"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/figlet": "^1.5.8",
+    "@types/inquirer": "^9.0.7",
+    "rollup": "^4.9.4",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "commander": "^11.1.0",
+    "figlet": "^1.7.0",
+    "inquirer": "^9.2.12"
+  }
+}

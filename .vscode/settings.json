@@ -1,0 +1,29 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "editor.formatOnSave": true,
+  "material-icon-theme.files.associations": {
+    "settings.json": "vscode",
+    "extensions.json": "vscode",
+    ".prettiercache": "prettier",
+    ".czrc": "commitlint"
+  },
+  "material-icon-theme.folders.associations": {
+    "workflows": "github",
+    ".scripts": "scripts",
+    ".husky/_": "husky",
+    ".scripts/bash": "scripts",
+    "packages/monorepo-cli": "tools",
+    "packages/elementor": "php",
+    "packages/stencil": "stencil",
+    "packages/websites": "views",
+    "stencil/component-wrapers": "stencil",
+    "component-wrapers/angular-library": "angular",
+    "component-wrapers/react-library": "react-components",
+    "component-wrapers/vue-library": "vue",
+    "websites/documentation": "views",
+    "websites/processos": "views"
+  }
+}

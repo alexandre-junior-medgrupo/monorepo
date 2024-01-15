@@ -1,0 +1,24 @@
+{
+  "name": "root",
+  "description": "Templários monorepo.",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "packages/websites/*"
+  ],
+  "scripts": {
+    "commit": "cz",
+    "start": "templarios",
+    "lint": "sh .scripts/bash/lint.sh"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.4.4",
+    "@commitlint/config-conventional": "^18.4.4",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.3",
+    "lerna": "^8.0.2",
+    "prettier": "^3.1.1",
+    "templarios-monorepo-cli": "*"
+  }
+}
