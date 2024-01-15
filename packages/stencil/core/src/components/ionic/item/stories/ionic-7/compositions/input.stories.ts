@@ -161,22 +161,22 @@ export const Input: Story = {
     }, 100);
 
     return html`
-    <ion-list>
-      <ion-item
-        lines="${args.lines}"
-        ?button="${args.button}"
-        ?disabled="${args.disabled}"
-      >
-        <tp-input-container>
-          <ion-label slot="label" tp-type="p14">Input</ion-label>
-          <ion-input
-            mode="md"
-            placeholder="Digite aqui"
-            clear-input="true"
-          ></ion-input>
-        </tp-input-container>
-      </ion-item>
-    </ion-list>
+      <ion-list>
+        <ion-item
+          lines="${args.lines}"
+          ?button="${args.button}"
+          ?disabled="${args.disabled}"
+        >
+          <tp-input-container>
+            <ion-label slot="label" tp-type="p14">Input</ion-label>
+            <ion-input
+              mode="md"
+              placeholder="Digite aqui"
+              clear-input="true"
+            ></ion-input>
+          </tp-input-container>
+        </ion-item>
+      </ion-list>
     `;
   },
   /* play: async ({ canvasElement }) => {

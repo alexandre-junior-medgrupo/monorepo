@@ -76,41 +76,41 @@ type Story = StoryObj<
 export const Default: Story = {
   render: ({ ...args }) => {
     return html`
-    <tp-input-container
-      color="${args.color}"
-      state="${args.state}"
-      ?disabled="${args.disabled}"
-    >
-      <ion-label slot="label" tp-type="p14">Descrição Datetime</ion-label>
-      <ion-datetime-button
-        mode="ios"
-        datetime="datetime"
-      ></ion-datetime-button>
-      <ion-icon src="./assets/tp-calendar.svg"></ion-icon>
-      <ion-label slot="feedback-error" tp-type="p14">
-        *Caracteres invalidos.
-      </ion-label>
-      <ion-label slot="feedback-success" tp-type="p14">
-        *Caracteres validos
-      </ion-label>
-      <ion-modal keepContentsMounted="true">
-        <ion-datetime
-          mode="md"
-          id="datetime"
-          presentation=${args.presentation}
-          prefer-wheel="true"
-        >
-          <div slot="title">
-            <ion-button fill="clear" size="xxs">
-              <ion-label tp-type="p12b">CANCELAR</ion-label>
-            </ion-button>
-            <ion-button fill="clear" size="xxs">
-              <ion-label tp-type="p12b">SELECIONAR</ion-label>
-            </ion-button>
-          </div>
-        </ion-datetime>
-      </ion-modal>
-    </tp-input-container>
+      <tp-input-container
+        color="${args.color}"
+        state="${args.state}"
+        ?disabled="${args.disabled}"
+      >
+        <ion-label slot="label" tp-type="p14">Descrição Datetime</ion-label>
+        <ion-datetime-button
+          mode="ios"
+          datetime="datetime"
+        ></ion-datetime-button>
+        <ion-icon src="./assets/tp-calendar.svg"></ion-icon>
+        <ion-label slot="feedback-error" tp-type="p14">
+          *Caracteres invalidos.
+        </ion-label>
+        <ion-label slot="feedback-success" tp-type="p14">
+          *Caracteres validos
+        </ion-label>
+        <ion-modal keepContentsMounted="true">
+          <ion-datetime
+            mode="md"
+            id="datetime"
+            presentation=${args.presentation}
+            prefer-wheel="true"
+          >
+            <div slot="title">
+              <ion-button fill="clear" size="xxs">
+                <ion-label tp-type="p12b">CANCELAR</ion-label>
+              </ion-button>
+              <ion-button fill="clear" size="xxs">
+                <ion-label tp-type="p12b">SELECIONAR</ion-label>
+              </ion-button>
+            </div>
+          </ion-datetime>
+        </ion-modal>
+      </tp-input-container>
     `;
   },
   /* play: async ({ canvasElement }) => {

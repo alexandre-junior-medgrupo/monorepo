@@ -57,211 +57,123 @@
 }
 
 .ion-color-brand,
-[tp-color=brand] {
+[tp-color='brand'] {
   --ion-color-base: var(--tp-color-brand) !important;
   --ion-color-base-rgb: var(--tp-color-brand-rgb) !important;
   --ion-color-contrast: var(--tp-color-contrast-fixed) !important;
-  --ion-color-contrast-rgb: var(
-    --tp-color-contrast-fixed-rgb
-  ) !important;
+  --ion-color-contrast-rgb: var(--tp-color-contrast-fixed-rgb) !important;
   --ion-color-shade: var(--tp-color-brand-shade) !important;
   --ion-color-tint: var(--tp-color-brand-tint) !important;
 }
 
 .ion-color-brand-1,
-[tp-color=brand-1] {
+[tp-color='brand-1'] {
   --ion-color-base: var(--tp-color-brand-1) !important;
-  --ion-color-base-rgb: var(
-    --tp-color-brand-1-rgb
-  ) !important;
+  --ion-color-base-rgb: var(--tp-color-brand-1-rgb) !important;
   --ion-color-contrast: var(--tp-color-neutral-10) !important;
-  --ion-color-contrast-rgb: var(
-    --tp-color-neutral-10-rgb
-  ) !important;
-  --ion-color-shade: var(
-    --tp-color-brand-1-shade
-  ) !important;
-  --ion-color-tint: var(
-    --tp-color-brand-1-tint
-  ) !important;
+  --ion-color-contrast-rgb: var(--tp-color-neutral-10-rgb) !important;
+  --ion-color-shade: var(--tp-color-brand-1-shade) !important;
+  --ion-color-tint: var(--tp-color-brand-1-tint) !important;
 }
 
 .ion-color-brand-2,
-[tp-color=brand-2] {
+[tp-color='brand-2'] {
   --ion-color-base: var(--tp-color-brand-2) !important;
-  --ion-color-base-rgb: var(
-    --tp-color-brand-2-rgb
-  ) !important;
+  --ion-color-base-rgb: var(--tp-color-brand-2-rgb) !important;
   --ion-color-contrast: var(--tp-color-neutral-10) !important;
-  --ion-color-contrast-rgb: var(
-    --tp-color-neutral-10-rgb
-  ) !important;
-  --ion-color-shade: var(
-    --tp-color-brand-2-shade
-  ) !important;
-  --ion-color-tint: var(
-    --tp-color-brand-2-tint
-  ) !important;
+  --ion-color-contrast-rgb: var(--tp-color-neutral-10-rgb) !important;
+  --ion-color-shade: var(--tp-color-brand-2-shade) !important;
+  --ion-color-tint: var(--tp-color-brand-2-tint) !important;
 }
 
 .ion-color-brand-3,
-[tp-color=brand-3] {
+[tp-color='brand-3'] {
   --ion-color-base: var(--tp-color-brand-3) !important;
-  --ion-color-base-rgb: var(
-    --tp-color-brand-3-rgb
-  ) !important;
-  --ion-color-contrast: var(
-    --tp-color-contrast-fixed
-  ) !important;
-  --ion-color-contrast-rgb: var(
-    --tp-color-contrast-fixed-rgb
-  ) !important;
-  --ion-color-shade: var(
-    --tp-color-brand-3-shade
-  ) !important;
-  --ion-color-tint: var(
-    --tp-color-brand-3-tint
-  ) !important;
+  --ion-color-base-rgb: var(--tp-color-brand-3-rgb) !important;
+  --ion-color-contrast: var(--tp-color-contrast-fixed) !important;
+  --ion-color-contrast-rgb: var(--tp-color-contrast-fixed-rgb) !important;
+  --ion-color-shade: var(--tp-color-brand-3-shade) !important;
+  --ion-color-tint: var(--tp-color-brand-3-tint) !important;
 }
 
 .ion-color-brand-4,
-[tp-color=brand-4] {
+[tp-color='brand-4'] {
   --ion-color-base: var(--tp-color-brand-4) !important;
-  --ion-color-base-rgb: var(
-    --tp-color-brand-4-rgb
-  ) !important;
+  --ion-color-base-rgb: var(--tp-color-brand-4-rgb) !important;
   --ion-color-contrast: var(--tp-color-neutral-1) !important;
-  --ion-color-contrast-rgb: var(
-    --tp-color-neutral-1-rgb
-  ) !important;
-  --ion-color-shade: var(
-    --tp-color-brand-4-shade
-  ) !important;
-  --ion-color-tint: var(
-    --tp-color-brand-4-tint
-  ) !important;
+  --ion-color-contrast-rgb: var(--tp-color-neutral-1-rgb) !important;
+  --ion-color-shade: var(--tp-color-brand-4-shade) !important;
+  --ion-color-tint: var(--tp-color-brand-4-tint) !important;
 }
 
 .ion-color-brand-5,
-[tp-color=brand-5] {
+[tp-color='brand-5'] {
   --ion-color-base: var(--tp-color-brand-5) !important;
-  --ion-color-base-rgb: var(
-    --tp-color-brand-5-rgb
-  ) !important;
+  --ion-color-base-rgb: var(--tp-color-brand-5-rgb) !important;
   --ion-color-contrast: var(--tp-color-neutral-1) !important;
-  --ion-color-contrast-rgb: var(
-    --tp-color-neutral-1-rgb
-  ) !important;
-  --ion-color-shade: var(
-    --tp-color-brand-5-shade
-  ) !important;
-  --ion-color-tint: var(
-    --tp-color-brand-5-tint
-  ) !important;
+  --ion-color-contrast-rgb: var(--tp-color-neutral-1-rgb) !important;
+  --ion-color-shade: var(--tp-color-brand-5-shade) !important;
+  --ion-color-tint: var(--tp-color-brand-5-tint) !important;
 }
 
 .tp-color-brand,
-[tp-color=brand] {
+[tp-color='brand'] {
   --tp-color-base: var(--tp-color-brand) !important;
   --tp-color-base-rgb: var(--tp-color-brand-rgb) !important;
   --tp-color-contrast: var(--tp-color-contrast-fixed) !important;
-  --tp-color-contrast-rgb: var(
-    --tp-color-contrast-fixed-rgb
-  ) !important;
+  --tp-color-contrast-rgb: var(--tp-color-contrast-fixed-rgb) !important;
   --tp-color-shade: var(--tp-color-brand-shade) !important;
   --tp-color-tint: var(--tp-color-brand-tint) !important;
 }
 
 .tp-color-brand-1,
-[tp-color=brand-1] {
+[tp-color='brand-1'] {
   --tp-color-base: var(--tp-color-brand-1) !important;
-  --tp-color-base-rgb: var(
-    --tp-color-brand-1-rgb
-  ) !important;
+  --tp-color-base-rgb: var(--tp-color-brand-1-rgb) !important;
   --tp-color-contrast: var(--tp-color-neutral-10) !important;
-  --tp-color-contrast-rgb: var(
-    --tp-color-neutral-10-rgb
-  ) !important;
-  --tp-color-shade: var(
-    --tp-color-brand-1-shade
-  ) !important;
-  --tp-color-tint: var(
-    --tp-color-brand-1-tint
-  ) !important;
+  --tp-color-contrast-rgb: var(--tp-color-neutral-10-rgb) !important;
+  --tp-color-shade: var(--tp-color-brand-1-shade) !important;
+  --tp-color-tint: var(--tp-color-brand-1-tint) !important;
 }
 
 .tp-color-brand-2,
-[tp-color=brand-2] {
+[tp-color='brand-2'] {
   --tp-color-base: var(--tp-color-brand-2) !important;
-  --tp-color-base-rgb: var(
-    --tp-color-brand-2-rgb
-  ) !important;
+  --tp-color-base-rgb: var(--tp-color-brand-2-rgb) !important;
   --tp-color-contrast: var(--tp-color-neutral-10) !important;
-  --tp-color-contrast-rgb: var(
-    --tp-color-neutral-10-rgb
-  ) !important;
-  --tp-color-shade: var(
-    --tp-color-brand-2-shade
-  ) !important;
-  --tp-color-tint: var(
-    --tp-color-brand-2-tint
-  ) !important;
+  --tp-color-contrast-rgb: var(--tp-color-neutral-10-rgb) !important;
+  --tp-color-shade: var(--tp-color-brand-2-shade) !important;
+  --tp-color-tint: var(--tp-color-brand-2-tint) !important;
 }
 
 .tp-color-brand-3,
-[tp-color=brand-3] {
+[tp-color='brand-3'] {
   --tp-color-base: var(--tp-color-brand-3) !important;
-  --tp-color-base-rgb: var(
-    --tp-color-brand-3-rgb
-  ) !important;
-  --tp-color-contrast: var(
-    --tp-color-contrast-fixed
-  ) !important;
-  --tp-color-contrast-rgb: var(
-    --tp-color-contrast-fixed-rgb
-  ) !important;
-  --tp-color-shade: var(
-    --tp-color-brand-3-shade
-  ) !important;
-  --tp-color-tint: var(
-    --tp-color-brand-3-tint
-  ) !important;
+  --tp-color-base-rgb: var(--tp-color-brand-3-rgb) !important;
+  --tp-color-contrast: var(--tp-color-contrast-fixed) !important;
+  --tp-color-contrast-rgb: var(--tp-color-contrast-fixed-rgb) !important;
+  --tp-color-shade: var(--tp-color-brand-3-shade) !important;
+  --tp-color-tint: var(--tp-color-brand-3-tint) !important;
 }
 
 .tp-color-brand-4,
-[tp-color=brand-4] {
+[tp-color='brand-4'] {
   --tp-color-base: var(--tp-color-brand-4) !important;
-  --tp-color-base-rgb: var(
-    --tp-color-brand-4-rgb
-  ) !important;
+  --tp-color-base-rgb: var(--tp-color-brand-4-rgb) !important;
   --tp-color-contrast: var(--tp-color-neutral-1) !important;
-  --tp-color-contrast-rgb: var(
-    --tp-color-neutral-1-rgb
-  ) !important;
-  --tp-color-shade: var(
-    --tp-color-brand-4-shade
-  ) !important;
-  --tp-color-tint: var(
-    --tp-color-brand-4-tint
-  ) !important;
+  --tp-color-contrast-rgb: var(--tp-color-neutral-1-rgb) !important;
+  --tp-color-shade: var(--tp-color-brand-4-shade) !important;
+  --tp-color-tint: var(--tp-color-brand-4-tint) !important;
 }
 
 .tp-color-brand-5,
-[tp-color=brand-5] {
+[tp-color='brand-5'] {
   --tp-color-base: var(--tp-color-brand-5) !important;
-  --tp-color-base-rgb: var(
-    --tp-color-brand-5-rgb
-  ) !important;
+  --tp-color-base-rgb: var(--tp-color-brand-5-rgb) !important;
   --tp-color-contrast: var(--tp-color-neutral-1) !important;
-  --tp-color-contrast-rgb: var(
-    --tp-color-neutral-1-rgb
-  ) !important;
-  --tp-color-shade: var(
-    --tp-color-brand-5-shade
-  ) !important;
-  --tp-color-tint: var(
-    --tp-color-brand-5-tint
-  ) !important;
+  --tp-color-contrast-rgb: var(--tp-color-neutral-1-rgb) !important;
+  --tp-color-shade: var(--tp-color-brand-5-shade) !important;
+  --tp-color-tint: var(--tp-color-brand-5-tint) !important;
 }
 
 /*# sourceMappingURL=ventilamed.css.map */

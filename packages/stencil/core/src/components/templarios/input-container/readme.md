@@ -2,7 +2,6 @@
 
 <!-- Auto Generated Below -->
 
-
 ## Properties
 
 | Property   | Attribute  | Description                                            | Type                                                                                                                                                | Default     |
@@ -13,7 +12,6 @@
 | `loading`  | `loading`  | Define o estado de carregamento do componente.         | `boolean`                                                                                                                                           | `undefined` |
 | `state`    | `state`    | Define a variação de estado do componente.             | `"error" \| "success"`                                                                                                                              | `undefined` |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

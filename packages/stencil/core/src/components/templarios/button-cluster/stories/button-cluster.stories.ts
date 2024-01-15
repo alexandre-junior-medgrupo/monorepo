@@ -57,14 +57,14 @@ type Story = StoryObj;
 export const Default: Story = {
   render: ({ ...args }) => {
     return html`
-    <tp-button-cluster
-      color="${args.color}"
-      ?collapsed="${args.collapsed}"
-      ?loading="${args.loading}"
-    >
-      <tp-text slot="expand-text" tp-type="p12">Expandir a lista</tp-text>
-      <tp-text slot="collapse-text" tp-type="p12">Ocultar a lista</tp-text>
-    </tp-button-cluster>
+      <tp-button-cluster
+        color="${args.color}"
+        ?collapsed="${args.collapsed}"
+        ?loading="${args.loading}"
+      >
+        <tp-text slot="expand-text" tp-type="p12">Expandir a lista</tp-text>
+        <tp-text slot="collapse-text" tp-type="p12">Ocultar a lista</tp-text>
+      </tp-button-cluster>
     `;
   },
   /* play: async ({ canvasElement }) => {

@@ -16,9 +16,7 @@ export default meta;
 type Story = StoryObj<Components.IonSkeletonText & TpIonSkeletonText>;
 
 export const Default: Story = {
-  render: () => html`
-    <ion-skeleton-text animated></ion-skeleton-text>
-  `,
+  render: () => html` <ion-skeleton-text animated></ion-skeleton-text> `,
   /* play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     expect(canvas.getByText(/ion-skeleton-text/gi)).toBeTruthy();

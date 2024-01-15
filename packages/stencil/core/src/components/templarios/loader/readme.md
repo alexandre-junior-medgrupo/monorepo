@@ -2,7 +2,6 @@
 
 <!-- Auto Generated Below -->
 
-
 ## Properties
 
 | Property | Attribute | Description                             | Type                                                                                                                                                | Default     |
@@ -11,7 +10,6 @@
 | `fixed`  | `fixed`   | Define a posição do componente.         | `boolean`                                                                                                                                           | `false`     |
 | `tpName` | `tp-name` | Define a variação do componente.        | `"secondary"`                                                                                                                                       | `undefined` |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

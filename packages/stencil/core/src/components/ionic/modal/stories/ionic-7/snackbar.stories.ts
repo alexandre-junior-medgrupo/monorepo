@@ -31,9 +31,9 @@ const openSnackbar = async () => {
 export const Default: Story = {
   render: () => {
     return html`
-    <ion-button id="open-modal" @click="${openSnackbar}">
-      Abrir Snackbar
-    </ion-button>
+      <ion-button id="open-modal" @click="${openSnackbar}">
+        Abrir Snackbar
+      </ion-button>
     `;
   },
   /* play: async ({ canvasElement }) => {

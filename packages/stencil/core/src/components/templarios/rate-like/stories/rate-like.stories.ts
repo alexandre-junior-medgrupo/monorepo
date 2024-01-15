@@ -54,10 +54,10 @@ type Story = StoryObj;
 export const Default: Story = {
   render: ({ ...args }) => {
     return html`
-    <tp-rate-like
-      status=${args.status}
-      ?loading="${args.loading}"
-    ></tp-rate-like>
+      <tp-rate-like
+        status=${args.status}
+        ?loading="${args.loading}"
+      ></tp-rate-like>
     `;
   },
   /* play: async ({ canvasElement }) => {

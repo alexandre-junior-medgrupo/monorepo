@@ -54,8 +54,8 @@ export const Default: Story = {
     }, 0);
 
     return html`
-    <tp-chart-radial color="${args.color}" size="${args.size}">
-    </tp-chart-radial>
+      <tp-chart-radial color="${args.color}" size="${args.size}">
+      </tp-chart-radial>
     `;
   },
   /* play: async ({ canvasElement }) => {

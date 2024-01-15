@@ -161,29 +161,29 @@ export const Checkbox: Story = {
     }, 100);
 
     return html`
-    <ion-list>
-      <ion-item
-        .color="${args.color}"
-        lines="${args.lines}"
-        ?button="${args.button}"
-        ?disabled="${args.disabled}"
-      >
-        <ion-checkbox label-placement="start" justify="space-between">
-          <ion-text> Lorem ipsum, dolor sit amet consectetur. </ion-text>
-        </ion-checkbox>
-      </ion-item>
+      <ion-list>
+        <ion-item
+          .color="${args.color}"
+          lines="${args.lines}"
+          ?button="${args.button}"
+          ?disabled="${args.disabled}"
+        >
+          <ion-checkbox label-placement="start" justify="space-between">
+            <ion-text> Lorem ipsum, dolor sit amet consectetur. </ion-text>
+          </ion-checkbox>
+        </ion-item>
 
-      <ion-item
-        .color="${args.color}"
-        lines="${args.lines}"
-        ?button="${args.button}"
-        ?disabled="${args.disabled}"
-      >
-        <ion-checkbox label-placement="end" justify="space-between">
-          <ion-text> Lorem ipsum, dolor sit amet consectetur. </ion-text>
-        </ion-checkbox>
-      </ion-item>
-    </ion-list>
+        <ion-item
+          .color="${args.color}"
+          lines="${args.lines}"
+          ?button="${args.button}"
+          ?disabled="${args.disabled}"
+        >
+          <ion-checkbox label-placement="end" justify="space-between">
+            <ion-text> Lorem ipsum, dolor sit amet consectetur. </ion-text>
+          </ion-checkbox>
+        </ion-item>
+      </ion-list>
     `;
   },
   /* play: async ({ canvasElement }) => {

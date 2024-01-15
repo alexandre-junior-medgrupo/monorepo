@@ -2,7 +2,6 @@
 
 <!-- Auto Generated Below -->
 
-
 ## Properties
 
 | Property    | Attribute   | Description                                            | Type                                                                                                                                                | Default     |
@@ -13,7 +12,6 @@
 | `loading`   | `loading`   | Define o estado de carregamento do componente.         | `boolean`                                                                                                                                           | `undefined` |
 | `placement` | `placement` | Define posicionamento em relação ao componente parent. | `"bottom" \| "left" \| "right" \| "top"`                                                                                                            | `undefined` |
 | `position`  | `position`  | Define posicionamento horizontal do componente.        | `"center" \| "end" \| "start"`                                                                                                                      | `undefined` |
-
 
 ## Methods
 
@@ -31,8 +29,6 @@ todo
 
 Type: `Promise<void>`
 
-
-
 ### `toggleOnHover(event?: any) => Promise<void>`
 
 todo
@@ -47,9 +43,6 @@ todo
 
 Type: `Promise<void>`
 
+---
 
-
-
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

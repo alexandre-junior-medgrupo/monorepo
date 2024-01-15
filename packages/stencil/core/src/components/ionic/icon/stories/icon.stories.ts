@@ -44,11 +44,11 @@ export const Icons: Story = {
     const iconUrl = `./assets/${args.src}`;
 
     return html`
-    <ion-icon
-      color="${args.color}"
-      tp-size="${args['tp-size']}"
-      src="${iconUrl}"
-    ></ion-icon>
+      <ion-icon
+        color="${args.color}"
+        tp-size="${args['tp-size']}"
+        src="${iconUrl}"
+      ></ion-icon>
     `;
   },
   /* play: async ({ canvasElement }) => {

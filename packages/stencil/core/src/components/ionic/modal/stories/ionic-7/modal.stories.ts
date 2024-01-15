@@ -31,9 +31,9 @@ const openModal = async () => {
 export const Default: Story = {
   render: () => {
     return html`
-    <ion-button id="open-modal" @click="${openModal}">
-      Abrir Modal
-    </ion-button>
+      <ion-button id="open-modal" @click="${openModal}">
+        Abrir Modal
+      </ion-button>
     `;
   },
   /* play: async ({ canvasElement }) => {

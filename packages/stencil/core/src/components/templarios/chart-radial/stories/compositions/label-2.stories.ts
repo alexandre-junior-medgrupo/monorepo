@@ -57,9 +57,9 @@ export const Label_2: Story = {
     }, 0);
 
     return html`
-    <tp-chart-radial color="${args.color}" size="${args.size}">
-      <ion-label slot="title">NEF 1</ion-label>
-    </tp-chart-radial>
+      <tp-chart-radial color="${args.color}" size="${args.size}">
+        <ion-label slot="title">NEF 1</ion-label>
+      </tp-chart-radial>
     `;
   },
   /* play: async ({ canvasElement }) => {

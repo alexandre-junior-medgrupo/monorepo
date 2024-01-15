@@ -45,11 +45,11 @@ type Story = StoryObj;
 export const Default: Story = {
   render: ({ ...args }) => {
     return html`
-    <tp-loader
-      color="${args.color}"
-      ?fixed="${args.fixed}"
-      tp-name="${args['tp-name']}"
-    ></tp-loader>
+      <tp-loader
+        color="${args.color}"
+        ?fixed="${args.fixed}"
+        tp-name="${args['tp-name']}"
+      ></tp-loader>
     `;
   },
   /* play: async ({ canvasElement }) => {

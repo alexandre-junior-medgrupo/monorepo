@@ -2,7 +2,6 @@
 
 <!-- Auto Generated Below -->
 
-
 ## Properties
 
 | Property   | Attribute   | Description                                                           | Type                                                                                                                                                | Default     |
@@ -14,7 +13,6 @@
 | `size`     | `size`      | Define a variação de tamanho do componente.                           | `TpHorizontalChartBarSize`                                                                                                                          | `undefined` |
 | `value`    | `value`     | Define o valor da barra de progresso.                                 | `number`                                                                                                                                            | `0`         |
 
-
 ## CSS Custom Properties
 
 | Name                   | Description                                                                  |
@@ -22,7 +20,6 @@
 | `--tp-fill-percentage` | Propriedade definida dinamicamente no tsx. Define o progresso do componente. |
 | `--tp-track-color`     | Define a cor do track.                                                       |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

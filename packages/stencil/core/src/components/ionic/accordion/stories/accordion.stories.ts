@@ -184,172 +184,172 @@ export const Default: Story = {
     }, 100);
 
     return html`
-    <ion-accordion-group>
-      <ion-accordion value="first" toggle-icon="./assets/tp-chevron-down.svg">
-        <ion-item slot="header" lines="none">
-          <ion-label tp-type="${args['tp-type']}">First Accordion</ion-label>
-        </ion-item>
-        <div slot="content">
-          <ion-text>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-              reiciendis nemo, cupiditate labore, dicta corporis quaerat earum
-              voluptatem mollitia veniam repudiandae sed quas optio quos
-              placeat? Eaque saepe id modi? Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Eveniet reiciendis nemo,
-              cupiditate labore, dicta corporis quaerat earum voluptatem
-              mollitia veniam repudiandae sed quas optio quos placeat? Eaque
-              saepe id modi? Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Eveniet reiciendis nemo, cupiditate labore,
-              dicta corporis quaerat earum voluptatem mollitia veniam
-              repudiandae sed quas optio quos placeat? Eaque saepe id modi?
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-              reiciendis nemo, cupiditate labore, dicta corporis quaerat earum
-              voluptatem mollitia.
-            </p>
-          </ion-text>
-          <ion-text>
-            <p>
-              veniam repudiandae sed quas optio quos placeat? Eaque saepe id
-              modi? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Eveniet reiciendis nemo, cupiditate labore, dicta corporis
-              quaerat earum voluptatem mollitia veniam repudiandae sed quas
-              optio quos placeat? Eaque saepe id modi? Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Eveniet reiciendis nemo,
-              cupiditate labore, dicta corporis quaerat earum voluptatem
-              mollitia veniam repudiandae sed quas optio quos placeat? Eaque
-              saepe id modi? Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Eveniet reiciendis
-            </p>
-          </ion-text>
-          <ion-text>
-            <p>
-              nemo, cupiditate labore, dicta corporis quaerat earum voluptatem
-              mollitia veniam repudiandae sed quas optio quos placeat? Eaque
-              saepe id modi? Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Eveniet reiciendis nemo, cupiditate labore,
-              dicta corporis quaerat earum voluptatem mollitia veniam
-              repudiandae sed quas optio quos placeat? Eaque saepe id modi?
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-              reiciendis nemo, cupiditate labore, dicta corporis quaerat earum
-              voluptatem mollitia veniam repudiandae sed quas optio quos
-              placeat? Eaque saepe id modi?
-            </p>
-          </ion-text>
-        </div>
-      </ion-accordion>
+      <ion-accordion-group>
+        <ion-accordion value="first" toggle-icon="./assets/tp-chevron-down.svg">
+          <ion-item slot="header" lines="none">
+            <ion-label tp-type="${args['tp-type']}">First Accordion</ion-label>
+          </ion-item>
+          <div slot="content">
+            <ion-text>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+                reiciendis nemo, cupiditate labore, dicta corporis quaerat earum
+                voluptatem mollitia veniam repudiandae sed quas optio quos
+                placeat? Eaque saepe id modi? Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Eveniet reiciendis nemo,
+                cupiditate labore, dicta corporis quaerat earum voluptatem
+                mollitia veniam repudiandae sed quas optio quos placeat? Eaque
+                saepe id modi? Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Eveniet reiciendis nemo, cupiditate labore,
+                dicta corporis quaerat earum voluptatem mollitia veniam
+                repudiandae sed quas optio quos placeat? Eaque saepe id modi?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+                reiciendis nemo, cupiditate labore, dicta corporis quaerat earum
+                voluptatem mollitia.
+              </p>
+            </ion-text>
+            <ion-text>
+              <p>
+                veniam repudiandae sed quas optio quos placeat? Eaque saepe id
+                modi? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Eveniet reiciendis nemo, cupiditate labore, dicta corporis
+                quaerat earum voluptatem mollitia veniam repudiandae sed quas
+                optio quos placeat? Eaque saepe id modi? Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Eveniet reiciendis nemo,
+                cupiditate labore, dicta corporis quaerat earum voluptatem
+                mollitia veniam repudiandae sed quas optio quos placeat? Eaque
+                saepe id modi? Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Eveniet reiciendis
+              </p>
+            </ion-text>
+            <ion-text>
+              <p>
+                nemo, cupiditate labore, dicta corporis quaerat earum voluptatem
+                mollitia veniam repudiandae sed quas optio quos placeat? Eaque
+                saepe id modi? Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Eveniet reiciendis nemo, cupiditate labore,
+                dicta corporis quaerat earum voluptatem mollitia veniam
+                repudiandae sed quas optio quos placeat? Eaque saepe id modi?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+                reiciendis nemo, cupiditate labore, dicta corporis quaerat earum
+                voluptatem mollitia veniam repudiandae sed quas optio quos
+                placeat? Eaque saepe id modi?
+              </p>
+            </ion-text>
+          </div>
+        </ion-accordion>
 
-      <ion-accordion
-        value="second"
-        toggle-icon="./assets/tp-chevron-down.svg"
-      >
-        <ion-item slot="header" lines="none">
-          <ion-label tp-type="${args['tp-type']}">Second Accordion</ion-label>
-        </ion-item>
-        <div slot="content">
-          <ion-text>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-              reiciendis nemo, cupiditate labore, dicta corporis quaerat earum
-              voluptatem mollitia veniam repudiandae sed quas optio quos
-              placeat? Eaque saepe id modi? Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Eveniet reiciendis nemo,
-              cupiditate labore, dicta corporis quaerat earum voluptatem
-              mollitia veniam repudiandae sed quas optio quos placeat? Eaque
-              saepe id modi? Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Eveniet reiciendis nemo, cupiditate labore,
-              dicta corporis quaerat earum voluptatem mollitia veniam
-              repudiandae sed quas optio quos placeat? Eaque saepe id modi?
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-              reiciendis nemo, cupiditate labore, dicta corporis quaerat earum
-              voluptatem mollitia.
-            </p>
-          </ion-text>
-          <ion-text>
-            <p>
-              veniam repudiandae sed quas optio quos placeat? Eaque saepe id
-              modi? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Eveniet reiciendis nemo, cupiditate labore, dicta corporis
-              quaerat earum voluptatem mollitia veniam repudiandae sed quas
-              optio quos placeat? Eaque saepe id modi? Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Eveniet reiciendis nemo,
-              cupiditate labore, dicta corporis quaerat earum voluptatem
-              mollitia veniam repudiandae sed quas optio quos placeat? Eaque
-              saepe id modi? Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Eveniet reiciendis
-            </p>
-          </ion-text>
-          <ion-text>
-            <p>
-              nemo, cupiditate labore, dicta corporis quaerat earum voluptatem
-              mollitia veniam repudiandae sed quas optio quos placeat? Eaque
-              saepe id modi? Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Eveniet reiciendis nemo, cupiditate labore,
-              dicta corporis quaerat earum voluptatem mollitia veniam
-              repudiandae sed quas optio quos placeat? Eaque saepe id modi?
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-              reiciendis nemo, cupiditate labore, dicta corporis quaerat earum
-              voluptatem mollitia veniam repudiandae sed quas optio quos
-              placeat? Eaque saepe id modi?
-            </p>
-          </ion-text>
-        </div>
-      </ion-accordion>
+        <ion-accordion
+          value="second"
+          toggle-icon="./assets/tp-chevron-down.svg"
+        >
+          <ion-item slot="header" lines="none">
+            <ion-label tp-type="${args['tp-type']}">Second Accordion</ion-label>
+          </ion-item>
+          <div slot="content">
+            <ion-text>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+                reiciendis nemo, cupiditate labore, dicta corporis quaerat earum
+                voluptatem mollitia veniam repudiandae sed quas optio quos
+                placeat? Eaque saepe id modi? Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Eveniet reiciendis nemo,
+                cupiditate labore, dicta corporis quaerat earum voluptatem
+                mollitia veniam repudiandae sed quas optio quos placeat? Eaque
+                saepe id modi? Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Eveniet reiciendis nemo, cupiditate labore,
+                dicta corporis quaerat earum voluptatem mollitia veniam
+                repudiandae sed quas optio quos placeat? Eaque saepe id modi?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+                reiciendis nemo, cupiditate labore, dicta corporis quaerat earum
+                voluptatem mollitia.
+              </p>
+            </ion-text>
+            <ion-text>
+              <p>
+                veniam repudiandae sed quas optio quos placeat? Eaque saepe id
+                modi? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Eveniet reiciendis nemo, cupiditate labore, dicta corporis
+                quaerat earum voluptatem mollitia veniam repudiandae sed quas
+                optio quos placeat? Eaque saepe id modi? Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Eveniet reiciendis nemo,
+                cupiditate labore, dicta corporis quaerat earum voluptatem
+                mollitia veniam repudiandae sed quas optio quos placeat? Eaque
+                saepe id modi? Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Eveniet reiciendis
+              </p>
+            </ion-text>
+            <ion-text>
+              <p>
+                nemo, cupiditate labore, dicta corporis quaerat earum voluptatem
+                mollitia veniam repudiandae sed quas optio quos placeat? Eaque
+                saepe id modi? Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Eveniet reiciendis nemo, cupiditate labore,
+                dicta corporis quaerat earum voluptatem mollitia veniam
+                repudiandae sed quas optio quos placeat? Eaque saepe id modi?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+                reiciendis nemo, cupiditate labore, dicta corporis quaerat earum
+                voluptatem mollitia veniam repudiandae sed quas optio quos
+                placeat? Eaque saepe id modi?
+              </p>
+            </ion-text>
+          </div>
+        </ion-accordion>
 
-      <ion-accordion value="third" toggle-icon="./assets/tp-chevron-down.svg">
-        <ion-item slot="header" lines="none">
-          <ion-label tp-type="${args['tp-type']}">Third Accordion</ion-label>
-        </ion-item>
-        <div slot="content">
-          <ion-text>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-              reiciendis nemo, cupiditate labore, dicta corporis quaerat earum
-              voluptatem mollitia veniam repudiandae sed quas optio quos
-              placeat? Eaque saepe id modi? Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Eveniet reiciendis nemo,
-              cupiditate labore, dicta corporis quaerat earum voluptatem
-              mollitia veniam repudiandae sed quas optio quos placeat? Eaque
-              saepe id modi? Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Eveniet reiciendis nemo, cupiditate labore,
-              dicta corporis quaerat earum voluptatem mollitia veniam
-              repudiandae sed quas optio quos placeat? Eaque saepe id modi?
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-              reiciendis nemo, cupiditate labore, dicta corporis quaerat earum
-              voluptatem mollitia.
-            </p>
-          </ion-text>
-          <ion-text>
-            <p>
-              veniam repudiandae sed quas optio quos placeat? Eaque saepe id
-              modi? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Eveniet reiciendis nemo, cupiditate labore, dicta corporis
-              quaerat earum voluptatem mollitia veniam repudiandae sed quas
-              optio quos placeat? Eaque saepe id modi? Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Eveniet reiciendis nemo,
-              cupiditate labore, dicta corporis quaerat earum voluptatem
-              mollitia veniam repudiandae sed quas optio quos placeat? Eaque
-              saepe id modi? Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Eveniet reiciendis
-            </p>
-          </ion-text>
-          <ion-text>
-            <p>
-              nemo, cupiditate labore, dicta corporis quaerat earum voluptatem
-              mollitia veniam repudiandae sed quas optio quos placeat? Eaque
-              saepe id modi? Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Eveniet reiciendis nemo, cupiditate labore,
-              dicta corporis quaerat earum voluptatem mollitia veniam
-              repudiandae sed quas optio quos placeat? Eaque saepe id modi?
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-              reiciendis nemo, cupiditate labore, dicta corporis quaerat earum
-              voluptatem mollitia veniam repudiandae sed quas optio quos
-              placeat? Eaque saepe id modi?
-            </p>
-          </ion-text>
-        </div>
-      </ion-accordion>
-    </ion-accordion-group>
+        <ion-accordion value="third" toggle-icon="./assets/tp-chevron-down.svg">
+          <ion-item slot="header" lines="none">
+            <ion-label tp-type="${args['tp-type']}">Third Accordion</ion-label>
+          </ion-item>
+          <div slot="content">
+            <ion-text>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+                reiciendis nemo, cupiditate labore, dicta corporis quaerat earum
+                voluptatem mollitia veniam repudiandae sed quas optio quos
+                placeat? Eaque saepe id modi? Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Eveniet reiciendis nemo,
+                cupiditate labore, dicta corporis quaerat earum voluptatem
+                mollitia veniam repudiandae sed quas optio quos placeat? Eaque
+                saepe id modi? Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Eveniet reiciendis nemo, cupiditate labore,
+                dicta corporis quaerat earum voluptatem mollitia veniam
+                repudiandae sed quas optio quos placeat? Eaque saepe id modi?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+                reiciendis nemo, cupiditate labore, dicta corporis quaerat earum
+                voluptatem mollitia.
+              </p>
+            </ion-text>
+            <ion-text>
+              <p>
+                veniam repudiandae sed quas optio quos placeat? Eaque saepe id
+                modi? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Eveniet reiciendis nemo, cupiditate labore, dicta corporis
+                quaerat earum voluptatem mollitia veniam repudiandae sed quas
+                optio quos placeat? Eaque saepe id modi? Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Eveniet reiciendis nemo,
+                cupiditate labore, dicta corporis quaerat earum voluptatem
+                mollitia veniam repudiandae sed quas optio quos placeat? Eaque
+                saepe id modi? Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Eveniet reiciendis
+              </p>
+            </ion-text>
+            <ion-text>
+              <p>
+                nemo, cupiditate labore, dicta corporis quaerat earum voluptatem
+                mollitia veniam repudiandae sed quas optio quos placeat? Eaque
+                saepe id modi? Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Eveniet reiciendis nemo, cupiditate labore,
+                dicta corporis quaerat earum voluptatem mollitia veniam
+                repudiandae sed quas optio quos placeat? Eaque saepe id modi?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+                reiciendis nemo, cupiditate labore, dicta corporis quaerat earum
+                voluptatem mollitia veniam repudiandae sed quas optio quos
+                placeat? Eaque saepe id modi?
+              </p>
+            </ion-text>
+          </div>
+        </ion-accordion>
+      </ion-accordion-group>
     `;
   },
   /* play: async ({ canvasElement }) => {

@@ -163,23 +163,23 @@ export const Searchbar: Story = {
     }, 100);
 
     return html`
-    <ion-list>
-      <ion-item
-        lines="${args.lines}"
-        ?button="${args.button}"
-        ?disabled="${args.disabled}"
-      >
-        <tp-input-container>
-          <ion-label slot="label" tp-type="p14">Searchbar</ion-label>
-          <ion-searchbar
-            mode="md"
-            search-icon="./../../../../assets/tp-search.svg"
-            clear-icon="./../../../../assets/tp-x.svg"
-            placeholder="Lorem ipsum dolor"
-          ></ion-searchbar>
-        </tp-input-container>
-      </ion-item>
-    </ion-list>
+      <ion-list>
+        <ion-item
+          lines="${args.lines}"
+          ?button="${args.button}"
+          ?disabled="${args.disabled}"
+        >
+          <tp-input-container>
+            <ion-label slot="label" tp-type="p14">Searchbar</ion-label>
+            <ion-searchbar
+              mode="md"
+              search-icon="./../../../../assets/tp-search.svg"
+              clear-icon="./../../../../assets/tp-x.svg"
+              placeholder="Lorem ipsum dolor"
+            ></ion-searchbar>
+          </tp-input-container>
+        </ion-item>
+      </ion-list>
     `;
   },
   /* play: async ({ canvasElement }) => {

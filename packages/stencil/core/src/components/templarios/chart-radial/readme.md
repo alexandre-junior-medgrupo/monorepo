@@ -2,7 +2,6 @@
 
 <!-- Auto Generated Below -->
 
-
 ## Properties
 
 | Property | Attribute | Description                                      | Type                                                                                                                                                | Default     |
@@ -10,7 +9,6 @@
 | `color`  | `color`   | Define a variação de cor do componente.          | `"orange" \| "orange-1" \| "orange-2" \| "orange-3" \| "orange-4" \| "orange-5" \| TpColors \| TpColorsMedgrupo \| (string & Record<never, never>)` | `undefined` |
 | `items`  | --        | Define os valores representados pelo componente. | `TpChartRadialItem[]`                                                                                                                               | `[]`        |
 | `size`   | `size`    | Define a variação de tamanho do componente.      | `TpChartRadialSize.LG \| TpChartRadialSize.MD \| TpChartRadialSize.SM \| TpChartRadialSize.XS`                                                      | `undefined` |
-
 
 ## CSS Custom Properties
 
@@ -23,7 +21,6 @@
 | `--tp-title-font-size`      | Define o font-size do título do componente.                                         |
 | `--tp-title-line-height`    | Define o line-height do título do componente.                                       |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

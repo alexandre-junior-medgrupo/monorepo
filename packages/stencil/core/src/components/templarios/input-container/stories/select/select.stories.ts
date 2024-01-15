@@ -66,37 +66,37 @@ export const Select: Story = {
     const interfaceOpts = { cssClass: 'tp-select' };
 
     return html`
-    <tp-input-container
-      color="${args.color}"
-      state="${args.state}"
-      ?inverted="${args.inverted}"
-      ?loading="${args.loading}"
-    >
-      <ion-label slot="label" tp-type="p14">Descrição Select</ion-label>
-      <ion-select
-        interface="popover"
-        .interfaceOptions=${interfaceOpts}
-        id="tp-select-01"
-        aria-label="option-1"
-        placeholder="Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor"
+      <tp-input-container
+        color="${args.color}"
+        state="${args.state}"
+        ?inverted="${args.inverted}"
+        ?loading="${args.loading}"
       >
-        <ion-select-option value="option-1">
-          Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum
-          dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor
-        </ion-select-option>
-        <ion-select-option value="option-2"> Option 2 </ion-select-option>
-        <ion-select-option value="option-3"> Option 3 </ion-select-option>
-        <ion-select-option value="option-4"> Option 4 </ion-select-option>
-        <ion-select-option value="option-5"> Option 5 </ion-select-option>
-        <ion-select-option value="option-6"> Option 6 </ion-select-option>
-      </ion-select>
-      <ion-label slot="feedback-error" tp-type="p14">
-        *Caracteres invalidos
-      </ion-label>
-      <ion-label slot="feedback-success" tp-type="p14">
-        *Caracteres validos
-      </ion-label>
-    </tp-input-container>
+        <ion-label slot="label" tp-type="p14">Descrição Select</ion-label>
+        <ion-select
+          interface="popover"
+          .interfaceOptions=${interfaceOpts}
+          id="tp-select-01"
+          aria-label="option-1"
+          placeholder="Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor"
+        >
+          <ion-select-option value="option-1">
+            Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum
+            dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor
+          </ion-select-option>
+          <ion-select-option value="option-2"> Option 2 </ion-select-option>
+          <ion-select-option value="option-3"> Option 3 </ion-select-option>
+          <ion-select-option value="option-4"> Option 4 </ion-select-option>
+          <ion-select-option value="option-5"> Option 5 </ion-select-option>
+          <ion-select-option value="option-6"> Option 6 </ion-select-option>
+        </ion-select>
+        <ion-label slot="feedback-error" tp-type="p14">
+          *Caracteres invalidos
+        </ion-label>
+        <ion-label slot="feedback-success" tp-type="p14">
+          *Caracteres validos
+        </ion-label>
+      </tp-input-container>
     `;
   },
   /* play: async ({ canvasElement }) => {

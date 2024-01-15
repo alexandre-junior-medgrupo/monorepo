@@ -31,12 +31,11 @@ export default meta;
 type Story = StoryObj<Components.IonLabel & TpIonLabel>;
 
 export const Default: Story = {
-  render: ({ ...args }) =>
-    html`
+  render: ({ ...args }) => html`
     <ion-label color="${args.color}" tp-type="${args['tp-type']}">
       Lorem ipsum, dolor sit amet consectetur.
     </ion-label>
-    `,
+  `,
   /* play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     expect(canvas.getByText(/ion-label/gi)).toBeTruthy();

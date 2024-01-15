@@ -52,17 +52,17 @@ export const Offline: Story = {
     const iconUrl = `./assets/${args.icon}`;
 
     return html`
-    <tp-alert color="${args.color}" ?loading="${args.loading}">
-      <ion-icon
-        class="tp-alert__icon"
-        slot="icon"
-        tp-size="sm"
-        src="${iconUrl}"
-      ></ion-icon>
-      <ion-text class="tp-alert__text" slot="text" tp-type="p12x">
-        <p>Você está offline. Conecte-se para acessar o conteúdo.</p>
-      </ion-text>
-    </tp-alert>
+      <tp-alert color="${args.color}" ?loading="${args.loading}">
+        <ion-icon
+          class="tp-alert__icon"
+          slot="icon"
+          tp-size="sm"
+          src="${iconUrl}"
+        ></ion-icon>
+        <ion-text class="tp-alert__text" slot="text" tp-type="p12x">
+          <p>Você está offline. Conecte-se para acessar o conteúdo.</p>
+        </ion-text>
+      </tp-alert>
     `;
   },
   /* play: async ({ canvasElement }) => {

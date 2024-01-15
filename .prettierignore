@@ -1,0 +1,23 @@
+# root
+
+# stencil/core
+packages/stencil/core/.stencil
+packages/stencil/core/dist/
+packages/stencil/core/loader/
+packages/stencil/core/www/
+packages/stencil/core/styles/
+packages/stencil/core/storybook-static/
+
+# stencil/component-wrappers/angular-library
+packages/stencil/component-wrappers/angular-library/.angular
+packages/stencil/component-wrappers/angular-library/projects/templarios/src/lib/stencil-generated
+
+# websites/documentation
+packages/websites/documentation/.docusaurus
+packages/websites/documentation/build/
+packages/websites/documentation/docs/
+
+# websites/processos
+packages/websites/processos/.docusaurus
+packages/websites/processos/build/
+packages/websites/processos/docs/

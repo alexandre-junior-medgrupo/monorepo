@@ -60,75 +60,75 @@ type Story = StoryObj<Components.IonInput & TpInputContainer>;
 export const Default: Story = {
   render: ({ ...args }) => {
     return html`
-    <tp-input-container
-      color="${args.color}"
-      state="${args.state}"
-      ?disabled="${args.disabled}"
-    >
-      <ion-label slot="label" tp-type="p14">Descrição Input</ion-label>
-      <ion-input
-        type="email"
-        mode="md"
-        clear-input="true"
-        placeholder="Digite um e-mail valido"
-      ></ion-input>
-      <ion-label slot="feedback-error" tp-type="p14">
-        *Caracteres invalidos.
-      </ion-label>
-      <ion-label slot="feedback-success" tp-type="p14">
-        *Caracteres validos
-      </ion-label>
-    </tp-input-container>
-
-    <tp-input-container
-      color="${args.color}"
-      state="${args.state}"
-      ?disabled="${args.disabled}"
-    >
-      <ion-label slot="label" tp-type="p14">Descrição Input</ion-label>
-      <ion-input
-        type="email"
-        mode="md"
-        clear-input="true"
-        placeholder="Digite um e-mail valido"
-      ></ion-input>
-      <ion-label slot="feedback-error" tp-type="p14">
-        *Caracteres invalidos.
-      </ion-label>
-      <ion-label slot="feedback-success" tp-type="p14">
-        *Caracteres validos
-      </ion-label>
-    </tp-input-container>
-
-    <tp-input-container
-      color="${args.color}"
-      state="${args.state}"
-      ?disabled="${args.disabled}"
-    >
-      <ion-label slot="label" tp-type="p14">Descrição Input</ion-label>
-      <ion-icon
-        slot="start"
+      <tp-input-container
         color="${args.color}"
-        src="./assets/tp-alert-triangle.svg"
-      ></ion-icon>
-      <ion-input
-        type="email"
-        mode="md"
-        clear-input="true"
-        placeholder="Digite um e-mail valido"
-      ></ion-input>
-      <ion-icon
-        slot="end"
+        state="${args.state}"
+        ?disabled="${args.disabled}"
+      >
+        <ion-label slot="label" tp-type="p14">Descrição Input</ion-label>
+        <ion-input
+          type="email"
+          mode="md"
+          clear-input="true"
+          placeholder="Digite um e-mail valido"
+        ></ion-input>
+        <ion-label slot="feedback-error" tp-type="p14">
+          *Caracteres invalidos.
+        </ion-label>
+        <ion-label slot="feedback-success" tp-type="p14">
+          *Caracteres validos
+        </ion-label>
+      </tp-input-container>
+
+      <tp-input-container
         color="${args.color}"
-        src="./assets/tp-alert-triangle.svg"
-      ></ion-icon>
-      <ion-label slot="feedback-error" tp-type="p14">
-        *Caracteres invalidos.
-      </ion-label>
-      <ion-label slot="feedback-success" tp-type="p14">
-        *Caracteres validos
-      </ion-label>
-    </tp-input-container>
+        state="${args.state}"
+        ?disabled="${args.disabled}"
+      >
+        <ion-label slot="label" tp-type="p14">Descrição Input</ion-label>
+        <ion-input
+          type="email"
+          mode="md"
+          clear-input="true"
+          placeholder="Digite um e-mail valido"
+        ></ion-input>
+        <ion-label slot="feedback-error" tp-type="p14">
+          *Caracteres invalidos.
+        </ion-label>
+        <ion-label slot="feedback-success" tp-type="p14">
+          *Caracteres validos
+        </ion-label>
+      </tp-input-container>
+
+      <tp-input-container
+        color="${args.color}"
+        state="${args.state}"
+        ?disabled="${args.disabled}"
+      >
+        <ion-label slot="label" tp-type="p14">Descrição Input</ion-label>
+        <ion-icon
+          slot="start"
+          color="${args.color}"
+          src="./assets/tp-alert-triangle.svg"
+        ></ion-icon>
+        <ion-input
+          type="email"
+          mode="md"
+          clear-input="true"
+          placeholder="Digite um e-mail valido"
+        ></ion-input>
+        <ion-icon
+          slot="end"
+          color="${args.color}"
+          src="./assets/tp-alert-triangle.svg"
+        ></ion-icon>
+        <ion-label slot="feedback-error" tp-type="p14">
+          *Caracteres invalidos.
+        </ion-label>
+        <ion-label slot="feedback-success" tp-type="p14">
+          *Caracteres validos
+        </ion-label>
+      </tp-input-container>
     `;
   },
   /* play: async ({ canvasElement }) => {

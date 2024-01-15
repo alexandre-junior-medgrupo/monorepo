@@ -80,20 +80,20 @@ export const Label: Story = {
     const renderedValue = Math.round((args.value / args.maxCount) * 100);
 
     return html`
-    <tp-horizontal-chart-bar
-      value="${args.value}"
-      .size="${args.size}"
-      .color="${args.color}"
-      max-count="${args.maxCount}"
-      ?loading="${args.loading}"
-    >
-      <ion-label
-        tp-type="${args.size ? 'p12b' : 'p10b'}"
-        color="${args.color ? args.color : 'brand-4'}"
+      <tp-horizontal-chart-bar
+        value="${args.value}"
+        .size="${args.size}"
+        .color="${args.color}"
+        max-count="${args.maxCount}"
+        ?loading="${args.loading}"
       >
-        ${renderedValue}%
-      </ion-label>
-    </tp-horizontal-chart-bar>
+        <ion-label
+          tp-type="${args.size ? 'p12b' : 'p10b'}"
+          color="${args.color ? args.color : 'brand-4'}"
+        >
+          ${renderedValue}%
+        </ion-label>
+      </tp-horizontal-chart-bar>
     `;
   },
   /* play: async ({ canvasElement }) => {

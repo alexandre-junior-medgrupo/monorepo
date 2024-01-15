@@ -149,37 +149,37 @@ const closeDatetime = () => {
 export const Datetime: Story = {
   render: ({ ...args }) => {
     return html`
-    <ion-list>
-      <ion-item>
-        <tp-input-container color="${args.color}" @click=${openDatetime}>
-          <ion-label slot="label" tp-type="p14">Descrição Datetime</ion-label>
-          <ion-datetime-button
-            mode="ios"
-            datetime="datetime"
-          ></ion-datetime-button>
-          <ion-icon src="./assets/tp-calendar.svg"></ion-icon>
-        </tp-input-container>
-      </ion-item>
-    </ion-list>
+      <ion-list>
+        <ion-item>
+          <tp-input-container color="${args.color}" @click=${openDatetime}>
+            <ion-label slot="label" tp-type="p14">Descrição Datetime</ion-label>
+            <ion-datetime-button
+              mode="ios"
+              datetime="datetime"
+            ></ion-datetime-button>
+            <ion-icon src="./assets/tp-calendar.svg"></ion-icon>
+          </tp-input-container>
+        </ion-item>
+      </ion-list>
 
-    <ion-datetime
-      id="datetime"
-      presentation=${args.presentation}
-      prefer-wheel="true"
-    >
-      <div slot="title">
-        <ion-button fill="clear" size="xxs">
-          <ion-label tp-type="p12b" @click=${closeDatetime}
-            >CANCELAR</ion-label
-          >
-        </ion-button>
-        <ion-button fill="clear" size="xxs">
-          <ion-label tp-type="p12b" @click=${closeDatetime}
-            >SELECIONAR</ion-label
-          >
-        </ion-button>
-      </div>
-    </ion-datetime>
+      <ion-datetime
+        id="datetime"
+        presentation=${args.presentation}
+        prefer-wheel="true"
+      >
+        <div slot="title">
+          <ion-button fill="clear" size="xxs">
+            <ion-label tp-type="p12b" @click=${closeDatetime}
+              >CANCELAR</ion-label
+            >
+          </ion-button>
+          <ion-button fill="clear" size="xxs">
+            <ion-label tp-type="p12b" @click=${closeDatetime}
+              >SELECIONAR</ion-label
+            >
+          </ion-button>
+        </div>
+      </ion-datetime>
     `;
   },
   /* play: async ({ canvasElement }) => {

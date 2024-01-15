@@ -2,7 +2,6 @@
 
 <!-- Auto Generated Below -->
 
-
 ## Properties
 
 | Property          | Attribute          | Description                                                           | Type                                                                                                                                                | Default     |
@@ -16,7 +15,6 @@
 | `markerValue`     | `marker-value`     | Define a posição do marker na coluna.                                 | `number`                                                                                                                                            | `0`         |
 | `noLabel`         | `no-label`         | Define se um slot será disponibilizado para receber o label do chart. | `boolean`                                                                                                                                           | `false`     |
 
-
 ## CSS Custom Properties
 
 | Name                    | Description                                                                                         |
@@ -26,7 +24,6 @@
 | `--tp-marker-color`     | Define a cor do marcador.                                                                           |
 | `--tp-marker-value`     | Propriedade definida dinamicamente no tsx. Define a posição, em porcentagem, do marcador na coluna. |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

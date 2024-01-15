@@ -47,7 +47,7 @@ const openSheet = async () => {
 export const Default: Story = {
   render: () => {
     return html`
-    <ion-button id="open-modal" @click="${openSheet}">Abrir Sheet</ion-button>
+      <ion-button id="open-modal" @click="${openSheet}">Abrir Sheet</ion-button>
     `;
   },
   /* play: async ({ canvasElement }) => {

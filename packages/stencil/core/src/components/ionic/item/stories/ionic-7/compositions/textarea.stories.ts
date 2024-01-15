@@ -161,21 +161,21 @@ export const Textarea: Story = {
     }, 100);
 
     return html`
-    <ion-list>
-      <ion-item
-        lines="${args.lines}"
-        ?button="${args.button}"
-        ?disabled="${args.disabled}"
-      >
-        <tp-input-container>
-          <ion-label slot="label" tp-type="p14">Textarea</ion-label>
-          <ion-textarea
-            placeholder="Lorem ipsum, dolor sit amet consectetur."
-            mode="md"
-          ></ion-textarea>
-        </tp-input-container>
-      </ion-item>
-    </ion-list>
+      <ion-list>
+        <ion-item
+          lines="${args.lines}"
+          ?button="${args.button}"
+          ?disabled="${args.disabled}"
+        >
+          <tp-input-container>
+            <ion-label slot="label" tp-type="p14">Textarea</ion-label>
+            <ion-textarea
+              placeholder="Lorem ipsum, dolor sit amet consectetur."
+              mode="md"
+            ></ion-textarea>
+          </tp-input-container>
+        </ion-item>
+      </ion-list>
     `;
   },
   /* play: async ({ canvasElement }) => {

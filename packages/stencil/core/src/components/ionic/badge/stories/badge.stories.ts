@@ -44,15 +44,14 @@ export default meta;
 type Story = StoryObj<Components.IonBadge & TpIonBadge>;
 
 export const Default: Story = {
-  render: ({ ...args }) =>
-    html`
+  render: ({ ...args }) => html`
     <ion-badge
       color="${args.color}"
       tp-size="${args['tp-size']}"
       tp-fill="${args['tp-fill']}"
       >ion-badge</ion-badge
     >
-    `,
+  `,
   /* play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     expect(canvas.getByText(/ion-badge/gi)).toBeTruthy();

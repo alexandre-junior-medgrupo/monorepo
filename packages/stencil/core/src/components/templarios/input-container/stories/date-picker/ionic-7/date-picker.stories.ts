@@ -65,33 +65,36 @@ const openDatetime = () => {
 export const Default: Story = {
   render: ({ ...args }) => {
     return html`
-    <tp-input-container
-      id="input-container"
-      state="${args.state}"
-      ?disabled="${args.disabled}"
-      @click=${openDatetime}
-    >
-      <ion-label slot="label" tp-type="p14">Descrição Datetime</ion-label>
-      <ion-datetime-button mode="ios" datetime="datetime"></ion-datetime-button>
-      <ion-icon src="./assets/tp-calendar.svg"></ion-icon>
-      <ion-label slot="feedback-error" tp-type="p14">
-        *Caracteres invalidos.
-      </ion-label>
-      <ion-label slot="feedback-success" tp-type="p14">
-        *Caracteres validos
-      </ion-label>
+      <tp-input-container
+        id="input-container"
+        state="${args.state}"
+        ?disabled="${args.disabled}"
+        @click=${openDatetime}
+      >
+        <ion-label slot="label" tp-type="p14">Descrição Datetime</ion-label>
+        <ion-datetime-button
+          mode="ios"
+          datetime="datetime"
+        ></ion-datetime-button>
+        <ion-icon src="./assets/tp-calendar.svg"></ion-icon>
+        <ion-label slot="feedback-error" tp-type="p14">
+          *Caracteres invalidos.
+        </ion-label>
+        <ion-label slot="feedback-success" tp-type="p14">
+          *Caracteres validos
+        </ion-label>
 
-      <ion-datetime mode="md" id="datetime" presentation="date">
-        <div slot="buttons">
-          <ion-button fill="clear" size="xxs">
-            <ion-label tp-type="p12b">Cancelar</ion-label>
-          </ion-button>
-          <ion-button fill="clear" size="xxs">
-            <ion-label tp-type="p12b">Ok</ion-label>
-          </ion-button>
-        </div>
-      </ion-datetime>
-    </tp-input-container>
+        <ion-datetime mode="md" id="datetime" presentation="date">
+          <div slot="buttons">
+            <ion-button fill="clear" size="xxs">
+              <ion-label tp-type="p12b">Cancelar</ion-label>
+            </ion-button>
+            <ion-button fill="clear" size="xxs">
+              <ion-label tp-type="p12b">Ok</ion-label>
+            </ion-button>
+          </div>
+        </ion-datetime>
+      </tp-input-container>
     `;
   },
   /* play: async ({ canvasElement }) => {

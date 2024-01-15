@@ -163,34 +163,34 @@ export const Radio: Story = {
     }, 100);
 
     return html`
-    <ion-list>
-      <ion-radio-group>
-        <ion-item
-          .color="${args.color}"
-          lines="${args.lines}"
-          ?button="${args.button}"
-          ?disabled="${args.disabled}"
-        >
-          <ion-radio label-placement="start" justify="space-between">
-            <ion-text> Lorem ipsum, dolor sit amet consectetur. </ion-text>
-          </ion-radio>
-        </ion-item>
+      <ion-list>
+        <ion-radio-group>
+          <ion-item
+            .color="${args.color}"
+            lines="${args.lines}"
+            ?button="${args.button}"
+            ?disabled="${args.disabled}"
+          >
+            <ion-radio label-placement="start" justify="space-between">
+              <ion-text> Lorem ipsum, dolor sit amet consectetur. </ion-text>
+            </ion-radio>
+          </ion-item>
 
-        <ion-item
-          .color="${args.color}"
-          lines="${args.lines}"
-          tp-gap="${args['tp-gap']}"
-          tp-spacingX="${args['tp-spacingx']}"
-          tp-spacingY="${args['tp-spacingy']}"
-          ?button="${args.button}"
-          ?disabled="${args.disabled}"
-        >
-          <ion-radio label-placement="end" justify="space-between">
-            <ion-text> Lorem ipsum, dolor sit amet consectetur. </ion-text>
-          </ion-radio>
-        </ion-item>
-      </ion-radio-group>
-    </ion-list>
+          <ion-item
+            .color="${args.color}"
+            lines="${args.lines}"
+            tp-gap="${args['tp-gap']}"
+            tp-spacingX="${args['tp-spacingx']}"
+            tp-spacingY="${args['tp-spacingy']}"
+            ?button="${args.button}"
+            ?disabled="${args.disabled}"
+          >
+            <ion-radio label-placement="end" justify="space-between">
+              <ion-text> Lorem ipsum, dolor sit amet consectetur. </ion-text>
+            </ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
     `;
   },
   /* play: async ({ canvasElement }) => {
