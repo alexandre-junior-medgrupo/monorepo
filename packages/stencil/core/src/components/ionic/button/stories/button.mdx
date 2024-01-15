@@ -1,0 +1,53 @@
+import { Canvas, Controls, Meta } from '@storybook/blocks';
+import * as buttonClearStories from './button.clear.stories';
+import * as buttonIconStories from './button.icon.stories';
+import * as buttonOutlineStories from './button.outline.stories';
+import * as buttonSolidStories from './button.solid.stories';
+
+<Meta of={buttonSolidStories} />
+
+# ion-button
+
+**Documentação Adicional:**
+
+- **[`Ionic v7`](https://ionicframework.com/docs/api/button)**
+- **[`Ionic v6`](https://ionicframework.com/docs/v6/api/button)**
+
+## Types
+
+```ts
+import { TpIonButton } from 'templarios/core/dist/types/interfaces';
+```
+
+## Enums
+
+```ts
+import {
+  TpIonButtonSolidSize,
+  TpIonButtonOutlineSize,
+  TpIonButtonClearSize,
+  TpIonButtonIconSize,
+} from 'templarios/core/dist/types/interfaces';
+```
+
+## Atributos
+
+### Default
+
+<Canvas of={buttonSolidStories.Default} />
+<Controls of={buttonSolidStories.Default} />
+
+### Outline
+
+<Canvas of={buttonOutlineStories.Outline} />
+<Controls of={buttonOutlineStories.Outline} />
+
+### Clear
+
+<Canvas of={buttonClearStories.Clear} />
+<Controls of={buttonClearStories.Clear} />
+
+### IconOnly
+
+<Canvas of={buttonIconStories.IconOnly} />
+<Controls of={buttonIconStories.IconOnly} />

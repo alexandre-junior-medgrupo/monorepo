@@ -1,0 +1,39 @@
+import { Canvas, Controls, Meta } from '@storybook/blocks';
+import * as modalStories from '../ionic-6/modal.stories';
+
+<Meta of={modalStories} />
+
+# ion-modal (modal)
+
+**Documentação Adicional:**
+
+- **[`Ionic v7`](https://ionicframework.com/docs/api/modal)**
+- **[`Ionic v6`](https://ionicframework.com/docs/v6/api/modal)**
+
+## Atributos
+
+<Canvas of={modalStories.Default} />
+<Controls of={modalStories.Default} />
+
+## Usage
+
+```ts
+// modal-example.ts
+
+async function openModal() {
+  const modal = await modalController.create({
+    component: 'modal-example',
+    cssClass: 'tp-modal',
+  });
+
+  await modal.present();
+}
+
+async function closeModal() {
+  await modal.dismiss();
+}
+```
+
+```html
+<!-- modal-example.html -->
+```

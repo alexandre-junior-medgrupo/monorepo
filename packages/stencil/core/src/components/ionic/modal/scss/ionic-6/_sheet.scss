@@ -1,0 +1,8 @@
+@import '../../../../../styles/templarios.abstracts';
+
+.templarios-ionic-6 {
+  ion-modal.tp-sheet .ion-page {
+    --tp-padding: 24px;
+    padding: var(--tp-padding);
+  }
+}

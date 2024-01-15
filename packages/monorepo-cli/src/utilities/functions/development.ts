@@ -11,15 +11,48 @@ export const development = () => {
     'Executa os pacotes escolhidos em modo de desenvolvimento.',
   );
 
-  const inquire = (answers: any) => {
-    execSync(
-      `lerna run start ${
-        answers.inquire.length > 1
-          ? `--parallel --scope={${answers.inquire}}`
-          : `--scope=${answers.inquire}`
-      }`,
-      { stdio: 'inherit' },
-    );
+  const inquire = (answer: any) => {
+    const { inquire } = answer;
+
+    if (inquire.includes('templarios-core')) {
+      inquirer
+        .prompt([
+          {
+            type: 'list',
+            name: 'inquire2',
+            message: 'Escolha uma das opções:',
+            choices: ['Ionic 7', 'Ionic 6'],
+          },
+        ])
+        .then((answer2: any) => {
+          const { inquire2 } = answer2;
+          const ionicRelease = inquire2.slice(-1);
+
+          execSync(
+            `lerna run node:replace:package:start:${ionicRelease} --scope=templarios-core`,
+            { stdio: 'inherit' },
+          );
+
+          execSync(
+            `lerna run start ${
+              inquire.length > 1
+                ? `--parallel --scope={${inquire}}`
+                : `--scope=${inquire}`
+            }`,
+            { stdio: 'inherit' },
+          );
+        })
+        .catch((error: any) => log(error));
+    } else {
+      execSync(
+        `lerna run start ${
+          inquire.length > 1
+            ? `--parallel --scope={${inquire}}`
+            : `--scope=${inquire}`
+        }`,
+        { stdio: 'inherit' },
+      );
+    }
   };
 
   inquirer
@@ -29,8 +62,14 @@ export const development = () => {
         name: 'inquire',
         message: 'Escolha uma das opções:',
         choices: options,
+        validate(answer) {
+          if (answer.length < 1) {
+            return 'Escolha pelo menos uma das opções.';
+          }
+          return true;
+        },
       },
     ])
-    .then((answers: any) => inquire(answers))
+    .then((answer: any) => inquire(answer))
     .catch((error: any) => log(error));
 };

@@ -1,5 +1,6 @@
 import chalk from 'chalk';
 import { Command } from 'commander';
+import { execSync } from 'child_process';
 import inquirer from 'inquirer';
 import figlet from 'figlet';
 
@@ -23,11 +24,11 @@ const start$1 = [
     'Lint',
 ];
 const development$1 = [
-    { name: ' api', value: 'api' },
-    { name: ' stencil', value: 'stencil' },
+    { name: ' api', value: 'templarios-api' },
+    { name: ' stencil', value: 'templarios-core' },
     new inquirer.Separator('== websites'),
-    { name: ' documentation', value: 'documentation' },
-    { name: ' processos', value: 'processos' },
+    { name: ' documentation', value: 'templarios-documentation' },
+    { name: ' processos', value: 'templarios-processos' },
 ];
 
 /**
@@ -37,7 +38,7 @@ const development$1 = [
 const printWelcomeMessage = (message) => {
     log(chalk.hex(ThemeColors.base)(figlet.textSync('Templários')));
     log('');
-    log(chalk.hex(ThemeColors.base).bold('! Templários Components Library'));
+    log(chalk.hex(ThemeColors.base).bold('! Templários Component Library'));
     log('');
     log(chalk.hex(ThemeColors.base).bold('! Website:'), chalk.underline('https://templarios.com'));
     log(chalk.hex(ThemeColors.base).bold('! Documentação:'), chalk.underline('https://templarios.com'));
@@ -51,10 +52,38 @@ const printWelcomeMessage = (message) => {
     log('');
 };
 
+/**
+ * Executa a inquire de desenvolvimento.
+ */
 const development = () => {
     printWelcomeMessage('Executa os pacotes escolhidos em modo de desenvolvimento.');
-    const inquire = (answers) => {
-        log(answers);
+    const inquire = (answer) => {
+        const { inquire } = answer;
+        if (inquire.includes('templarios-core')) {
+            inquirer
+                .prompt([
+                {
+                    type: 'list',
+                    name: 'inquire2',
+                    message: 'Escolha uma das opções:',
+                    choices: ['Ionic 7', 'Ionic 6'],
+                },
+            ])
+                .then((answer2) => {
+                const { inquire2 } = answer2;
+                const ionicRelease = inquire2.slice(-1);
+                execSync(`lerna run node:replace:package:start:${ionicRelease} --scope=templarios-core`, { stdio: 'inherit' });
+                execSync(`lerna run start ${inquire.length > 1
+                    ? `--parallel --scope={${inquire}}`
+                    : `--scope=${inquire}`}`, { stdio: 'inherit' });
+            })
+                .catch((error) => log(error));
+        }
+        else {
+            execSync(`lerna run start ${inquire.length > 1
+                ? `--parallel --scope={${inquire}}`
+                : `--scope=${inquire}`}`, { stdio: 'inherit' });
+        }
     };
     inquirer
         .prompt([
@@ -63,12 +92,21 @@ const development = () => {
             name: 'inquire',
             message: 'Escolha uma das opções:',
             choices: development$1,
+            validate(answer) {
+                if (answer.length < 1) {
+                    return 'Escolha pelo menos uma das opções.';
+                }
+                return true;
+            },
         },
     ])
-        .then((answers) => inquire(answers))
+        .then((answer) => inquire(answer))
         .catch((error) => log(error));
 };
 
+/**
+ * Executa a inquire inicial.
+ */
 const start = () => {
     printWelcomeMessage();
     const inquire = (answers) => {
@@ -76,6 +114,18 @@ const start = () => {
         if (inquire === 'Desenvolvimento') {
             development();
         }
+        /* if (inquire === 'Produção') {
+          production();
+        } */
+        /* if (inquire === 'Distribuição') {
+          distribution();
+        } */
+        /* if (inquire === 'Publicação') {
+          publish();
+        } */
+        /* if (inquire === 'Lint') {
+          lint();
+        } */
     };
     inquirer
         .prompt([
@@ -94,8 +144,8 @@ const program = new Command();
 program
     .name('templarios')
     .description(`${chalk.hex(ThemeColors.base).bold('Templários Monorepo CLI')}`)
-    .option('-s, --start', 'executa o Templários Monorepo CLI')
-    .option('-d, --development', 'executa os pacotes escolhidos em modo de desenvolvimento.')
+    .option('-start, --start', 'executa o Templários Monorepo CLI')
+    .option('-dev, --development', 'executa os pacotes escolhidos em modo de desenvolvimento.')
     .action((option) => {
     if (option.start) {
         start();

@@ -1,0 +1,11 @@
+@use '../variables/type.variables';
+
+@each $type-value, $type in type.$types {
+  [tp-type='#{$type-value}'],
+  [tp-type='#{$type-value}'] * {
+    @each $property, $value in $type {
+      #{$property}: #{$value} !important;
+    }
+    margin: 0;
+  }
+}

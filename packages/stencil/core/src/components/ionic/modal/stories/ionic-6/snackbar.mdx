@@ -1,0 +1,86 @@
+import { Canvas, Controls, Meta } from '@storybook/blocks';
+import * as snackbarStories from '../ionic-6/snackbar.stories';
+
+<Meta of={snackbarStories} />
+
+# ion-modal (snackbar)
+
+**Documentação Adicional:**
+
+- **[`Ionic v7`](https://ionicframework.com/docs/api/modal)**
+- **[`Ionic v6`](https://ionicframework.com/docs/v6/api/modal)**
+
+## Types
+
+```ts
+import { TpIonsnackbar } from 'templarios/core/dist/types/interfaces';
+```
+
+## Atributos
+
+<Canvas of={snackbarStories.Default} />
+<Controls of={snackbarStories.Default} />
+
+## Usage
+
+```ts
+// snackbar.example.ts
+
+async function openModal() {
+  const modal = await modalController.create({
+    component: 'snackbar-example',
+    cssClass: 'tp-snackbar',
+  });
+
+  await modal.present();
+}
+
+async function closeModal() {
+  await modal.dismiss();
+}
+```
+
+```html
+<!-- snackbar-example.html -->
+
+<div class="tp-snackbar__container">
+  <ion-avatar tp-color="brand-3" tp-size="xxs">
+    <ion-label>AB</ion-label>
+  </ion-avatar>
+
+  <ion-text class="tp-snackbar__text" tp-type="p16b">
+    <p>1.341 alunos fizeram o simulado</p>
+  </ion-text>
+
+  <ion-button fill="clear" size="xs">
+    <ion-icon slot="icon-only" src="./assets/tp-x.svg"></ion-icon>
+  </ion-button>
+</div>
+
+<!-- As classes acima ja contem com um estilo definido -->
+```
+
+```scss
+// snackbar-example.scss
+
+.tp-snackbar {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: hsl(var(--med-color-neutral-2));
+  }
+
+  &__avatar {
+    display: flex;
+  }
+
+  &__text.sc-med-type-h {
+    margin: 0 16px;
+  }
+
+  &__button {
+    margin: 0;
+  }
+}
+```

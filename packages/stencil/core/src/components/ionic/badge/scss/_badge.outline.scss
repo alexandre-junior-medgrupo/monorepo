@@ -1,0 +1,14 @@
+ion-badge[tp-fill='outline'] {
+  --background: transparent;
+  --color: var(--tp-color-brand-2);
+  border: 1px solid var(--tp-color-brand-2);
+}
+
+//
+// color
+//
+ion-badge.ion-color[tp-fill='outline'] {
+  color: var(--ion-color-base);
+  background: transparent;
+  border: 1px solid var(--ion-color-base);
+}

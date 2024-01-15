@@ -1,0 +1,13 @@
+.templarios-ionic-6 {
+  ion-datetime.datetime-presentation-date,
+  ion-datetime.datetime-presentation-time,
+  ion-datetime.datetime-prefer-wheel {
+    color: var(--tp-color-neutral-10);
+  }
+
+  ion-datetime.datetime-presentation-date.ion-color-primary,
+  ion-datetime.datetime-presentation-time.ion-color-primary,
+  ion-datetime.datetime-prefer-wheel.ion-color-primary {
+    //--ion-color-base: var(--tp-color-neutral-10) !important;
+  }
+}

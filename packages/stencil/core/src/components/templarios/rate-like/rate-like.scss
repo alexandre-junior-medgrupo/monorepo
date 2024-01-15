@@ -1,0 +1,53 @@
+.tp-rate-like {
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__button {
+    width: 24px;
+    height: 24px;
+    color: var(--tp-color-neutral-10);
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+
+    &:first-child {
+      margin-right: 16px;
+    }
+
+    &--disabled {
+      pointer-events: none;
+
+      .tp-rate-like__icon {
+        color: var(--tp-color-neutral-4);
+      }
+    }
+
+    &--like .tp-rate-like__icon {
+      color: var(--tp-color-success);
+    }
+
+    &--dislike .tp-rate-like__icon {
+      color: var(--tp-color-warning);
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__skeleton {
+    --background-rgb: var(--tp-color-neutral-10-rgb);
+    --border-radius: 0;
+
+    width: 24px;
+    height: 24px;
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+}

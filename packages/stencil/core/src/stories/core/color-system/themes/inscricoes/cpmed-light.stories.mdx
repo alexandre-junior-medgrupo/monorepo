@@ -1,0 +1,129 @@
+import { Meta, Title, ColorPalette, ColorItem } from '@storybook/blocks';
+import {
+  TpSchemeCSSClasses,
+  TpThemeCSSClasses,
+} from '../../../../../utils/enums/theme.enum';
+
+<Meta
+  title="Core/Color System/Themes/Inscrições/CPMed Light"
+  parameters={{
+    themes: {
+      target: 'root',
+      default: 'CPMed Light',
+      list: [
+        {
+          name: 'CPMed Light',
+          class: [
+            `${TpThemeCSSClasses.InscricoesCPMed}`,
+            `${TpSchemeCSSClasses.Light}`,
+          ],
+          color: '#8F4E3D',
+        },
+      ],
+    },
+  }}
+/>
+
+<Title>CPMed</Title>
+
+```html
+<html class="tp-color-theme-inscricoes-cpmed"></html>
+```
+
+<Title>Colors</Title>
+
+<ColorPalette>
+  <ColorItem
+    title="Brand"
+    colors={{
+      brand: 'var(--tp-color-brand)',
+    }}
+  />
+  <ColorItem
+    title="Contrast"
+    colors={{
+      '': 'var(--tp-color-neutral-10)',
+    }}
+  />
+</ColorPalette>
+
+<Title>Variants</Title>
+
+<ColorPalette>
+  <ColorItem
+    title="Brand"
+    colors={{
+      'brand-1': 'var(--tp-color-brand-1)',
+      'brand-2': 'var(--tp-color-brand-2)',
+      'brand-3': 'var(--tp-color-brand-3)',
+      'brand-4': 'var(--tp-color-brand-4)',
+      'brand-5': 'var(--tp-color-brand-5)',
+    }}
+  />
+  <ColorItem
+    title="Contrast"
+    colors={{
+      'brand-1': 'var(--tp-color-neutral-10)',
+      'brand-2': 'var(--tp-color-neutral-10)',
+      'brand-3': 'var(--tp-color-neutral-10)',
+      'brand-4': 'var(--tp-color-neutral-10)',
+      'brand-5': 'var(--tp-color-neutral-10)',
+    }}
+  />
+</ColorPalette>
+
+<Title>Shade / Tint</Title>
+
+<ColorPalette>
+  <ColorItem
+    title="Brand"
+    colors={{
+      'brand-tint': 'var(--tp-color-brand-tint)',
+      brand: 'var(--tp-color-brand)',
+      'brand-shade': 'var(--tp-color-brand-shade)',
+    }}
+  />
+</ColorPalette>
+
+<ColorPalette>
+  <ColorItem
+    title="Brand 1"
+    colors={{
+      'brand-1-tint': 'var(--tp-color-brand-1-tint)',
+      'brand-1': 'var(--tp-color-brand-1)',
+      'brand-1-shade': 'var(--tp-color-brand-1-shade)',
+    }}
+  />
+  <ColorItem
+    title="Brand 2"
+    colors={{
+      'brand-2-tint': 'var(--tp-color-brand-2-tint)',
+      'brand-2': 'var(--tp-color-brand-2)',
+      'brand-2-shade': 'var(--tp-color-brand-2-shade)',
+    }}
+  />
+  <ColorItem
+    title="Brand 3"
+    colors={{
+      'brand-3-tint': 'var(--tp-color-brand-3-tint)',
+      'brand-3': 'var(--tp-color-brand-3)',
+      'brand-3-shade': 'var(--tp-color-brand-3-shade)',
+    }}
+  />
+  <ColorItem
+    title="Brand 4"
+    colors={{
+      'brand-4-tint': 'var(--tp-color-brand-4-tint)',
+      'brand-4': 'var(--tp-color-brand-4)',
+      'brand-4-shade': 'var(--tp-color-brand-4-shade)',
+    }}
+  />
+  <ColorItem
+    title="Brand 5"
+    colors={{
+      'brand-5-tint': 'var(--tp-color-brand-5-tint)',
+      'brand-5': 'var(--tp-color-brand-5)',
+      'brand-5-shade': 'var(--tp-color-brand-5-shade)',
+    }}
+  />
+</ColorPalette>

@@ -1,0 +1,75 @@
+import { Canvas, Controls, Meta } from '@storybook/blocks';
+
+import * as itemStories from './ionic-7/item.stories';
+import * as searchbarStories from './ionic-7/compositions/searchbar.stories';
+import * as textareaStories from './ionic-7/compositions/textarea.stories';
+import * as datetimeStories from './ionic-7/compositions/datetime.stories';
+import * as checkboxStories from './ionic-7/compositions/checkbox.stories';
+import * as inputStories from './ionic-7/compositions/input.stories';
+import * as radioStories from './ionic-7/compositions/radio.stories';
+import * as toggleStories from './ionic-7/compositions/toggle.stories';
+
+<Meta of={itemStories} />
+
+# ion-item
+
+**Documentação Adicional:**
+
+- **[`Ionic v7`](https://ionicframework.com/docs/api/item)**
+- **[`Ionic v6`](https://ionicframework.com/docs/v6/api/item)**
+
+## Types
+
+```ts
+import { TpIonItem } from 'templarios/core/dist/types/interfaces';
+```
+
+## Enums
+
+```ts
+import { TpIonItemLines } from 'templarios/core/dist/types/interfaces';
+```
+
+## Atributos
+
+### Default
+
+<Canvas of={itemStories.Default} />
+<Controls of={itemStories.Default} />
+
+### Compositions
+
+### Checkbox
+
+<Canvas of={checkboxStories.Checkbox} />
+<Controls of={checkboxStories.Checkbox} />
+
+### Input
+
+<Canvas of={inputStories.Input} />
+<Controls of={inputStories.Input} />
+
+### Radio
+
+<Canvas of={radioStories.Radio} />
+<Controls of={radioStories.Radio} />
+
+### Toggle
+
+<Canvas of={toggleStories.Toggle} />
+<Controls of={toggleStories.Toggle} />
+
+### Searchbar
+
+<Canvas of={searchbarStories.Searchbar} />
+<Controls of={searchbarStories.Searchbar} />
+
+### Textarea
+
+<Canvas of={textareaStories.Textarea} />
+<Controls of={textareaStories.Textarea} />
+
+### Datetime
+
+<Canvas of={datetimeStories.Datetime} />
+<Controls of={datetimeStories.Datetime} />

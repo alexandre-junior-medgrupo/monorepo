@@ -1,0 +1,10 @@
+.templarios-ionic-6 {
+  //
+  // color line full
+  //
+  ion-list.list-lines-full {
+    ion-item.ion-color {
+      --ion-color-shade: var(--ion-color-contrast) !important;
+    }
+  }
+}

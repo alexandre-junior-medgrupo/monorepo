@@ -1,0 +1,37 @@
+import { Canvas, Controls, Meta } from '@storybook/blocks';
+import * as horizontalChartBarStories from './horizontal-chart-bar.stories';
+import * as horizontalChartBarLabelStories from './compositions/label.stories.ts';
+
+<Meta of={horizontalChartBarStories} />
+
+# tp-horizontal-chart-bar
+
+## Types
+
+```ts
+import { TpHorizontalChartBar } from 'templarios/angular';
+```
+
+## Enums
+
+```ts
+import { TpHorizontalChartBarSize } from 'templarios/angular';
+```
+
+## CSS Custom Properties
+
+```
+--tp-track-color: Define a cor do track.
+```
+
+## Atributos
+
+### Default
+
+<Canvas of={horizontalChartBarStories.Default} />
+<Controls of={horizontalChartBarStories.Default} />
+
+### Label
+
+<Canvas of={horizontalChartBarLabelStories.Label} />
+<Controls of={horizontalChartBarLabelStories.Label} />

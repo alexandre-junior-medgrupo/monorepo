@@ -1,0 +1,94 @@
+/**
+  * @prop --value: Propriedade definida dinamicamente no tsx. Define o valor do preenchimento do componente.
+  * @prop --width: Propriedade definida dinamicamente no tsx. Define a largura do componente.
+  * @prop --height: Propriedade definida dinamicamente no tsx. Define a altura do componente.
+*/
+
+:host {
+  --tp-skeleton-height: calc(var(--height) * 1px);
+  --tp-skeleton-width: calc(var(--width) * 1px);
+  --tp-skeleton-background-rgb: var(--tp-color-neutral-10-rgb);
+
+  display: block;
+  width: calc(var(--width) * 1px);
+  height: max-content;
+  color: var(--tp-color-neutral-10);
+  border-radius: 2px;
+}
+
+.tp-chart-bar {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    height: calc(var(--height) + var(--height-label) * 1px);
+    overflow: hidden;
+    border-radius: 2px;
+  }
+
+  &__label {
+    display: flex;
+    margin-bottom: 6px;
+    transform: translateY(calc(var(--height) * 1px - var(--value) * 1px));
+  }
+
+  &__progress {
+    width: 100%;
+    height: calc(var(--height) * 1px);
+    background: var(--tp-color-brand-4);
+    border-radius: 2px;
+    animation: load-chart-bar forwards 400ms ease-in-out;
+  }
+
+  &__label-skeleton {
+    --background-rgb: var(--tp-skeleton-background-rgb);
+    --border-radius: 2px;
+    width: var(--tp-skeleton-width);
+    height: 12px;
+    margin: 0 0 6px;
+  }
+
+  &__skeleton {
+    --background-rgb: var(--tp-skeleton-background-rgb);
+    --border-radius: 2px;
+    width: var(--tp-skeleton-width);
+    height: var(--tp-skeleton-height);
+    margin: 0;
+  }
+}
+
+//
+// no-label
+//
+:host(.tp-chart-bar--no-label) {
+  background: var(--tp-color-neutral-2);
+}
+
+//
+// loading
+//
+:host(.tp-chart-bar--loading) {
+  background: transparent;
+}
+
+//
+// color
+//
+:host(.tp-color) .tp-chart-bar__progress {
+  background: var(--tp-color-base);
+}
+
+//
+// animations
+//
+@keyframes load-chart-bar {
+  0% {
+    transform: translateY(calc(var(--height) * 1px));
+  }
+
+  100% {
+    transform: translateY(calc(var(--height) * 1px - var(--value) * 1px));
+  }
+}

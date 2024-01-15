@@ -1,0 +1,63 @@
+@import './../../../styles/definitions/scroll';
+
+:host {
+  position: relative;
+  overflow: hidden;
+}
+
+.tp-segment-container {
+  &__wrapper {
+    display: flex;
+    overflow-x: auto;
+    @include generate-scroll-style();
+  }
+
+  &__gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      display: none;
+      width: 32px;
+      height: 100%;
+      content: '';
+    }
+
+    &::before {
+      left: 0;
+      background: linear-gradient(
+        to left,
+        transparent,
+        var(--tp-color-neutral-2)
+      );
+    }
+
+    &::after {
+      right: 0;
+      background: linear-gradient(
+        to right,
+        transparent,
+        var(--tp-color-neutral-2)
+      );
+    }
+  }
+}
+
+:host(.tp-segment-container--show-gradient-start) {
+  .tp-segment-container__gradient::before {
+    display: block;
+  }
+}
+
+:host(.tp-segment-container--show-gradient-end) {
+  .tp-segment-container__gradient::after {
+    display: block;
+  }
+}

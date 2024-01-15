@@ -1,0 +1,37 @@
+/* stylelint-disable selector-max-compound-selectors */
+ion-datetime.datetime-presentation-date,
+ion-datetime.datetime-presentation-time,
+ion-datetime.datetime-prefer-wheel {
+  --background: var(--tp-color-neutral-2);
+  --wheel-fade-background-rgb: var(--tp-color-neutral-2-rgb);
+  --wheel-highlight-background: var(--tp-color-neutral-2);
+  --tp-color-button-label: var(--tp-color-brand-4);
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 207px);
+  min-width: 414px;
+  border-radius: 16px 16px 0 0;
+
+  &.ion-color-primary {
+    --ion-color-base: var(--tp-color-neutral-2) !important;
+    --ion-color-base-rgb: initial !important;
+  }
+
+  &::part(wheel-item) {
+    color: var(--tp-color-neutral-10);
+    opacity: 0.3;
+  }
+
+  &::part(active) {
+    opacity: initial;
+  }
+
+  div {
+    display: flex;
+    justify-content: space-between;
+
+    ion-button:last-child ion-label {
+      color: var(--tp-color-button-label);
+    }
+  }
+}

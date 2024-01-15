@@ -1,10 +1,18 @@
 {
   "name": "templarios-monorepo-cli",
-  "version": "1.0.0-alpha.0",
+  "version": "0.0.0",
+  "private": true,
   "description": "Templários monorepo CLI.",
   "type": "module",
+  "bin": {
+    "templarios": "./bin/index.js"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
   "scripts": {
-    "lint": "sh .scripts/lint.sh",
+    "lint": "npx prettier . --write --cache --cache-location .prettiercache",
     "build": "rollup --config"
   },
   "devDependencies": {

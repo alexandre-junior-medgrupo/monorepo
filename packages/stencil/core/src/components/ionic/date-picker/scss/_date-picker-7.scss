@@ -1,0 +1,44 @@
+@import '../../../../styles/templarios.abstracts';
+
+ion-datetime.datetime-presentation-date.datetime-grid {
+  --background: var(--tp-color-neutral-4);
+  --wheel-fade-background-rgb: var(--tp-color-neutral-4-rgb);
+  --wheel-highlight-background: var(--tp-color-neutral-4);
+  --ion-color-step-500: var(--tp-color-neutral-8);
+  --ion-color-step-650: var(--tp-color-neutral-8);
+  --tp-color-button-label: var(--tp-color-neutral-10);
+  top: 68px;
+  right: 0;
+  bottom: initial;
+  left: initial;
+  border-radius: 0 0 16px 16px;
+
+  @include breakpoint-down('sm') {
+    min-width: initial;
+    max-width: initial;
+  }
+
+  &::part(month-year-button) {
+    color: var(--tp-color-neutral-10);
+
+    &:hover {
+      --color: var(--tp-color-neutral-10);
+    }
+
+    &:focus {
+      --color: var(--tp-color-neutral-10);
+    }
+  }
+
+  &::part(calendar-day) {
+    color: var(--tp-color-neutral-10);
+  }
+
+  &::part(active) {
+    --ion-color-base: var(--tp-color-brand-2);
+  }
+
+  &::part(today) {
+    --ion-color-base: var(--tp-color-brand-2);
+  }
+}

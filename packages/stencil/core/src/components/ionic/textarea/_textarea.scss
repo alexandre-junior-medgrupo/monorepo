@@ -1,0 +1,25 @@
+ion-textarea.sc-ion-textarea-md-h {
+  --background: transparent;
+  --color: var(--tp-color-neutral-10);
+  --border-radius: 8px;
+  --padding-top: 12px;
+  --padding-bottom: 12px;
+  --padding-start: 16px !important;
+  --padding-end: 16px !important;
+  --placeholder-color: var(--tp-color-neutral-4);
+  --placeholder-font-weight: 400;
+  --placeholder-opacity: 1;
+  --highlight-color: var(--tp-color-neutral-10);
+}
+
+ion-textarea {
+  height: 80px;
+
+  .native-textarea::-webkit-scrollbar {
+    display: none;
+  }
+
+  .textarea-highlight.sc-ion-textarea-md {
+    background: transparent;
+  }
+}

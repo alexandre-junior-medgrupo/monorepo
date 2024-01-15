@@ -1,0 +1,29 @@
+import { Canvas, Controls, Meta } from '@storybook/blocks';
+import * as comparisonChartBarStories from '../stories/comparison-chart-bar.stories';
+import * as comparisonChartBarLabelStories from './compositions/label.stories';
+
+<Meta of={comparisonChartBarStories} />
+
+# tp-comparison-chart-bar
+
+## Types
+
+```ts
+import { TpComparisonChartBar } from '..';
+```
+
+## CSS Custom Properties
+
+```
+--tp-marker-color: Define a cor do marcador.;
+```
+
+## Atributos
+
+<Canvas of={comparisonChartBarStories.Default} />
+<Controls of={comparisonChartBarStories.Default} />
+
+## Compositions
+
+<Canvas of={comparisonChartBarLabelStories.Label} />
+<Controls of={comparisonChartBarLabelStories.Label} />

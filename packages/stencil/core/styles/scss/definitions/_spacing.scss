@@ -1,0 +1,9 @@
+@use '../variables/spacing.variables';
+
+@each $spacing-name, $spacing-value in spacing.$spacing {
+  [tp-spacingx='#{$spacing-name}'],
+  [tp-spacingy='#{$spacing-name}'],
+  [tp-gap='#{$spacing-name}'] * {
+    --tp-spacing: #{$spacing-value};
+  }
+}

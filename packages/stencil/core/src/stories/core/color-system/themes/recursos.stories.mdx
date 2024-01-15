@@ -1,0 +1,176 @@
+import { Meta, Title, ColorPalette, ColorItem } from '@storybook/blocks';
+import {
+  TpSchemeCSSClasses,
+  TpThemeCSSClasses,
+} from '../../../../utils/enums/theme.enum';
+
+<Meta
+  title="Core/Color System/Themes/Recursos"
+  parameters={{
+    themes: {
+      target: 'root',
+      default: 'Recursos',
+      list: [
+        {
+          name: 'Recursos',
+          class: [`${TpThemeCSSClasses.Recursos}`],
+          color: '#68a6ba',
+        },
+        {
+          name: 'Recursos Light',
+          class: [
+            `${TpThemeCSSClasses.Recursos}`,
+            `${TpSchemeCSSClasses.Light}`,
+          ],
+          color: '#3d7a8f',
+        },
+      ],
+    },
+  }}
+/>
+
+<Title>Recursos</Title>
+
+```html
+<html class="tp-color-theme-recursos"></html>
+```
+
+<Title>Colors</Title>
+
+<ColorPalette>
+  <ColorItem
+    title="Brand"
+    colors={{
+      brand: 'var(--tp-color-brand)',
+    }}
+  />
+  <ColorItem
+    title="Contrast"
+    colors={{
+      '': 'var(--tp-color-contrast-fixed)',
+    }}
+  />
+</ColorPalette>
+
+<Title>Variants</Title>
+
+<ColorPalette>
+  <ColorItem
+    title="Brand"
+    colors={{
+      'brand-1': 'var(--tp-color-brand-1)',
+      'brand-2': 'var(--tp-color-brand-2)',
+      'brand-3': 'var(--tp-color-brand-3)',
+      'brand-4': 'var(--tp-color-brand-4)',
+      'brand-5': 'var(--tp-color-brand-5)',
+    }}
+  />
+  <ColorItem
+    title="Contrast"
+    colors={{
+      'brand-1': 'var(--tp-color-neutral-10)',
+      'brand-2': 'var(--tp-color-neutral-10)',
+      'brand-3': 'var(--tp-color-contrast-fixed)',
+      'brand-4': 'var(--tp-color-neutral-1)',
+      'brand-5': 'var(--tp-color-neutral-1)',
+    }}
+  />
+</ColorPalette>
+
+<Title>Secondary Colors</Title>
+
+<ColorPalette>
+  <ColorItem
+    title="Orange"
+    colors={{
+      orange: 'var(--tp-color-orange)',
+    }}
+  />
+  <ColorItem
+    title="Contrast"
+    colors={{
+      '': 'var(--tp-color-contrast-fixed)',
+    }}
+  />
+</ColorPalette>
+
+<Title>Secondary Variants</Title>
+
+<ColorPalette>
+  <ColorItem
+    title="Orange"
+    colors={{
+      'orange-1': 'var(--tp-color-orange-1)',
+      'orange-2': 'var(--tp-color-orange-2)',
+      'orange-3': 'var(--tp-color-orange-3)',
+      'orange-4': 'var(--tp-color-orange-4)',
+      'orange-5': 'var(--tp-color-orange-5)',
+    }}
+  />
+  <ColorItem
+    title="Contrast"
+    colors={{
+      'variation-1': 'var(--tp-color-neutral-10)',
+      'variation-2': 'var(--tp-color-neutral-10)',
+      'variation-3': 'var(--tp-color-contrast-fixed)',
+      'variation-4': 'var(--tp-color-neutral-1)',
+      'variation-5': 'var(--tp-color-neutral-1)',
+    }}
+  />
+</ColorPalette>
+
+<Title>Shade / Tint</Title>
+
+<ColorPalette>
+  <ColorItem
+    title="Brand"
+    colors={{
+      'brand-tint': 'var(--tp-color-brand-tint)',
+      brand: 'var(--tp-color-brand)',
+      'brand-shade': 'var(--tp-color-brand-shade)',
+    }}
+  />
+</ColorPalette>
+
+<ColorPalette>
+  <ColorItem
+    title="Brand 1"
+    colors={{
+      'brand-1-tint': 'var(--tp-color-brand-1-tint)',
+      'brand-1': 'var(--tp-color-brand-1)',
+      'brand-1-shade': 'var(--tp-color-brand-1-shade)',
+    }}
+  />
+  <ColorItem
+    title="Brand 2"
+    colors={{
+      'brand-2-tint': 'var(--tp-color-brand-2-tint)',
+      'brand-2': 'var(--tp-color-brand-2)',
+      'brand-2-shade': 'var(--tp-color-brand-2-shade)',
+    }}
+  />
+  <ColorItem
+    title="Brand 3"
+    colors={{
+      'brand-3-tint': 'var(--tp-color-brand-3-tint)',
+      'brand-3': 'var(--tp-color-brand-3)',
+      'brand-3-shade': 'var(--tp-color-brand-3-shade)',
+    }}
+  />
+  <ColorItem
+    title="Brand 4"
+    colors={{
+      'brand-4-tint': 'var(--tp-color-brand-4-tint)',
+      'brand-4': 'var(--tp-color-brand-4)',
+      'brand-4-shade': 'var(--tp-color-brand-4-shade)',
+    }}
+  />
+  <ColorItem
+    title="Brand 5"
+    colors={{
+      'brand-5-tint': 'var(--tp-color-brand-5-tint)',
+      'brand-5': 'var(--tp-color-brand-5)',
+      'brand-5-shade': 'var(--tp-color-brand-5-shade)',
+    }}
+  />
+</ColorPalette>

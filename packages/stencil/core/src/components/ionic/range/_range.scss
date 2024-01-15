@@ -1,0 +1,60 @@
+ion-range {
+  --bar-background: var(--tp-color-neutral-15);
+  --bar-background-active: var(--tp-color-brand-4);
+  --knob-background: var(--bar-background-active);
+  --bar-height: 2px;
+  --knob-size: 12px;
+  --tp-ticks-background-active: var(--bar-background-active);
+  --tp-ticks-background: var(--bar-background-active);
+  --tp-bar-background-ticks: var(--tp-color-neutral-15);
+  color: var(--tp-color-neutral-10);
+
+  &::part(knob) {
+    transform: initial;
+  }
+
+  &::part(tick) {
+    border-radius: 50%;
+  }
+}
+
+//
+// secondary
+//
+ion-range[tp-secondary] {
+  --bar-height: 6px;
+  --bar-border-radius: 8px;
+  --knob-size: 16px;
+}
+
+//
+// ticks = true
+//
+ion-range[ticks] {
+  &::part(tick-active) {
+    background-color: var(--tp-ticks-background-active);
+    border-radius: 50%;
+  }
+
+  &::part(tick) {
+    background-color: var(--tp-ticks-background);
+    border-radius: 50%;
+  }
+}
+
+//
+// compositions
+//
+ion-range {
+  ion-icon[slot='start'] {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+//
+// color
+//
+ion-range.ion-color {
+  color: var(--ion-color-base);
+}

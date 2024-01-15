@@ -1,0 +1,31 @@
+@import '../../../styles/templarios.abstracts';
+
+ion-tab-bar {
+  padding: 8px 0;
+  --background: var(--tp-color-neutral-1);
+
+  @include breakpoint-down('sm') {
+    align-items: baseline;
+    height: 64px;
+  }
+}
+
+//
+// color
+//
+ion-tab-bar.ion-color {
+  background: transparent;
+
+  ion-tab-button {
+    background: transparent;
+
+    &.tab-selected {
+      --color-selected: var(--ion-color-base);
+      color: var(--ion-color-base);
+
+      ion-label {
+        color: var(--ion-color-base);
+      }
+    }
+  }
+}

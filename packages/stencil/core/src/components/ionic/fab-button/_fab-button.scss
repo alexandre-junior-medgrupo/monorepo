@@ -1,0 +1,17 @@
+ion-fab-button {
+  --background: var(--tp-color-brand);
+  --background-activated-opacity: 0.16;
+  --ripple-color: var(--tp-color-neutral-5);
+
+  width: 48px;
+  height: 48px;
+  color: var(--tp-color-neutral-10);
+}
+
+//
+// color
+//
+ion-fab-button.ion-color {
+  --ripple-color: var(--tp-color-constrast);
+  color: var(--tp-color-constrast);
+}

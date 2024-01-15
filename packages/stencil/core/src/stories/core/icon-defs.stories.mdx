@@ -1,0 +1,74 @@
+import { Meta, Title, Typeset, IconGallery, IconItem } from '@storybook/blocks';
+import {
+  TP_SYMBOL_DEFS_LOGOS,
+  TP_SYMBOL_DEFS_ICONS,
+} from '../../utils/constants/icon-defs.constant';
+import {
+  TpSchemeCSSClasses,
+  TpThemeCSSClasses,
+} from '../../utils/enums/theme.enum';
+
+<Meta
+  title="Core/Icons/Defs"
+  parameters={{
+    themes: {
+      target: 'root',
+      default: 'Default',
+      list: [
+        {
+          name: 'Default',
+          class: [`${TpThemeCSSClasses.MedSoft}`],
+          color: '#121616',
+        },
+        {
+          name: 'Light',
+          class: [
+            `${TpThemeCSSClasses.MedSoft}`,
+            `${TpSchemeCSSClasses.Light}`,
+          ],
+          color: '#F9FAFA',
+        },
+      ],
+    },
+  }}
+/>
+
+<Title>Icon Defs</Title>
+
+## Usage
+
+```html
+<svg>
+  <use xlink:href="./assets/products-icons-defs.svg#tp-rac-icon"></use>
+</svg>
+```
+
+<IconGallery>
+  {TP_SYMBOL_DEFS_ICONS.map((defs) => (
+    <IconItem name={`#${defs}`}>
+      <svg style={{ fill: 'var(--tp-color-neutral-1)' }}>
+        <use xlinkHref={`./assets/products-icons-defs.svg#${defs}`}></use>
+      </svg>
+    </IconItem>
+  ))}
+</IconGallery>
+
+<Title>Logos</Title>
+
+## Usage
+
+```html
+<svg>
+  <use xlink:href="./assets/products-logos-defs.svg#tp-bymed"></use>
+</svg>
+```
+
+<IconGallery>
+  {TP_SYMBOL_DEFS_LOGOS.map((defs) => (
+    <IconItem name={`#${defs}`}>
+      <svg style={{ fill: 'var(--tp-color-neutral-1)' }}>
+        <use xlinkHref={`./assets/products-logos-defs.svg#${defs}`}></use>
+      </svg>
+    </IconItem>
+  ))}
+</IconGallery>

@@ -4,11 +4,13 @@
   "private": true,
   "workspaces": [
     "packages/*",
+    "packages/stencil/*",
     "packages/websites/*"
   ],
   "scripts": {
     "commit": "cz",
-    "start": "templarios",
+    "start": "templarios --start",
+    "dev": "templarios --development",
     "lint": "sh .scripts/bash/lint.sh"
   },
   "devDependencies": {
@@ -19,6 +21,7 @@
     "husky": "^8.0.3",
     "lerna": "^8.0.2",
     "prettier": "^3.1.1",
+    "replace-in-file": "^7.1.0",
     "templarios-monorepo-cli": "*"
   }
 }

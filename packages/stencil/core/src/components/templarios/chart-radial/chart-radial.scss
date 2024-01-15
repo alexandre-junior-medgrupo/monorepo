@@ -1,0 +1,155 @@
+@use 'sass:map';
+
+/**
+  * @prop --tp-progress-percentage: Propriedade definida dinamicamente no tsx. Define o progresso de um barra circular.
+  * @prop --tp-size: Define o tamanho do componente.
+  * @prop --tp-title-font-size: Define o font-size do título do componente.
+  * @prop --tp-title-line-height: Define o line-height do título do componente.
+  * @prop --tp-subtitle-font-size: Define o font-size do subtítulo do componente.
+  * @prop --tp-subtitle-line-height: Define o line-height do subtítulo do componente.
+*/
+
+$tp-chart-radial-sizes: (
+  xs: (
+    properties: (
+      tp-size: 48px,
+      tp-title-font-size: 12px,
+      tp-title-line-height: 12px,
+    ),
+    rules: (
+      display: none,
+    ),
+  ),
+  sm: (
+    properties: (
+      tp-size: 56px,
+      tp-title-font-size: 14px,
+      tp-title-line-height: 16px,
+    ),
+    rules: (
+      display: none,
+    ),
+  ),
+  md: (
+    properties: (
+      tp-size: 80px,
+      tp-title-font-size: 16px,
+      tp-title-line-height: 16px,
+      tp-subtitle-font-size: 10px,
+      tp-subtitle-line-height: 12px,
+    ),
+    rules: (
+      display: initial,
+    ),
+  ),
+  lg: (
+    properties: (
+      tp-size: 108px,
+      tp-title-font-size: 20px,
+      tp-title-line-height: 20px,
+      tp-subtitle-font-size: 12px,
+      tp-subtitle-line-height: 12px,
+    ),
+    rules: (
+      display: initial,
+    ),
+  ),
+);
+
+:host {
+  position: relative;
+  display: flex;
+  width: var(--tp-size, 56px);
+  height: var(--tp-size, 56px);
+}
+
+.tp-chart-radial {
+  &__container {
+    width: var(--tp-size, 56px);
+    height: var(--tp-size, 56px);
+  }
+
+  &__track,
+  &__progress {
+    transform: rotate(-90deg);
+    transform-origin: 18px 18px;
+    transition: 1s ease-in-out;
+    fill: none;
+    stroke-dashoffset: 0;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  &__track {
+    stroke: var(--tp-color-neutral-2);
+  }
+
+  &__progress {
+    stroke-dasharray: var(--tp-progress-percentage) 100;
+  }
+
+  &__text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform: translate(-50%, -50%);
+
+    ::slotted(ion-label[slot='title']) {
+      font-weight: 600 !important;
+      font-size: 14px !important;
+      line-height: 16px !important;
+    }
+
+    ::slotted(ion-label[slot='subtitle']) {
+      display: none;
+      font-weight: 400 !important;
+    }
+  }
+}
+
+//
+// color
+//
+:host(.tp-color) .tp-chart-radial__track {
+  stroke: var(--tp-color-base);
+}
+
+//
+// size
+//
+@each $size-name, $size-value in $tp-chart-radial-sizes {
+  $properties-map: map.get($size-value, properties);
+  $rules-map: map.get($size-value, rules);
+
+  :host(.tp-chart-radial--#{$size-name}) {
+    @if ($properties-map) {
+      @each $properties-name, $properties-value in $properties-map {
+        --#{$properties-name}: #{$properties-value};
+      }
+    }
+  }
+
+  :host(.tp-chart-radial--#{$size-name}) .tp-chart-radial__text-container {
+    ::slotted(ion-label[slot='title']) {
+      font-size: var(--tp-title-font-size) !important;
+      line-height: var(--tp-title-line-height) !important;
+    }
+
+    ::slotted(ion-label[slot='subtitle']) {
+      font-size: var(--tp-subtitle-font-size) !important;
+      line-height: var(--tp-subtitle-line-height) !important;
+
+      @if ($rules-map) {
+        @each $rules-name, $rules-value in $rules-map {
+          #{$rules-name}: #{$rules-value};
+        }
+      }
+    }
+  }
+}

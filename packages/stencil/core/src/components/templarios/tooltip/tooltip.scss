@@ -1,0 +1,248 @@
+@import '../../../styles/templarios.abstracts';
+
+/*
+--tp-skeleton-width - define a largura do skeleton da tooltip
+--tp-skeleton-height - define a altura do skeleton da tooltip
+*/
+
+:host {
+  --background: var(--tp-color-neutral-3);
+  --arrow-distance: 12px;
+  --arrow-size: 9px;
+  --arrow-size-2: 12px;
+  --tp-skeleton-width: 285px;
+  --tp-skeleton-height: 144px;
+}
+
+:host {
+  position: relative;
+  display: inline-block;
+
+  .tp-tooltip {
+    &__content {
+      position: absolute;
+      top: calc(100% + var(--arrow-distance));
+      left: -20px;
+      z-index: 1;
+      width: 100%;
+      min-width: 285px;
+      max-width: 285px;
+      padding: 16px;
+      background: var(--background);
+      border-radius: 8px;
+      visibility: visible;
+      opacity: 1;
+      transition: opacity 300ms ease-in-out;
+    }
+
+    &__trigger-container {
+      position: relative;
+      cursor: pointer;
+
+      &::after {
+        position: absolute;
+        top: 100%;
+        left: 13px;
+        clear: both;
+        width: 0;
+        height: 0;
+        border-right: var(--arrow-size) solid transparent;
+        border-bottom: var(--arrow-size-2) solid var(--background);
+        border-left: var(--arrow-size) solid transparent;
+        transform: translateX(-50%);
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 300ms ease-in-out;
+        content: '';
+      }
+    }
+
+    &__content-skeleton {
+      position: absolute;
+      top: calc(100% + var(--arrow-distance));
+      left: -20px;
+      z-index: 1;
+      width: 100%;
+      min-width: var(--tp-skeleton-width);
+      max-width: var(--tp-skeleton-width);
+      height: var(--tp-skeleton-height);
+      visibility: visible;
+      opacity: 1;
+      transition: opacity 300ms ease-in-out;
+    }
+
+    &__skeleton {
+      --border-radius: 8px;
+      height: 100%;
+    }
+  }
+}
+
+/////////////////////////////
+// loading
+/////////////////////////////
+:host(.tp-tooltip--loading) {
+  --background: var(--tp-color-neutral-15);
+
+  .tp-tooltip__content {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+/////////////////////////////
+// color
+/////////////////////////////
+
+:host(.tp-color) {
+  --background: var(--tp-color-base);
+
+  ::slotted(*:not(ion-button)) {
+    color: var(--tp-color-contrast);
+  }
+
+  ::slotted(ion-button:hover) {
+    color: var(--tp-color-base);
+  }
+}
+
+/////////////////////////////
+// state
+/////////////////////////////
+
+:host(.tp-tooltip--collapsed) {
+  .tp-tooltip__content,
+  .tp-tooltip__trigger-container::after,
+  .tp-tooltip__content-skeleton {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+  }
+}
+
+/////////////////////////////
+// placement
+/////////////////////////////
+
+//////////
+// bottom
+//////////
+
+:host(.tp-tooltip--bottom) .tp-tooltip__trigger-container::after {
+  border-right: var(--arrow-size) solid transparent;
+  border-bottom: var(--arrow-size-2) solid var(--background);
+  border-left: var(--arrow-size) solid transparent;
+}
+
+:host(.tp-tooltip--bottom) .tp-tooltip__content,
+:host(.tp-tooltip--bottom) .tp-tooltip__conten-skeleton {
+  top: calc(100% + var(--arrow-distance));
+}
+
+//////////
+// top
+//////////
+
+:host(.tp-tooltip--top) .tp-tooltip__trigger-container::after {
+  top: auto;
+  bottom: 100%;
+  border-top: var(--arrow-size-2) solid var(--background);
+  border-right: var(--arrow-size) solid transparent;
+  border-bottom: 0;
+  border-left: var(--arrow-size) solid transparent;
+}
+
+:host(.tp-tooltip--top) .tp-tooltip__content,
+:host(.tp-tooltip--top) .tp-tooltip__content-skeleton {
+  top: auto;
+  bottom: calc(100% + var(--arrow-distance));
+}
+
+//////////
+// left
+//////////
+
+:host(.tp-tooltip--left) .tp-tooltip__trigger-container::after {
+  top: 50%;
+  right: 100%;
+  left: auto;
+  border-top: var(--arrow-size) solid transparent;
+  border-right: 0;
+  border-bottom: var(--arrow-size) solid transparent;
+  border-left: var(--arrow-size-2) solid var(--background);
+  transform: translateY(-50%);
+}
+
+:host(.tp-tooltip--left) .tp-tooltip__content,
+:host(.tp-tooltip--left) .tp-tooltip__content-skeleton {
+  top: 50%;
+  right: calc(100% + var(--arrow-distance));
+  left: auto;
+  transform: translateY(-50%);
+}
+
+//////////
+// right
+//////////
+
+:host(.tp-tooltip--right) .tp-tooltip__trigger-container::after {
+  top: 50%;
+  right: auto;
+  left: 100%;
+  border-top: var(--arrow-size) solid transparent;
+  border-right: var(--arrow-size-2) solid var(--background);
+  border-bottom: var(--arrow-size) solid transparent;
+  border-left: 0;
+  transform: translateY(-50%);
+}
+
+:host(.tp-tooltip--right) .tp-tooltip__content,
+:host(.tp-tooltip--right) .tp-tooltip__content-skeleton {
+  top: 50%;
+  left: calc(100% + var(--arrow-distance));
+  transform: translateY(-50%);
+}
+
+////////////////////
+// position
+////////////////////
+
+//////////
+// center
+//////////
+
+:host(.tp-tooltip--center:not(.tp-tooltip--right):not(.tp-tooltip--left))
+  .tp-tooltip__content,
+:host(.tp-tooltip--center:not(.tp-tooltip--right):not(.tp-tooltip--left))
+  .tp-tooltip__content-skeleton {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+:host(.tp-tooltip--center:not(.tp-tooltip--right):not(.tp-tooltip--left))
+  .tp-tooltip__trigger-container::after {
+  left: 50%;
+}
+
+//////////
+// end
+//////////
+
+:host(.tp-tooltip--end:not(.tp-tooltip--right):not(.tp-tooltip--left))
+  .tp-tooltip__content,
+:host(.tp-tooltip--end:not(.tp-tooltip--right):not(.tp-tooltip--left))
+  .tp-tooltip__content-skeleton {
+  right: -20px;
+  left: unset;
+}
+
+:host(.tp-tooltip--end:not(.tp-tooltip--right):not(.tp-tooltip--left))
+  .tp-tooltip__trigger-container::after {
+  right: -6px;
+  left: unset;
+
+  // fix para centralizar after com o icone da tooltip abaixo de SM
+  @include breakpoint-down('sm') {
+    right: -10px;
+  }
+}

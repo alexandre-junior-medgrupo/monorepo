@@ -1,0 +1,29 @@
+@use 'sass:map';
+
+@import '../../functions/color.functions';
+@import '../../variables/color.variables';
+@import '../../mixins/color.mixins';
+
+.tp-color-theme-cpmed {
+  $variation-map: map.get($theme-cpmed, cpmed-1);
+
+  @each $theme-name, $theme-value in $variation-map {
+    @include generate-color-properties($theme-name, $theme-value);
+  }
+}
+
+.tp-color-scheme-light {
+  &.tp-color-theme-cpmed {
+    $variation-map: map.get($theme-cpmed, cpmed-1-light);
+
+    @each $theme-name, $theme-value in $variation-map {
+      @include generate-color-properties($theme-name, $theme-value);
+    }
+  }
+}
+
+$variation-map: map.get($theme-cpmed, cpmed-1);
+@each $theme-name, $theme-value in $variation-map {
+  @include generate-color-classes($theme-name, ionic);
+  @include generate-color-classes($theme-name, templarios);
+}

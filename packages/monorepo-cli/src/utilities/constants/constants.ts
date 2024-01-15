@@ -12,9 +12,9 @@ export const start = [
 ];
 
 export const development = [
-  { name: ' api', value: 'api' },
-  { name: ' stencil', value: 'stencil' },
+  { name: ' api', value: 'templarios-api' },
+  { name: ' stencil', value: 'templarios-core' },
   new inquirer.Separator('== websites'),
-  { name: ' documentation', value: 'documentation' },
-  { name: ' processos', value: 'processos' },
+  { name: ' documentation', value: 'templarios-documentation' },
+  { name: ' processos', value: 'templarios-processos' },
 ];

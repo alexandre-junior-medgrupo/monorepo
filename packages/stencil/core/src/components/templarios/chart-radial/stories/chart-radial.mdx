@@ -1,0 +1,39 @@
+import { Canvas, Controls, Meta } from '@storybook/blocks';
+import * as chartRadialStories from './chart-radial.stories';
+import * as label1ChartRadialStories from './compositions/label-1.stories';
+import * as label2ChartRadialStories from './compositions/label-2.stories';
+import * as label3ChartRadialStories from './compositions/label-3.stories';
+
+<Meta of={chartRadialStories} />
+
+# tp-chart-radial
+
+## Types
+
+```ts
+import { TpChartRadial, TpChartRadialItem } from 'templarios/angular';
+```
+
+## Enums
+
+```ts
+import { TpChartRadialSize } from 'templarios/angular';
+```
+
+## Atributos
+
+### Default
+
+<Canvas of={chartRadialStories.Default} />
+<Controls of={chartRadialStories.Default} />
+
+## Compositions
+
+<Canvas of={label1ChartRadialStories.Label_1} />
+<Controls of={label1ChartRadialStories.Label_1} />
+
+<Canvas of={label2ChartRadialStories.Label_2} />
+<Controls of={label2ChartRadialStories.Label_2} />
+
+<Canvas of={label3ChartRadialStories.Label_3} />
+<Controls of={label3ChartRadialStories.Label_3} />

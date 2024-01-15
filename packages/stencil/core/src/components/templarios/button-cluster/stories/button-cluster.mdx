@@ -1,0 +1,27 @@
+import { Canvas, Controls, Meta } from '@storybook/blocks';
+import * as buttonClusterStories from '../stories/button-cluster.stories';
+
+<Meta of={buttonClusterStories} />
+
+# tp-button-cluster
+
+## Atributos
+
+<Canvas of={buttonClusterStories.Default} />
+<Controls of={buttonClusterStories.Default} />
+
+## Eventos
+
+### `TpButtonCluster.tpButtonClusterCollapsed: EventEmitter<boolean>`
+
+- O evento **tpButtonClusterCollapsed** é emitido quando a propriedade **collapsed** é alterada através dos métodos **toggleInternal** e **toggleExternal**. Emite o valor do **collapsed**.
+
+## Métodos
+
+### `TpButtonCluster.toggleInternal()`
+
+- O método **toggleInternal** inverte a propriedade **collapsed** do componente. Este método não pode ser chamado de fora do componente.
+
+### `TpButtonCluster.toggleExternal()`
+
+- O método **toggleExternal** inverte a propriedade **collapsed** do componente. Este método pode ser chamado de fora do componente.

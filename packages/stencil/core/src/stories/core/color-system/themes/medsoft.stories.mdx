@@ -1,0 +1,489 @@
+import { Meta, Title, ColorPalette, ColorItem } from '@storybook/blocks';
+import {
+  TpSchemeCSSClasses,
+  TpThemeCSSClasses,
+} from '../../../../utils/enums/theme.enum';
+
+<Meta
+  title="Core/Color System/Themes/Medsoft"
+  parameters={{
+    themes: {
+      target: 'root',
+      default: 'MedSoft',
+      list: [
+        {
+          name: 'MedSoft',
+          class: [`${TpThemeCSSClasses.MedSoft}`],
+          color: '#14A2B8',
+        },
+        {
+          name: 'MedSoft Light',
+          class: [
+            `${TpThemeCSSClasses.MedSoft}`,
+            `${TpSchemeCSSClasses.Light}`,
+          ],
+          color: '#3D848F',
+        },
+      ],
+    },
+  }}
+/>
+
+<Title>MedSoft</Title>
+
+```html
+<html class="tp-color-theme-medsoft"></html>
+```
+
+<Title>Colors</Title>
+
+<ColorPalette>
+  <ColorItem
+    title="Brand"
+    colors={{
+      brand: 'var(--tp-color-brand)',
+    }}
+  />
+  <ColorItem
+    title="Contrast"
+    colors={{
+      '': 'var(--tp-color-contrast-fixed)',
+    }}
+  />
+</ColorPalette>
+
+<Title>Variants</Title>
+
+<ColorPalette>
+  <ColorItem
+    title="Brand"
+    colors={{
+      'brand-1': 'var(--tp-color-brand-1)',
+      'brand-2': 'var(--tp-color-brand-2)',
+      'brand-3': 'var(--tp-color-brand-3)',
+      'brand-4': 'var(--tp-color-brand-4)',
+      'brand-5': 'var(--tp-color-brand-5)',
+    }}
+  />
+  <ColorItem
+    title="Contrast"
+    colors={{
+      'brand-1': 'var(--tp-color-neutral-10)',
+      'brand-2': 'var(--tp-color-neutral-10)',
+      'brand-3': 'var(--tp-color-contrast-fixed)',
+      'brand-4': 'var(--tp-color-neutral-1)',
+      'brand-5': 'var(--tp-color-neutral-1)',
+    }}
+  />
+</ColorPalette>
+
+<Title>Secondary Colors</Title>
+
+<ColorPalette>
+  <ColorItem
+    title="Aula"
+    colors={{
+      aula: 'var(--tp-color-aula)',
+    }}
+  />
+  <ColorItem
+    title="Material"
+    colors={{
+      material: 'var(--tp-color-material)',
+    }}
+  />
+  <ColorItem
+    title="Questões"
+    colors={{
+      questoes: 'var(--tp-color-questoes)',
+    }}
+  />
+  <ColorItem
+    title="Revalida"
+    colors={{
+      revalida: 'var(--tp-color-revalida)',
+    }}
+  />
+  <ColorItem
+    title="Provas"
+    colors={{
+      provas: 'var(--tp-color-provas)',
+    }}
+  />
+  <ColorItem
+    title="Contrast"
+    colors={{
+      '': 'var(--tp-color-contrast-fixed)',
+    }}
+  />
+</ColorPalette>
+
+<Title>Secondary Variants</Title>
+
+<ColorPalette>
+  <ColorItem
+    title="Aula"
+    colors={{
+      'aula-1': 'var(--tp-color-aula-1)',
+      'aula-2': 'var(--tp-color-aula-2)',
+      'aula-3': 'var(--tp-color-aula-3)',
+      'aula-4': 'var(--tp-color-aula-4)',
+      'aula-5': 'var(--tp-color-aula-5)',
+    }}
+  />
+  <ColorItem
+    title="Material"
+    colors={{
+      'material-1': 'var(--tp-color-material-1)',
+      'material-2': 'var(--tp-color-material-2)',
+      'material-3': 'var(--tp-color-material-3)',
+      'material-4': 'var(--tp-color-material-4)',
+      'material-5': 'var(--tp-color-material-5)',
+    }}
+  />
+  <ColorItem
+    title="Questões"
+    colors={{
+      'questoes-1': 'var(--tp-color-questoes-1)',
+      'questoes-2': 'var(--tp-color-questoes-2)',
+      'questoes-3': 'var(--tp-color-questoes-3)',
+      'questoes-4': 'var(--tp-color-questoes-4)',
+      'questoes-5': 'var(--tp-color-questoes-5)',
+    }}
+  />
+  <ColorItem
+    title="Revalida"
+    colors={{
+      'revalida-1': 'var(--tp-color-revalida-1)',
+      'revalida-2': 'var(--tp-color-revalida-2)',
+      'revalida-3': 'var(--tp-color-revalida-3)',
+      'revalida-4': 'var(--tp-color-revalida-4)',
+      'revalida-5': 'var(--tp-color-revalida-5)',
+    }}
+  />
+  <ColorItem
+    title="Provas"
+    colors={{
+      'provas-1': 'var(--tp-color-provas-1)',
+      'provas-2': 'var(--tp-color-provas-2)',
+      'provas-3': 'var(--tp-color-provas-3)',
+      'provas-4': 'var(--tp-color-provas-4)',
+      'provas-5': 'var(--tp-color-provas-5)',
+    }}
+  />
+  <ColorItem
+    title="Contrast"
+    colors={{
+      'variation-1': 'var(--tp-color-neutral-10)',
+      'variation-2': 'var(--tp-color-neutral-10)',
+      'variation-3': 'var(--tp-color-contrast-fixed)',
+      'variation-4': 'var(--tp-color-neutral-1)',
+      'variation-5': 'var(--tp-color-neutral-1)',
+    }}
+  />
+</ColorPalette>
+
+<Title>Shade / Tint</Title>
+
+<Title>Brand</Title>
+
+<ColorPalette>
+  <ColorItem
+    title="Brand"
+    colors={{
+      'brand-tint': 'var(--tp-color-brand-tint)',
+      brand: 'var(--tp-color-brand)',
+      'brand-shade': 'var(--tp-color-brand-shade)',
+    }}
+  />
+</ColorPalette>
+
+<Title>Aula</Title>
+
+<ColorPalette>
+  <ColorItem
+    title="Aula"
+    colors={{
+      'aula-tint': 'var(--tp-color-aula-tint)',
+      aula: 'var(--tp-color-aula)',
+      'aula-shade': 'var(--tp-color-aula-shade)',
+    }}
+  />
+</ColorPalette>
+
+<Title>Material</Title>
+
+<ColorPalette>
+  <ColorItem
+    title="Material"
+    colors={{
+      'material-tint': 'var(--tp-color-material-tint)',
+      material: 'var(--tp-color-material)',
+      'material-shade': 'var(--tp-color-material-shade)',
+    }}
+  />
+</ColorPalette>
+
+<Title>Questões</Title>
+
+<ColorPalette>
+  <ColorItem
+    title="Questões"
+    colors={{
+      'questoes-tint': 'var(--tp-color-questoes-tint)',
+      questoes: 'var(--tp-color-questoes)',
+      'questoes-shade': 'var(--tp-color-questoes-shade)',
+    }}
+  />
+</ColorPalette>
+
+<Title>Revalida</Title>
+
+<ColorPalette>
+  <ColorItem
+    title="Revalida"
+    colors={{
+      'revalida-tint': 'var(--tp-color-revalida-tint)',
+      revalida: 'var(--tp-color-revalida)',
+      'revalida-shade': 'var(--tp-color-revalida-shade)',
+    }}
+  />
+</ColorPalette>
+
+<Title>Provas</Title>
+
+<ColorPalette>
+  <ColorItem
+    title="Provas"
+    colors={{
+      'provas-tint': 'var(--tp-color-provas-tint)',
+      provas: 'var(--tp-color-provas)',
+      'provas-shade': 'var(--tp-color-provas-shade)',
+    }}
+  />
+</ColorPalette>
+
+<Title>Aula</Title>
+
+<ColorPalette>
+  <ColorItem
+    title="Aula 1"
+    colors={{
+      'aula-1-tint': 'var(--tp-color-aula-1-tint)',
+      'aula-1': 'var(--tp-color-aula-1)',
+      'aula-1-shade': 'var(--tp-color-aula-1-shade)',
+    }}
+  />
+  <ColorItem
+    title="Aula 2"
+    colors={{
+      'aula-2-tint': 'var(--tp-color-aula-2-tint)',
+      'aula-2': 'var(--tp-color-aula-2)',
+      'aula-2-shade': 'var(--tp-color-aula-2-shade)',
+    }}
+  />
+  <ColorItem
+    title="Aula 3"
+    colors={{
+      'aula-3-tint': 'var(--tp-color-aula-3-tint)',
+      'aula-3': 'var(--tp-color-aula-3)',
+      'aula-3-shade': 'var(--tp-color-aula-3-shade)',
+    }}
+  />
+  <ColorItem
+    title="Aula 4"
+    colors={{
+      'aula-4-tint': 'var(--tp-color-aula-4-tint)',
+      'aula-4': 'var(--tp-color-aula-4)',
+      'aula-4-shade': 'var(--tp-color-aula-4-shade)',
+    }}
+  />
+  <ColorItem
+    title="Aula 5"
+    colors={{
+      'aula-5-tint': 'var(--tp-color-aula-5-tint)',
+      'aula-5': 'var(--tp-color-aula-5)',
+      'aula-5-shade': 'var(--tp-color-aula-5-shade)',
+    }}
+  />
+</ColorPalette>
+
+<Title>Material</Title>
+
+<ColorPalette>
+  <ColorItem
+    title="Material 1"
+    colors={{
+      'material-1-tint': 'var(--tp-color-material-1-tint)',
+      'material-1': 'var(--tp-color-material-1)',
+      'material-1-shade': 'var(--tp-color-material-1-shade)',
+    }}
+  />
+  <ColorItem
+    title="Material 2"
+    colors={{
+      'material-2-tint': 'var(--tp-color-material-2-tint)',
+      'material-2': 'var(--tp-color-material-2)',
+      'material-2-shade': 'var(--tp-color-material-2-shade)',
+    }}
+  />
+  <ColorItem
+    title="Material 3"
+    colors={{
+      'material-3-tint': 'var(--tp-color-material-3-tint)',
+      'material-3': 'var(--tp-color-material-3)',
+      'material-3-shade': 'var(--tp-color-material-3-shade)',
+    }}
+  />
+  <ColorItem
+    title="Material 4"
+    colors={{
+      'material-4-tint': 'var(--tp-color-material-4-tint)',
+      'material-4': 'var(--tp-color-material-4)',
+      'material-4-shade': 'var(--tp-color-material-4-shade)',
+    }}
+  />
+  <ColorItem
+    title="Material 5"
+    colors={{
+      'material-5-tint': 'var(--tp-color-material-5-tint)',
+      'material-5': 'var(--tp-color-material-5)',
+      'material-5-shade': 'var(--tp-color-material-5-shade)',
+    }}
+  />
+</ColorPalette>
+
+<Title>Questões</Title>
+
+<ColorPalette>
+  <ColorItem
+    title="Questões 1"
+    colors={{
+      'questoes-1-tint': 'var(--tp-color-questoes-1-tint)',
+      'questoes-1': 'var(--tp-color-questoes-1)',
+      'questoes-1-shade': 'var(--tp-color-questoes-1-shade)',
+    }}
+  />
+  <ColorItem
+    title="Questões 2"
+    colors={{
+      'questoes-2-tint': 'var(--tp-color-questoes-2-tint)',
+      'questoes-2': 'var(--tp-color-questoes-2)',
+      'questoes-2-shade': 'var(--tp-color-questoes-2-shade)',
+    }}
+  />
+  <ColorItem
+    title="Questões 3"
+    colors={{
+      'questoes-3-tint': 'var(--tp-color-questoes-3-tint)',
+      'questoes-3': 'var(--tp-color-questoes-3)',
+      'questoes-3-shade': 'var(--tp-color-questoes-3-shade)',
+    }}
+  />
+  <ColorItem
+    title="Questões 4"
+    colors={{
+      'questoes-4-tint': 'var(--tp-color-questoes-4-tint)',
+      'questoes-4': 'var(--tp-color-questoes-4)',
+      'questoes-4-shade': 'var(--tp-color-questoes-4-shade)',
+    }}
+  />
+  <ColorItem
+    title="Questões 5"
+    colors={{
+      'questoes-5-tint': 'var(--tp-color-questoes-5-tint)',
+      'questoes-5': 'var(--tp-color-questoes-5)',
+      'questoes-5-shade': 'var(--tp-color-questoes-5-shade)',
+    }}
+  />
+</ColorPalette>
+
+<Title>Revalida</Title>
+
+<ColorPalette>
+  <ColorItem
+    title="Revalida 1"
+    colors={{
+      'revalida-1-tint': 'var(--tp-color-revalida-1-tint)',
+      'revalida-1': 'var(--tp-color-revalida-1)',
+      'revalida-1-shade': 'var(--tp-color-revalida-1-shade)',
+    }}
+  />
+  <ColorItem
+    title="Revalida 2"
+    colors={{
+      'revalida-2-tint': 'var(--tp-color-revalida-2-tint)',
+      'revalida-2': 'var(--tp-color-revalida-2)',
+      'revalida-2-shade': 'var(--tp-color-revalida-2-shade)',
+    }}
+  />
+  <ColorItem
+    title="Revalida 3"
+    colors={{
+      'revalida-3-tint': 'var(--tp-color-revalida-3-tint)',
+      'revalida-3': 'var(--tp-color-revalida-3)',
+      'revalida-3-shade': 'var(--tp-color-revalida-3-shade)',
+    }}
+  />
+  <ColorItem
+    title="Revalida 4"
+    colors={{
+      'revalida-4-tint': 'var(--tp-color-revalida-4-tint)',
+      'revalida-4': 'var(--tp-color-revalida-4)',
+      'revalida-4-shade': 'var(--tp-color-revalida-4-shade)',
+    }}
+  />
+  <ColorItem
+    title="Revalida 5"
+    colors={{
+      'revalida-5-tint': 'var(--tp-color-revalida-5-tint)',
+      'revalida-5': 'var(--tp-color-revalida-5)',
+      'revalida-5-shade': 'var(--tp-color-revalida-5-shade)',
+    }}
+  />
+</ColorPalette>
+
+<Title>Provas</Title>
+
+<ColorPalette>
+  <ColorItem
+    title="Provas 1"
+    colors={{
+      'provas-1-tint': 'var(--tp-color-provas-1-tint)',
+      'provas-1': 'var(--tp-color-provas-1)',
+      'provas-1-shade': 'var(--tp-color-provas-1-shade)',
+    }}
+  />
+  <ColorItem
+    title="Provas 2"
+    colors={{
+      'provas-2-tint': 'var(--tp-color-provas-2-tint)',
+      'provas-2': 'var(--tp-color-provas-2)',
+      'provas-2-shade': 'var(--tp-color-provas-2-shade)',
+    }}
+  />
+  <ColorItem
+    title="Provas 3"
+    colors={{
+      'provas-3-tint': 'var(--tp-color-provas-3-tint)',
+      'provas-3': 'var(--tp-color-provas-3)',
+      'provas-3-shade': 'var(--tp-color-provas-3-shade)',
+    }}
+  />
+  <ColorItem
+    title="Provas 4"
+    colors={{
+      'provas-4-tint': 'var(--tp-color-provas-4-tint)',
+      'provas-4': 'var(--tp-color-provas-4)',
+      'provas-4-shade': 'var(--tp-color-provas-4-shade)',
+    }}
+  />
+  <ColorItem
+    title="Provas 5"
+    colors={{
+      'provas-5-tint': 'var(--tp-color-provas-5-tint)',
+      'provas-5': 'var(--tp-color-provas-5)',
+      'provas-5-shade': 'var(--tp-color-provas-5-shade)',
+    }}
+  />
+</ColorPalette>

@@ -1,0 +1,52 @@
+@mixin generate-scroll-style($remove: null) {
+  --tp-scroll-color-content: var(--tp-color-neutral-3);
+  --tp-scroll-color-track: var(--tp-color-neutral-1);
+  --tp-scroll-width: 8px;
+
+  scroll-snap-type: both mandatory;
+  scroll-padding-top: 30px;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: var(--tp-scroll-width);
+    height: 8px;
+  }
+
+  @media (max-width: 576px) {
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--tp-scroll-color-track);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    color: transparent;
+    background: var(--tp-scroll-color-content);
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--tp-scroll-color-content);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-clip: content-box;
+    border: 2px solid transparent;
+    border-radius: 16px;
+    box-shadow: inset 0 0 0 10px;
+  }
+
+  &::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  @if ($remove != null) {
+    &::-webkit-scrollbar {
+      height: 0;
+    }
+  }
+}

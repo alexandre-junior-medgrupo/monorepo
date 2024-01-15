@@ -1,0 +1,75 @@
+@import '../../../../styles/templarios.abstracts';
+
+ion-toast {
+  --background: var(--tp-color-neutral-2);
+  --color: var(--tp-color-neutral-10);
+  --width: 382px;
+  --border-radius: 8px;
+  --start: initial;
+  --end: 20px;
+
+  @include breakpoint-down('sm') {
+    --width: 100%;
+    --end: 0;
+  }
+
+  &::part(container) {
+    height: 56px;
+  }
+
+  &::part(icon) {
+    font-size: 24px;
+  }
+
+  &::part(message) {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+//
+// size
+//
+ion-toast[tp-size='md'] {
+  --width: 400px;
+
+  &::part(container) {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-inline: 8px;
+  }
+}
+
+//
+// tp-reverse
+//
+ion-toast[tp-reverse] {
+  &::part(container) {
+    flex-direction: row-reverse;
+  }
+
+  &::part(icon) {
+    margin-inline-start: 0;
+    margin-inline-end: 16px;
+  }
+}
+
+//
+// color
+//
+ion-toast.ion-color {
+  --color: var(--ion-color-contrast);
+
+  &::part(icon) {
+    --stroke: var(--ion-color-contrast);
+    font-size: 24px;
+  }
+}
+
+//
+// warning
+//
+ion-toast[warning] {
+  --background: var(--tp-color-warning);
+}

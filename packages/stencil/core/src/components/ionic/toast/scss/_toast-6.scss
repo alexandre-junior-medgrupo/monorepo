@@ -1,0 +1,18 @@
+@import '../../../../styles/templarios.abstracts';
+
+.templarios-ionic-6 {
+  ion-toast {
+    --height: 56px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  //
+  // size
+  //
+  // ion-toast[tp-size='md'] {
+  //   --width: 400px;
+  //   --height: 72px;
+  // }
+}

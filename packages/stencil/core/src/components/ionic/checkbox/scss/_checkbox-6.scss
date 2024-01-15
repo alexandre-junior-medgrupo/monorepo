@@ -1,0 +1,18 @@
+.templarios-ionic-6 {
+  ion-checkbox {
+    --background-checked: var(--tp-color-brand-4);
+
+    &:hover {
+      --background-checked: var(--tp-color-brand-5);
+    }
+  }
+
+  ion-checkbox.ion-color {
+    --background-checked: var(--ion-color-base);
+
+    &:hover {
+      --border-color-checked: var(--ion-color-tint);
+      --background-checked: var(--ion-color-tint);
+    }
+  }
+}

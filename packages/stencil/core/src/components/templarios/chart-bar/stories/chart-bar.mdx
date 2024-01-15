@@ -1,0 +1,23 @@
+import { Canvas, Controls, Meta } from '@storybook/blocks';
+import * as chartBarStories from '../stories/chart-bar.stories';
+import * as chartBarLabelStories from './compositions/label.stories';
+
+<Meta of={chartBarStories} />
+
+# tp-chart-bar
+
+## Types
+
+```ts
+import { TpChartBar } from 'templarios/angular';
+```
+
+## Atributos
+
+<Canvas of={chartBarStories.Default} />
+<Controls of={chartBarStories.Default} />
+
+## Compositions
+
+<Canvas of={chartBarLabelStories.Label} />
+<Controls of={chartBarLabelStories.Label} />

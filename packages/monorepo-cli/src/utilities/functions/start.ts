@@ -15,6 +15,22 @@ export const start = () => {
     if (inquire === 'Desenvolvimento') {
       development();
     }
+
+    /* if (inquire === 'Produção') {
+      production();
+    } */
+
+    /* if (inquire === 'Distribuição') {
+      distribution();
+    } */
+
+    /* if (inquire === 'Publicação') {
+      publish();
+    } */
+
+    /* if (inquire === 'Lint') {
+      lint();
+    } */
   };
 
   inquirer

@@ -1,0 +1,24 @@
+@import '../../../../styles/templarios.abstracts';
+
+.templarios-ionic-6 {
+  ion-datetime.datetime-presentation-date.datetime-grid {
+    --ion-text-color: var(--tp-color-neutral-10);
+    color: var(--tp-color-neutral-10);
+
+    &.show-month-and-year {
+      --ion-color-base: var(--tp-color-neutral-8) !important;
+    }
+  }
+
+  ion-datetime.datetime-presentation-date.ion-color-primary.datetime-grid.show-month-and-year,
+  ion-datetime.datetime-presentation-time.ion-color-primary.datetime-grid.show-month-and-year,
+  ion-datetime.datetime-prefer-wheel.ion-color-primary.datetime-grid.show-month-and-year {
+    --ion-color-base: var(--tp-color-neutral-10) !important;
+  }
+
+  ion-datetime.datetime-presentation-date.ion-color-primary.datetime-grid,
+  ion-datetime.datetime-presentation-time.ion-color-primary.datetime-grid,
+  ion-datetime.datetime-prefer-wheel.ion-color-primary.datetime-grid {
+    --ion-color-base: var(--tp-color-brand-3) !important;
+  }
+}

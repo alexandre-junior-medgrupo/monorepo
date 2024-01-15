@@ -1,0 +1,23 @@
+import { Canvas, Controls, Meta } from '@storybook/blocks';
+import * as alertOfflineStories from './alert-offline.stories';
+import * as alertDesatualizadoStories from './alert-desatualizado.stories';
+
+<Meta of={alertOfflineStories} />
+
+# tp-alert
+
+## Types
+
+```ts
+import { TpAlertType } from 'templarios/angular';
+```
+
+## Offline
+
+<Canvas of={alertOfflineStories.Offline} />
+<Controls of={alertOfflineStories.Offline} />
+
+## Desatualizado
+
+<Canvas of={alertDesatualizadoStories.Desatualizado} />
+<Controls of={alertDesatualizadoStories.Desatualizado} />

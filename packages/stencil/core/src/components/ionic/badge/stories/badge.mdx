@@ -1,0 +1,31 @@
+import { Canvas, Controls, Meta } from '@storybook/blocks';
+import * as badgeStories from '../stories/badge.stories';
+
+<Meta of={badgeStories} />
+
+# ion-badge
+
+**Documentação Adicional:**
+
+- **[`Ionic v7`](https://ionicframework.com/docs/api/badge)**
+- **[`Ionic v6`](https://ionicframework.com/docs/v6/api/badge)**
+
+## Types
+
+```ts
+import { TpIonBadge } from 'templarios/core/dist/types/interfaces';
+```
+
+## Enums
+
+```ts
+import {
+  TpIonBadgeSize,
+  TpIonBadgeFill,
+} from 'templarios/core/dist/types/interfaces';
+```
+
+## Atributos
+
+<Canvas of={badgeStories.Default} />
+<Controls of={badgeStories.Default} />

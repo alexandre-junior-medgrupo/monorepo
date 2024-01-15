@@ -1,0 +1,126 @@
+@use 'sass:map';
+
+$back-button-sizes: (
+  xxs: (
+    properties: (
+      padding-top: 0,
+      padding-bottom: 0,
+      padding-start: 0,
+      padding-end: 0,
+    ),
+    rules: (
+      font-size: 16px,
+    ),
+  ),
+  xs: (
+    properties: (
+      padding-top: 4px,
+      padding-bottom: 4px,
+      padding-start: 4px,
+      padding-end: 4px,
+    ),
+    rules: (
+      font-size: 16px,
+    ),
+  ),
+  s: (
+    properties: (
+      padding-top: 4px,
+      padding-bottom: 4px,
+      padding-start: 4px,
+      padding-end: 4px,
+    ),
+    rules: (
+      font-size: 24px,
+    ),
+  ),
+  sm: (
+    properties: (
+      padding-top: 8px,
+      padding-bottom: 8px,
+      padding-start: 8px,
+      padding-end: 8px,
+    ),
+    rules: (
+      font-size: 24px,
+    ),
+  ),
+  md: (
+    properties: (
+      padding-top: 8px,
+      padding-bottom: 8px,
+      padding-start: 8px,
+      padding-end: 8px,
+    ),
+    rules: (
+      font-size: 32px,
+    ),
+  ),
+  lg: (
+    properties: (
+      padding-top: 8px,
+      padding-bottom: 8px,
+      padding-start: 8px,
+      padding-end: 8px,
+    ),
+    rules: (
+      font-size: 48px,
+    ),
+  ),
+);
+
+ion-back-button {
+  --background-focused: var(--tp-color-neutral-10);
+  --background-focused-opacity: 0.16;
+  --background-hover: var(--tp-color-neutral-10);
+  --background-hover-opacity: 0.08;
+  --border-radius: 50%;
+  --color: var(--tp-color-neutral-1);
+  --min-width: 16px;
+  --min-height: 16px;
+  --padding-top: 4px;
+  --padding-bottom: 4px;
+  --padding-start: 4px;
+  --padding-end: 4px;
+  --icon-font-size: 24px;
+  --icon-margin-end: auto;
+  --icon-margin-start: auto;
+}
+
+ion-back-button {
+  display: inline-block;
+  overflow: hidden;
+  color: var(--tp-color-neutral-10);
+  border-radius: var(--border-radius);
+}
+
+//
+// size
+//
+ion-back-button {
+  @each $size-name, $size-value in $back-button-sizes {
+    &[tp-size='#{$size-name}'] {
+      $properties-map: map.get($size-value, properties);
+      $rules-map: map.get($size-value, rules);
+
+      @if ($properties-map) {
+        @each $properties-name, $properties-value in $properties-map {
+          --#{$properties-name}: #{$properties-value};
+        }
+      }
+
+      @if ($rules-map) {
+        @each $rules-name, $rules-value in $rules-map {
+          --icon-#{$rules-name}: #{$rules-value};
+        }
+      }
+    }
+  }
+}
+
+//
+// color
+//
+ion-back-button.ion-color {
+  color: var(--ion-color-base);
+}

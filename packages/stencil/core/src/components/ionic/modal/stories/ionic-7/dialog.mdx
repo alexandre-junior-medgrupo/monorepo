@@ -1,0 +1,70 @@
+import { Canvas, Controls, Meta } from '@storybook/blocks';
+import * as dialogStories from '../ionic-7/dialog.stories';
+
+<Meta of={dialogStories} />
+
+# ion-modal (dialog)
+
+**Documentação Adicional:**
+
+- **[`Ionic v7`](https://ionicframework.com/docs/api/modal)**
+- **[`Ionic v6`](https://ionicframework.com/docs/v6/api/modal)**
+
+## Types
+
+```ts
+import { TpIonDialog } from 'templarios/core/dist/types/interfaces';
+```
+
+## Atributos
+
+<Canvas of={dialogStories.Default} />
+<Controls of={dialogStories.Default} />
+
+## Usage
+
+```ts
+// dialog.example.ts
+
+async function openModal() {
+  const modal = await modalController.create({
+    component: 'dialog-example',
+    cssClass: 'tp-dialog',
+  });
+
+  await modal.present();
+}
+
+async function closeModal() {
+  await modal.dismiss();
+}
+```
+
+```html
+<!-- dialog-example.component.html -->
+
+<ion-header class="tp-dialog__header">
+  <ion-button fill="clear">
+    <ion-icon
+      class="tp-dialog__icon"
+      slot="icon-only"
+      src="./assets/tp-x.svg"
+    ></ion-icon>
+  </ion-button>
+</ion-header>
+
+<div class="tp-dialog__content">
+  <ion-text tp-type="p16b">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore corrupti
+      cumque adipisci, voluptatibus facilis odio tenetur. In deleniti aliquam,
+      unde facilis reiciendis suscipit laudantium numquam!
+    </p>
+  </ion-text>
+</div>
+
+<ion-footer class="tp-dialog__footer">
+  <ion-button class="tp-dialog__button" fill="outline"> Cancelar </ion-button>
+  <ion-button class="tp-dialog__button">Salvar</ion-button>
+</ion-footer>
+```

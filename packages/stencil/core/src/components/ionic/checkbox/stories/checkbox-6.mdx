@@ -1,0 +1,28 @@
+import { Canvas, Controls, Meta } from '@storybook/blocks';
+import * as checkboxTextStories from './ionic-6/compositions/text.stories';
+import * as checkboxStories from './ionic-6/checkbox.stories';
+
+<Meta of={checkboxStories} />
+
+# ion-checkbox
+
+**Documentação Adicional:**
+
+- **[`Ionic v7`](https://ionicframework.com/docs/api/checkbox)**
+- **[`Ionic v6`](https://ionicframework.com/docs/v6/api/checkbox)**
+
+## Types
+
+```ts
+import { TpIonCheckbox } from 'templarios/core/dist/types/interfaces';
+```
+
+## Atributos
+
+<Canvas of={checkboxStories.Default} />
+<Controls of={checkboxStories.Default} />
+
+## Compositions
+
+<Canvas of={checkboxTextStories.Label} />
+<Controls of={checkboxTextStories.Label} />

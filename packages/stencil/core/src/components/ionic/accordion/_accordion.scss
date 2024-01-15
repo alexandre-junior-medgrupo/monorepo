@@ -1,0 +1,90 @@
+ion-accordion {
+  border-radius: 8px;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  [slot='header'] {
+    --background: transparent;
+    --color: var(--tp-color-neutral-10);
+    --ripple-color: transparent;
+    --padding-start: 16px;
+    --padding-end: 16px;
+    --padding-top: 16px;
+    --padding-bottom: 16px;
+
+    &:hover {
+      --background-hover: transparent;
+    }
+  }
+
+  [slot='content'] {
+    padding-top: 0;
+    padding-right: 16px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    background: transparent;
+
+    * {
+      color: var(--tp-color-neutral-7);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  .ion-accordion-toggle-icon {
+    --stroke: var(--tp-color-neutral-9);
+  }
+}
+
+//
+// spacing
+//
+ion-accordion {
+  &[tp-spacingx] {
+    [slot='header'] {
+      --padding-start: var(--tp-spacing);
+      --padding-end: var(--tp-spacing);
+    }
+
+    [slot='content'] {
+      padding-right: var(--tp-spacing);
+      padding-left: var(--tp-spacing);
+    }
+  }
+
+  &[tp-spacingy] {
+    [slot='header'] {
+      --padding-top: var(--tp-spacing);
+      --padding-bottom: var(--tp-spacing);
+    }
+
+    [slot='content'] {
+      padding-bottom: var(--tp-spacing);
+    }
+  }
+}
+
+//
+// color
+//
+ion-accordion[tp-color] {
+  [slot='header'] {
+    --background: var(--tp-color-base);
+    --color: var(--tp-color-contrast);
+  }
+
+  [slot='content'] {
+    background: var(--tp-color-base);
+
+    * {
+      color: var(--tp-color-contrast);
+    }
+  }
+
+  .ion-accordion-toggle-icon {
+    --stroke: var(--tp-color-contrast);
+  }
+}

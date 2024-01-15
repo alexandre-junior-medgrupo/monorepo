@@ -1,0 +1,33 @@
+ion-segment-button {
+  --background-hover-opacity: 0;
+  --indicator-color: var(--tp-color-brand-3);
+  --color-checked: var(--tp-color-neutral-10);
+  --ripple-color: var(--tp-color-neutral-4);
+
+  &.in-segment-color {
+    color: var(--tp-color-neutral-3);
+  }
+}
+
+//
+// states
+//
+// hover
+ion-segment-button:hover {
+  background: var(--tp-color-neutral-15);
+}
+
+// active
+ion-segment-button.segment-button-checked ion-label {
+  color: var(--tp-color-neutral-10);
+}
+
+//
+// composition
+//
+ion-segment-button ion-label {
+  color: var(--tp-color-neutral-5);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}

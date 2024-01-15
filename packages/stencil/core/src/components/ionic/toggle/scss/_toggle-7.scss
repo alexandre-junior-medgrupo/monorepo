@@ -1,0 +1,20 @@
+ion-toggle {
+  --border-radius: 10px;
+  --handle-background: var(--tp-color-neutral-10);
+  --handle-background-checked: var(--tp-color-neutral-10);
+  --handle-height: 18px;
+  --handle-max-height: 18px;
+  --handle-width: 18px;
+  --track-background: var(--tp-color-neutral-4);
+  --track-background-checked: var(--tp-color-brand-3);
+
+  &::part(track) {
+    width: 32px;
+    height: 20px;
+  }
+
+  &::part(label) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

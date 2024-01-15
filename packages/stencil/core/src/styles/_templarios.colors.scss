@@ -1,0 +1,41 @@
+@use 'sass:map';
+
+@import './functions/color.functions';
+@import './variables/color.variables';
+@import './mixins/color.mixins';
+
+:root {
+  @include generate-neutral-properties($neutral-1);
+  @include generate-neutral-alternative-properties($neutral-15);
+  @include generate-color-properties(brand, $brand-1);
+
+  @each $name, $value in $feedback-default {
+    @include generate-feedback-properties($name, $value);
+  }
+}
+
+.tp-color-scheme-light {
+  @include generate-neutral-properties($neutral-10, true);
+  @include generate-neutral-alternative-properties($neutral-95, true);
+  @include generate-color-properties(brand, $brand-1-light, true);
+
+  @each $name, $value in $feedback-light {
+    @include generate-feedback-properties($name, $value, true);
+  }
+}
+
+@include generate-neutral-classes(ionic);
+@include generate-neutral-classes(templarios);
+@include generate-color-classes(brand, ionic);
+@include generate-color-classes(brand, templarios);
+@each $name, $value in $feedback-default {
+  @include generate-feedback-classes($name, ionic);
+  @include generate-feedback-classes($name, templarios);
+}
+
+:root,
+html.md,
+html.ios {
+  --ion-background-color: var(--tp-color-neutral-1);
+  --ion-default-font: 'fsemeric', 'Open Sans', sans-serif;
+}

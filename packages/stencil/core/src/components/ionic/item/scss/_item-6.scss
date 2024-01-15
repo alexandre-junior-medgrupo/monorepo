@@ -1,0 +1,63 @@
+.templarios-ionic-6 {
+  ion-item {
+    display: flex;
+    align-items: center;
+  }
+
+  // checkbox
+  ion-item {
+    ion-checkbox.in-item[slot='start'] {
+      margin: 0 16px 0 0;
+    }
+
+    ion-checkbox.in-item[slot='end'] {
+      margin: 0 0 0 16px;
+    }
+  }
+
+  // radio
+  ion-item {
+    ion-radio.in-item[slot='start'] {
+      margin: 0 16px 0 0;
+    }
+
+    ion-radio.in-item[slot='end'] {
+      margin: 0 0 0 16px;
+    }
+  }
+
+  // toggle
+  ion-item {
+    ion-toggle.in-item {
+      margin: 0;
+      padding: 0;
+      padding-inline: 0;
+    }
+
+    ion-toggle.in-item[slot='start'] {
+      margin: 0 16px 0 0;
+    }
+
+    ion-toggle.in-item[slot='end'] {
+      margin: 0 0 0 16px;
+    }
+  }
+
+  //
+  // color
+  //
+  ion-item.ion-color {
+    // checkbox
+    ion-checkbox {
+      --background: var(--ion-color-base);
+      --background-checked: var(--ion-color-contrast);
+      --checkmark-color: var(--ion-color-base);
+    }
+
+    // toggle
+    ion-toggle {
+      --background: var(--tp-color-neutral-4);
+      --background-checked: var(--ion-color-contrast);
+    }
+  }
+}

@@ -1,0 +1,16 @@
+ion-text * {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+ion-text,
+ion-text a {
+  color: var(--tp-color-neutral-10);
+}
+
+ion-text.ion-color,
+ion-text.ion-color a {
+  color: var(--ion-color-base);
+}

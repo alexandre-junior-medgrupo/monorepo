@@ -1,0 +1,45 @@
+import { Canvas, Controls, Meta } from '@storybook/blocks';
+import * as dialogStories from '../ionic-6/dialog.stories';
+
+<Meta of={dialogStories} />
+
+# ion-modal (dialog)
+
+**Documentação Adicional:**
+
+- **[`Ionic v7`](https://ionicframework.com/docs/api/modal)**
+- **[`Ionic v6`](https://ionicframework.com/docs/v6/api/modal)**
+
+## Types
+
+```ts
+import { TpIonDialog } from 'templarios/core/dist/types/interfaces';
+```
+
+## Atributos
+
+<Canvas of={dialogStories.Default} />
+<Controls of={dialogStories.Default} />
+
+## Usage
+
+```ts
+// dialog.example.ts
+
+async function openModal() {
+  const modal = await modalController.create({
+    component: 'dialog-example',
+    cssClass: 'tp-dialog',
+  });
+
+  await modal.present();
+}
+
+async function closeModal() {
+  await modal.dismiss();
+}
+```
+
+```html
+<!-- dialog.example.html -->
+```

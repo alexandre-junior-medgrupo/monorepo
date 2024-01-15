@@ -1,0 +1,33 @@
+ion-radio {
+  --color: var(--tp-color-neutral-35);
+  --color-checked: var(--tp-color-brand-4);
+
+  &:hover {
+    --color: var(--tp-color-neutral-95);
+  }
+
+  &.radio-checked {
+    --color: var(--tp-color-neutral-4);
+  }
+
+  &::part(label) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+//
+// color
+//
+ion-radio.ion-color {
+  --color: var(--ion-color-base);
+  --color-checked: var(--ion-color-base);
+
+  &:hover {
+    --color: var(--ion-color-tint);
+  }
+
+  &.radio-checked {
+    --color: var(--ion-color-base);
+  }
+}

@@ -1,0 +1,28 @@
+import { Canvas, Controls, Meta } from '@storybook/blocks';
+import * as toggleTextStories from './ionic-7/compositions/text.stories';
+import * as toggleStories from './ionic-7/toggle.stories';
+
+<Meta of={toggleStories} />
+
+# ion-toggle
+
+**Documentação Adicional:**
+
+- **[`Ionic v7`](https://ionicframework.com/docs/api/toggle)**
+- **[`Ionic v6`](https://ionicframework.com/docs/v6/api/toggle)**
+
+## Types
+
+```ts
+import { TpIonToggle } from 'templarios/core/dist/types/interfaces';
+```
+
+## Atributos
+
+<Canvas of={toggleStories.Default} />
+<Controls of={toggleStories.Default} />
+
+## Compositions
+
+<Canvas of={toggleTextStories.Text} />
+<Controls of={toggleTextStories.Text} />

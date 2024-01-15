@@ -1,0 +1,137 @@
+@use 'sass:map';
+
+$tp-chip-sizes: (
+  md: (
+    properties: (
+      padding-top: 4px,
+      padding-bottom: 4px,
+      padding-inline: 12px,
+    ),
+    rules: (
+      font-size: 14px,
+    ),
+  ),
+  lg: (
+    properties: (
+      padding-top: 8px,
+      padding-bottom: 8px,
+      padding-inline: 16px,
+    ),
+    rules: (
+      font-size: 16px,
+    ),
+  ),
+);
+
+ion-chip {
+  --background: var(--tp-color-brand-3);
+  --color: rgba(var(--tp-color-neutral-10-rgb), 0.5); // ripple effect
+
+  margin: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border: 1px solid var(--tp-color-brand-3);
+  border-radius: 50px;
+
+  ion-label {
+    padding: 4px 2px;
+    color: var(--tp-color-neutral-10);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &:not(.ion-color) ion-icon {
+    color: var(--tp-color-neutral-10);
+  }
+
+  ion-icon {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-inline: 0;
+  }
+}
+
+// default state
+ion-chip.chip-outline {
+  border-color: var(--tp-color-neutral-25);
+
+  ion-label {
+    color: var(--tp-color-brand-4);
+  }
+
+  &:not(.ion-color) ion-icon {
+    color: var(--tp-color-brand-4);
+  }
+}
+
+//
+// hover
+//
+// default state
+ion-chip.chip-outline:hover {
+  background: transparent;
+}
+
+// active state
+ion-chip:not(.chip-outline):hover {
+  --background: var(--tp-color-brand-2);
+  border: 1px solid var(--tp-color-brand-2);
+}
+
+//
+// size
+//
+ion-chip {
+  @each $size-name, $size-value in $tp-chip-sizes {
+    &[size='#{$size-name}'] {
+      $properties-map: map.get($size-value, properties);
+      $rules-map: map.get($size-value, rules);
+
+      @if ($properties-map) {
+        @each $properties-name, $properties-value in $properties-map {
+          #{$properties-name}: #{$properties-value};
+        }
+      }
+
+      @if ($rules-map) {
+        ion-label {
+          @each $rules-name, $rules-value in $rules-map {
+            #{$rules-name}: #{$rules-value};
+          }
+        }
+      }
+    }
+  }
+}
+
+//
+// color
+//
+// default state
+ion-chip.ion-color.chip-outline {
+  color: var(--ion-color-base);
+  --color: rgba(var(--tp-color-neutral-10-rgb), 0.5); // ripple effect
+  border-color: var(--tp-color-neutral-25);
+
+  ion-label {
+    color: var(--ion-color-base);
+  }
+}
+
+// active state
+ion-chip.ion-color:not(.chip-outline) {
+  color: var(--ion-color-contrast);
+  --color: rgba(var(--tp-color-neutral-10-rgb), 0.5); // ripple effect
+  background: var(--ion-color-base);
+  border: 1px solid var(--ion-color-base);
+
+  ion-label {
+    color: var(--ion-color-contrast);
+  }
+
+  &:hover {
+    background: rgba(var(--ion-color-base-rgb, 0, 0, 0), 0.92);
+    border-color: rgba(var(--ion-color-base-rgb, 0, 0, 0), 0.92);
+  }
+}

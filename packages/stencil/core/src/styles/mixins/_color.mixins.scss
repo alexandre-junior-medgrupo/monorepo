@@ -1,0 +1,390 @@
+@use 'sass:color';
+@use 'sass:map';
+@use 'sass:list';
+@use 'sass:math';
+
+// @mixin generate-neutral-properties($hsl, $invert: null);
+// @param $hsl: hsl color
+// @param $invert?: boolean
+//
+// @examples:
+// $neutral-1: hsl(188, 10%, 8%);
+// @include generate-neutral-properties($neutral-1);
+//
+// $neutral-10: hsl(188, 10%, 98%);
+// @include generate-neutral-properties($neutral-10, true);
+@mixin generate-neutral-properties($hsl, $invert: null) {
+  $hue: color.hue($hsl);
+  $saturation: color.saturation($hsl);
+  $lightness: color.lightness($hsl);
+
+  @for $i from 1 through 10 {
+    $lightness-multiplier: if($i == 1, 0, $i - 1);
+    $lightness-multiplier-value: $lightness-multiplier * 10%;
+    $lightness-step: if(
+      $invert,
+      $lightness-multiplier-value * -1,
+      $lightness-multiplier-value
+    );
+
+    $base: hsl($hue, $saturation, $lightness + $lightness-step);
+    $shade: hsl($hue, $saturation, ($lightness + $lightness-step) - 5%);
+    $tint: hsl($hue, $saturation, ($lightness + $lightness-step) + 5%);
+
+    --tp-color-neutral-#{$i}: #{$base};
+    --tp-color-neutral-#{$i}-rgb: #{rgb-list($base)};
+    --tp-color-neutral-#{$i}-shade: #{$shade};
+    --tp-color-neutral-#{$i}-tint: #{$tint};
+  }
+}
+
+// @mixin generate-neutral-alternative-properties($hsl, $invert: null);
+// @param $hsl: hsl color
+// @param $invert?: boolean
+//
+// @examples:
+// $neutral-15: hsl(188, 10%, 13%);
+// @include generate-neutral-alternative-properties($neutral-15);
+//
+// $neutral-95: hsl(188, 10%, 93%);
+// @include generate-neutral-alternative-properties($neutral-95, true);
+@mixin generate-neutral-alternative-properties($hsl, $invert: null) {
+  $hue: color.hue($hsl);
+  $saturation: color.saturation($hsl);
+  $lightness: color.lightness($hsl);
+
+  @for $i from 1 through 9 {
+    $lightness-multiplier: if($i == 1, 0, $i - 1);
+    $lightness-multiplier-value: $lightness-multiplier * 10%;
+    $lightness-step: if(
+      $invert,
+      $lightness-multiplier-value * -1,
+      $lightness-multiplier-value
+    );
+
+    $base: hsl($hue, $saturation, $lightness + $lightness-step);
+    $shade: hsl($hue, $saturation, ($lightness + $lightness-step) - 5%);
+    $tint: hsl($hue, $saturation, ($lightness + $lightness-step) + 5%);
+
+    --tp-color-neutral-#{$i}5: #{$base};
+    --tp-color-neutral-#{$i}5-rgb: #{rgb-list($base)};
+    --tp-color-neutral-#{$i}5-shade: #{$shade};
+    --tp-color-neutral-#{$i}5-tint: #{$tint};
+  }
+}
+
+// @mixin generate-color-properties($name, $hsl, $invert: null);
+// @param $name: string
+// @param $hsl: hsl color
+// @param $invert?: boolean
+//
+// @examples:
+// $brand-1: hsl(188, 80%, 20%);
+// @include generate-color-properties(brand, $brand-1);
+//
+// $brand-1-light: hsl(188, 40%, 80%);
+// @include generate-color-properties(brand, $brand-1-light, true);
+@mixin generate-color-properties($name, $hsl, $invert: null) {
+  $hue: color.hue($hsl);
+  $saturation: color.saturation($hsl);
+  $lightness: color.lightness($hsl);
+
+  $base: hsl($hue, $saturation, 40%);
+  $shade: hsl($hue, $saturation, 40% - 5%);
+  $tint: hsl($hue, $saturation, 40% + 5%);
+
+  --tp-color-contrast-fixed: #{$neutral-10};
+  --tp-color-contrast-fixed-rgb: #{rgb-list($neutral-10)};
+
+  --tp-color-#{$name}: #{$base};
+  --tp-color-#{$name}-rgb: #{rgb-list($base)};
+  --tp-color-#{$name}-shade: #{$shade};
+  --tp-color-#{$name}-tint: #{$tint};
+
+  @for $i from 1 through 5 {
+    @if $i <=3 {
+      $lightness-multiplier: if($i == 1, 0, $i - 1);
+      $lightness-multiplier-value: $lightness-multiplier * 10%;
+      $lightness-step: if(
+        $invert,
+        $lightness-multiplier-value * -1,
+        $lightness-multiplier-value
+      );
+
+      $base: hsl($hue, $saturation, $lightness + $lightness-step);
+      $shade: hsl($hue, $saturation, ($lightness + $lightness-step) - 5%);
+      $tint: hsl($hue, $saturation, ($lightness + $lightness-step) + 5%);
+
+      --tp-color-#{$name}-#{$i}: #{$base};
+      --tp-color-#{$name}-#{$i}-rgb: #{rgb-list($base)};
+      --tp-color-#{$name}-#{$i}-shade: #{$shade};
+      --tp-color-#{$name}-#{$i}-tint: #{$tint};
+    } @else {
+      $lightness-multiplier: if($i == 4, $i, $i + 1);
+      $lightness-multiplier-value: $lightness-multiplier * 10%;
+      $lightness-step: if(
+        $invert,
+        $lightness-multiplier-value * -1,
+        $lightness-multiplier-value
+      );
+
+      $base: hsl($hue, $saturation, $lightness + $lightness-step);
+      $shade: hsl($hue, $saturation, ($lightness + $lightness-step) - 5%);
+      $tint: hsl($hue, $saturation, ($lightness + $lightness-step) + 5%);
+
+      --tp-color-#{$name}-#{$i}: #{$base};
+      --tp-color-#{$name}-#{$i}-rgb: #{rgb-list($base)};
+      --tp-color-#{$name}-#{$i}-shade: #{$shade};
+      --tp-color-#{$name}-#{$i}-tint: #{$tint};
+    }
+  }
+}
+
+// TODO
+@mixin generate-color-properties-fixed($name, $hsl, $contrast) {
+  $hue: color.hue($hsl);
+  $saturation: color.saturation($hsl);
+  $lightness: color.lightness($hsl);
+
+  $base: hsl($hue, $saturation, $lightness);
+  $shade: hsl($hue, $saturation, $lightness - 5%);
+  $tint: hsl($hue, $saturation, $lightness + 5%);
+
+  --tp-color-#{$name}: #{$base};
+  --tp-color-#{$name}-rgb: #{rgb-list($base)};
+  --tp-color-#{$name}-shade: #{$shade};
+  --tp-color-#{$name}-tint: #{$tint};
+
+  @for $i from 1 through 5 {
+    --tp-color-#{$name}-#{$i}: #{$base};
+    --tp-color-#{$name}-#{$i}-rgb: #{rgb-list($base)};
+    --tp-color-#{$name}-#{$i}-shade: #{$shade};
+    --tp-color-#{$name}-#{$i}-tint: #{$tint};
+  }
+}
+
+// @mixin generate-feedback-properties($name, $hsl, $invert: null);
+// @param $name: string
+// @param $hsl: hsl color
+// @param $invert?: boolean
+//
+// @examples:
+// $attention-default: hsl(44, 80%, 65%);
+// @include generate-feedback-properties(attention, $attention-default);
+//
+// $attention-light: hsl(44, 80%, 45%);
+// @include generate-feedback-properties(attention, $attention-light, true);
+@mixin generate-feedback-properties($name, $hsl, $invert: null) {
+  $hue: color.hue($hsl);
+  $saturation: color.saturation($hsl);
+  $lightness: color.lightness($hsl);
+
+  $base: hsl($hue, $saturation, $lightness);
+  $shade: hsl($hue, $saturation, $lightness - 5%);
+  $tint: hsl($hue, $saturation, $lightness + 5%);
+
+  --tp-color-#{$name}: #{$base};
+  --tp-color-#{$name}-rgb: #{rgb-list($base)};
+  --tp-color-#{$name}-shade: #{$shade};
+  --tp-color-#{$name}-tint: #{$tint};
+}
+
+// @include generate-neutral-classes($framework);
+// @param $framework: ionic | templarios
+@mixin generate-neutral-classes($framework) {
+  @if not list.index($color-system-frameworks, $framework) {
+    @error "#{$framework} não é um framework válido. Utilize uma das variações: #{$color-system-frameworks}.";
+  }
+
+  $namespace: if($framework == ionic, ion, tp);
+
+  @for $i from 1 through 10 {
+    .#{$namespace}-color-neutral-#{$i},
+    [tp-color='neutral-#{$i}'] {
+      --#{$namespace}-color-base: var(--tp-color-neutral-#{$i}) !important;
+      --#{$namespace}-color-base-rgb: var(
+        --tp-color-neutral-#{$i}-rgb
+      ) !important;
+      --#{$namespace}-color-contrast: #{if(
+          $i <= 5,
+          var(--tp-color-neutral-10),
+          var(--tp-color-neutral-1)
+        )} !important;
+      --#{$namespace}-color-contrast-rgb: #{if(
+          $i <= 5,
+          var(--tp-color-neutral-10-rgb),
+          var(--tp-color-neutral-1-rgb)
+        )} !important;
+      --#{$namespace}-color-shade: var(
+        --tp-color-neutral-#{$i}-shade
+      ) !important;
+      --#{$namespace}-color-tint: var(--tp-color-neutral-#{$i}-tint) !important;
+    }
+
+    @if $i !=10 {
+      .#{$namespace}-color-neutral-#{$i}5,
+      [tp-color='neutral-#{$i}5'] {
+        --#{$namespace}-color-base: var(--tp-color-neutral-#{$i}5) !important;
+        --#{$namespace}-color-base-rgb: var(
+          --tp-color-neutral-#{$i}5-rgb
+        ) !important;
+        --#{$namespace}-color-contrast: #{if(
+            $i <=5,
+            var(--tp-color-neutral-10),
+            var(--tp-color-neutral-1)
+          )} !important;
+        --#{$namespace}-color-contrast-rgb: #{if(
+            $i <=5,
+            var(--tp-color-neutral-10-rgb),
+            var(--tp-color-neutral-1-rgb)
+          )} !important;
+        --#{$namespace}-color-shade: var(
+          --tp-color-neutral-#{$i}5-shade
+        ) !important;
+        --#{$namespace}-color-tint: var(
+          --tp-color-neutral-#{$i}5-tint
+        ) !important;
+      }
+    }
+  }
+}
+
+// @include generate-color-classes($name, $framework);
+// @param $name: string
+// @param $framework: ionic | templarios
+@mixin generate-color-classes($name, $framework) {
+  @if not list.index($color-system-frameworks, $framework) {
+    @error "#{$framework} não é um framework válido. Utilize uma das variações: #{$color-system-frameworks}.";
+  }
+
+  $namespace: if($framework == ionic, ion, tp);
+
+  .#{$namespace}-color-#{$name},
+  [tp-color='#{$name}'] {
+    --#{$namespace}-color-base: var(--tp-color-#{$name}) !important;
+    --#{$namespace}-color-base-rgb: var(--tp-color-#{$name}-rgb) !important;
+    --#{$namespace}-color-contrast: var(--tp-color-contrast-fixed) !important;
+    --#{$namespace}-color-contrast-rgb: var(
+      --tp-color-contrast-fixed-rgb
+    ) !important;
+    --#{$namespace}-color-shade: var(--tp-color-#{$name}-shade) !important;
+    --#{$namespace}-color-tint: var(--tp-color-#{$name}-tint) !important;
+  }
+
+  @for $i from 1 through 5 {
+    .#{$namespace}-color-#{$name}-#{$i},
+    [tp-color='#{$name}-#{$i}'] {
+      --#{$namespace}-color-base: var(--tp-color-#{$name}-#{$i}) !important;
+      --#{$namespace}-color-base-rgb: var(
+        --tp-color-#{$name}-#{$i}-rgb
+      ) !important;
+
+      @if $i == 3 {
+        --#{$namespace}-color-contrast: var(
+          --tp-color-contrast-fixed
+        ) !important;
+        --#{$namespace}-color-contrast-rgb: var(
+          --tp-color-contrast-fixed-rgb
+        ) !important;
+      } @else if $i <= 2 {
+        --#{$namespace}-color-contrast: var(--tp-color-neutral-10) !important;
+        --#{$namespace}-color-contrast-rgb: var(
+          --tp-color-neutral-10-rgb
+        ) !important;
+      } @else {
+        --#{$namespace}-color-contrast: var(--tp-color-neutral-1) !important;
+        --#{$namespace}-color-contrast-rgb: var(
+          --tp-color-neutral-1-rgb
+        ) !important;
+      }
+
+      --#{$namespace}-color-shade: var(
+        --tp-color-#{$name}-#{$i}-shade
+      ) !important;
+      --#{$namespace}-color-tint: var(
+        --tp-color-#{$name}-#{$i}-tint
+      ) !important;
+    }
+  }
+}
+
+// TODO
+@mixin generate-color-classes-fixed($name, $framework, $contrast) {
+  @if not list.index($color-system-frameworks, $framework) {
+    @error "#{$framework} não é um framework válido. Utilize uma das variações: #{$color-system-frameworks}.";
+  }
+
+  $namespace: if($framework == ionic, ion, tp);
+
+  .#{$namespace}-color-#{$name},
+  [tp-color='#{$name}'] {
+    --#{$namespace}-color-base: var(--tp-color-#{$name}) !important;
+    --#{$namespace}-color-base-rgb: var(--tp-color-#{$name}-rgb) !important;
+    --#{$namespace}-color-contrast: var(#{$contrast}) !important;
+    --#{$namespace}-color-contrast-rgb: var(#{$contrast}-rgb) !important;
+    --#{$namespace}-color-shade: var(--tp-color-#{$name}-shade) !important;
+    --#{$namespace}-color-tint: var(--tp-color-#{$name}-tint) !important;
+  }
+
+  @for $i from 1 through 5 {
+    .#{$namespace}-color-#{$name}-#{$i},
+    [tp-color='#{$name}-#{$i}'] {
+      --#{$namespace}-color-base: var(--tp-color-#{$name}-#{$i}) !important;
+      --#{$namespace}-color-base-rgb: var(
+        --tp-color-#{$name}-#{$i}-rgb
+      ) !important;
+      --#{$namespace}-color-contrast: var(#{$contrast}) !important;
+      --#{$namespace}-color-contrast-rgb: var(#{$contrast}-rgb) !important;
+      --#{$namespace}-color-shade: var(
+        --tp-color-#{$name}-#{$i}-shade
+      ) !important;
+      --#{$namespace}-color-tint: var(
+        --tp-color-#{$name}-#{$i}-tint
+      ) !important;
+    }
+  }
+}
+
+// TODO
+@mixin generate-color-classes-fixed-light($name, $framework) {
+  @if not list.index($color-system-frameworks, $framework) {
+    @error "#{$framework} não é um framework válido. Utilize uma das variações: #{$color-system-frameworks}.";
+  }
+
+  $namespace: if($framework == ionic, ion, tp);
+
+  .#{$namespace}-color-#{$name},
+  [tp-color='#{$name}'] {
+    @content;
+  }
+
+  @for $i from 1 through 5 {
+    .#{$namespace}-color-#{$name}-#{$i},
+    [tp-color='#{$name}-#{$i}'] {
+      @content;
+    }
+  }
+}
+
+// @include generate-feedback-classes($name, $framework);
+// @param $name: string
+// @param $framework: ionic | templarios
+@mixin generate-feedback-classes($name, $framework) {
+  @if not list.index($color-system-frameworks, $framework) {
+    @error "#{$framework} não é um framework válido. Utilize uma das variações: #{$color-system-frameworks}.";
+  }
+
+  $namespace: if($framework == ionic, ion, tp);
+
+  .#{$namespace}-color-#{$name},
+  [tp-color='#{$name}'] {
+    --#{$namespace}-color-base: var(--tp-color-#{$name}) !important;
+    --#{$namespace}-color-base-rgb: var(--tp-color-#{$name}-rgb) !important;
+    --#{$namespace}-color-contrast: var(--tp-color-neutral-1) !important;
+    --#{$namespace}-color-contrast-rgb: var(
+      --tp-color-neutral-10-rgb
+    ) !important;
+    --#{$namespace}-color-shade: var(--tp-color-#{$name}-shade) !important;
+    --#{$namespace}-color-tint: var(--tp-color-#{$name}-tint) !important;
+  }
+}

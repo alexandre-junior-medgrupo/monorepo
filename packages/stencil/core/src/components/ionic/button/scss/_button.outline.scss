@@ -1,0 +1,28 @@
+ion-button.button-outline {
+  --border-width: 1px;
+  --background: transparent;
+  --border-color: var(--tp-color-neutral-3);
+  --color: var(--tp-color-neutral-95);
+  --background-hover-opacity: 0;
+  color: var(--tp-color-neutral-95);
+}
+
+//
+// disabled
+//
+ion-button.button-outline.button-disabled {
+  --border-color: var(--tp-color-neutral-3);
+  --color: var(--tp-color-neutral-5);
+  color: var(--tp-color-neutral-5);
+}
+
+//
+// color
+//
+ion-button.button-outline.ion-color {
+  color: var(--ion-color-base);
+
+  &.button-disabled {
+    --ion-color-base: var(--tp-color-neutral-5) !important;
+  }
+}

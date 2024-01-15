@@ -1,0 +1,122 @@
+@use 'sass:map';
+
+$tp-button-sizes: (
+  xxs: (
+    properties: (
+      padding-top: 4px,
+      padding-bottom: 4px,
+      padding-start: 12px,
+      padding-end: 12px,
+      font-size: 14px,
+    ),
+    rules: (
+      height: 24px,
+      min-height: 24px,
+    ),
+  ),
+  xs: (
+    properties: (
+      padding-top: 6px,
+      padding-bottom: 6px,
+      padding-start: 12px,
+      padding-end: 12px,
+      font-size: 14px,
+    ),
+    rules: (
+      height: 32px,
+      min-height: 32px,
+    ),
+  ),
+  sm: (
+    properties: (
+      padding-top: 12px,
+      padding-bottom: 12px,
+      padding-start: 16px,
+      padding-end: 16px,
+      font-size: 14px,
+    ),
+    rules: (
+      height: 40px,
+      min-height: 40px,
+    ),
+  ),
+);
+
+ion-button {
+  &.button-clear {
+    --background: transparent;
+    --background-hover-opacity: 0;
+    --color: var(--tp-color-neutral-10);
+    --color-hover: var(--tp-color-brand-3);
+    --color-activated: var(--tp-color-brand-3);
+    --background-hover: transparent;
+    --background-focused: transparent;
+    --padding-top: 16px;
+    --padding-bottom: 16px;
+    --padding-start: 16px;
+    --padding-end: 16px;
+    height: 48px;
+    color: var(--tp-color-neutral-10);
+
+    &:hover {
+      color: var(--tp-color-brand-3);
+    }
+  }
+}
+
+//
+// disabled
+//
+ion-button.button-clear.button-disabled {
+  --color: var(--tp-color-neutral-5);
+  color: var(--tp-color-neutral-5);
+}
+
+//
+// tp-no-padding
+//
+ion-button.button-clear[tp-no-padding] {
+  --padding-end: 0;
+  --padding-start: 0;
+
+  ion-icon[slot='start'] {
+    margin-inline-start: 0;
+  }
+
+  ion-icon[slot='end'] {
+    margin-inline-end: 0;
+  }
+}
+
+//
+// color
+//
+ion-button {
+  &.button-clear.ion-color:not(:hover) {
+    --ion-color-base: var(--tp-color-neutral-10) !important;
+
+    &.button-disabled {
+      --ion-color-base: var(--tp-color-neutral-5) !important;
+    }
+  }
+}
+
+//
+// sizes
+//
+ion-button {
+  @each $size-name, $size-value in $tp-button-sizes {
+    &.button-#{$size-name}.button-clear {
+      $properties-map: map.get($size-value, properties);
+      $rules-map: map.get($size-value, rules);
+
+      @each $properties-name, $properties-value in $properties-map {
+        --#{$properties-name}: #{$properties-value};
+      }
+
+      @each $rules-name, $rules-value in $rules-map {
+        #{$rules-name}: #{$rules-value};
+      }
+    }
+  }
+}

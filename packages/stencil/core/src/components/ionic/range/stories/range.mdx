@@ -1,0 +1,37 @@
+import { Canvas, Controls, Meta } from '@storybook/blocks';
+import * as rangeIconsStories from './compositions/icons.stories';
+import * as rangeStories from './range.stories';
+
+<Meta of={rangeStories} />
+
+# ion-range
+
+**Documentação Adicional:**
+
+- **[`Ionic v7`](https://ionicframework.com/docs/api/range)**
+- **[`Ionic v6`](https://ionicframework.com/docs/v6/api/range)**
+
+## Types
+
+```ts
+import { TpIonRange } from 'templarios/core/dist/types/interfaces';
+```
+
+## Atributos
+
+### Default
+
+<Canvas of={rangeStories.Default} />
+<Controls of={rangeStories.Default} />
+
+### Ticks
+
+<Canvas of={rangeStories.Ticks} />
+<Controls of={rangeStories.Ticks} />
+
+## Compositions
+
+### Icons
+
+<Canvas of={rangeIconsStories.Icons} />
+<Controls of={rangeIconsStories.Icons} />

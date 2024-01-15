@@ -1,0 +1,131 @@
+@use 'sass:map';
+
+$avatar-sizes: (
+  xxs: (
+    avatar: (
+      width: 24px,
+      height: 24px,
+    ),
+    label: (
+      font-size: 12px,
+      line-height: 12px,
+    ),
+  ),
+  xs: (
+    avatar: (
+      width: 32px,
+      height: 32px,
+    ),
+    label: (
+      font-size: 16px,
+      line-height: 16px,
+    ),
+  ),
+  sm: (
+    avatar: (
+      width: 40px,
+      height: 40px,
+    ),
+    label: (
+      font-size: 20px,
+      line-height: 20px,
+    ),
+  ),
+  md: (
+    avatar: (
+      width: 56px,
+      height: 56px,
+    ),
+    label: (
+      font-size: 24px,
+      line-height: 24px,
+    ),
+  ),
+  lg: (
+    avatar: (
+      width: 64px,
+      height: 64px,
+    ),
+    label: (
+      font-size: 32px,
+      line-height: 32px,
+    ),
+  ),
+  xl: (
+    avatar: (
+      width: 72px,
+      height: 72px,
+    ),
+    label: (
+      font-size: 32px,
+      line-height: 32px,
+    ),
+  ),
+  xxl: (
+    avatar: (
+      width: 80px,
+      height: 80px,
+    ),
+    label: (
+      font-size: 32px,
+      line-height: 32px,
+    ),
+  ),
+);
+
+ion-avatar {
+  --ion-color-base: var(--tp-color-brand);
+  --ion-color-contrast: var(--tp-color-neutral-10);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+//
+// size
+//
+ion-avatar {
+  @each $size-name, $size-value in $avatar-sizes {
+    &[tp-size='#{$size-name}'] {
+      $avatar-map: map.get($size-value, avatar);
+      $label-map: map.get($size-value, label);
+
+      @each $avatar-name, $avatar-value in $avatar-map {
+        #{$avatar-name}: #{$avatar-value};
+      }
+
+      ion-label {
+        @each $label-name, $label-value in $label-map {
+          #{$label-name}: #{$label-value};
+        }
+      }
+    }
+  }
+}
+
+//
+// color
+//
+ion-avatar[tp-color] {
+  background: var(--ion-color-base);
+}
+
+//
+// compositions
+//
+ion-avatar ion-label {
+  color: var(--ion-color-contrast);
+  font-size: 24px;
+  line-height: 24px;
+}
+
+// color
+ion-avatar[tp-color] ion-label {
+  color: var(--ion-color-contrast);
+}

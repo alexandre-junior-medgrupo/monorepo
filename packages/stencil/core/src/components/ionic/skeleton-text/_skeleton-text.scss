@@ -1,0 +1,11 @@
+ion-skeleton-text {
+  --background-rgb: var(--tp-color-neutral-10-rgb);
+  --border-radius: 4px;
+}
+
+ion-skeleton-text {
+  display: block;
+  width: 100%;
+  height: 20px;
+  margin: 0;
+}

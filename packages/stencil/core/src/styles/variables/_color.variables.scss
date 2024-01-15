@@ -1,0 +1,161 @@
+$brand-1: hsl(188, 80%, 20%);
+$brand-1-light: hsl(188, 40%, 80%);
+
+$neutral-1: hsl(188, 10%, 8%);
+$neutral-10: hsl(188, 10%, 98%);
+$neutral-15: hsl(188, 10%, 13%);
+$neutral-95: hsl(188, 10%, 93%);
+
+$feedback-default: (
+  attention: hsl(44, 80%, 65%),
+  caution: hsl(24, 80%, 65%),
+  warning: hsl(4, 80%, 65%),
+  success: hsl(128, 80%, 65%),
+);
+$feedback-light: (
+  attention: hsl(44, 80%, 45%),
+  caution: hsl(24, 80%, 45%),
+  warning: hsl(4, 80%, 45%),
+  success: hsl(128, 80%, 35%),
+);
+
+//
+// themes
+//
+$theme-medsoft: (
+  medsoft-1: (
+    aula: hsl(168, 80%, 20%),
+    material: hsl(24, 80%, 20%),
+    questoes: hsl(200, 80%, 20%),
+    revalida: hsl(342, 80%, 20%),
+    provas: hsl(268, 80%, 20%),
+  ),
+  medsoft-1-light: (
+    aula: hsl(168, 40%, 80%),
+    material: hsl(24, 40%, 80%),
+    questoes: hsl(200, 40%, 80%),
+    revalida: hsl(342, 40%, 80%),
+    provas: hsl(268, 40%, 80%),
+  ),
+);
+
+$theme-recursos: (
+  recursos-1: (
+    brand: hsl(195, 80%, 20%),
+    'orange': hsl(25, 80%, 20%),
+  ),
+  recursos-1-light: (
+    brand: hsl(195, 40%, 80%),
+    'orange': hsl(25, 40%, 80%),
+  ),
+);
+
+$theme-cpmed: (
+  cpmed-1: (
+    brand: hsl(12, 80%, 20%),
+  ),
+  cpmed-1-light: (
+    brand: hsl(12, 40%, 80%),
+  ),
+);
+
+$theme-cpvent: (
+  cpvent-1: (
+    brand: hsl(72, 80%, 20%),
+  ),
+  cpvent-1-light: (
+    brand: hsl(72, 40%, 80%),
+  ),
+);
+
+$theme-extensivo-rmais: (
+  extensivo-rmais-1: (
+    brand: hsl(300, 80%, 20%),
+  ),
+  extensivo-rmais-1-light: (
+    brand: hsl(300, 40%, 80%),
+  ),
+);
+
+$theme-extensivo: (
+  extensivo-1: (
+    brand: hsl(128, 80%, 20%),
+  ),
+  extensivo-1-light: (
+    brand: hsl(128, 40%, 80%),
+  ),
+);
+
+$theme-intensivao: (
+  intensivao-1: (
+    brand: hsl(344, 80%, 20%),
+  ),
+  intensivao-1-light: (
+    brand: hsl(344, 40%, 80%),
+  ),
+);
+
+$theme-medeletro: (
+  medeletro-1: (
+    brand: hsl(180, 80%, 20%),
+  ),
+  medeletro-1-light: (
+    brand: hsl(180, 40%, 80%),
+  ),
+);
+
+$theme-medmaster: (
+  medmaster-1: (
+    brand: hsl(56, 80%, 20%),
+  ),
+  medmaster-1-light: (
+    brand: hsl(56, 40%, 80%),
+  ),
+);
+
+$theme-no-papo: (
+  no-papo-1: (
+    brand: hsl(230, 80%, 20%),
+  ),
+  no-papo-1-light: (
+    brand: hsl(230, 40%, 80%),
+  ),
+);
+
+$theme-ventilamed: (
+  ventilamed-1: (
+    brand: hsl(29, 80%, 20%),
+  ),
+  ventilamed-1-light: (
+    brand: hsl(29, 40%, 80%),
+  ),
+);
+
+$theme-inscricoes-cpmed: (
+  cpmed-1: (
+    brand: hsl(12, 80%, 80%),
+  ),
+  cpmed-1-light: (
+    brand: hsl(12, 40%, 80%),
+  ),
+);
+
+$theme-especialidade: (
+  especialidade-1: (
+    brand: hsl(80, 100%, 65%),
+  ),
+  especialidade-1-light: (
+    brand: hsl(80, 50%, 65%),
+  ),
+);
+
+$theme-especialidade-clinica: (
+  clinica-1: (
+    brand: hsl(22, 100%, 43%),
+  ),
+  clinica-1-light: (
+    brand: hsl(22, 50%, 43%),
+  ),
+);
+
+$color-system-frameworks: ionic, templarios;

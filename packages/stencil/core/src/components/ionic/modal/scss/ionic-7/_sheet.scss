@@ -1,0 +1,55 @@
+@import '../../../../../styles/templarios.abstracts';
+
+.tp-sheet {
+  --background: var(--tp-color-neutral-2);
+  --border-radius: 15px 15px 0 0;
+  --height: 100%;
+  --max-height: calc(80vh - 48px); // 2 * 24px de padding
+  --width: 100%;
+  --ion-backdrop-color: var(--tp-color-neutral-1);
+  padding-bottom: var(--ion-safe-area-bottom);
+
+  &::part(content) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    opacity: 1;
+  }
+
+  @include breakpoint-up('sm') {
+    --width: calc(420px - 48px); // 2 * 24px de padding
+    --border-radius: 15px 0 0 15px;
+    --max-height: 100vh;
+  }
+
+  @include breakpoint-up('lg') {
+    --width: calc(456px - 48px); // 2 * 24px de padding
+  }
+}
+
+.tp-sheet {
+  &__header {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 24px;
+    text-align: right;
+    box-shadow: none;
+  }
+
+  &__content {
+    --tp-scroll-color-track: transparent;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 24px;
+    box-shadow: none;
+  }
+
+  &__button {
+    flex: 1;
+  }
+}

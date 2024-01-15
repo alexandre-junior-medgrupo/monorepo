@@ -1,0 +1,121 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Templarios/Usage/Angular" />
+
+# Angular
+
+## **Installation**
+
+```bash
+npm i templarios@github:MEDGRUPOGIT/templarios.git#1.0.0
+```
+
+### **Release 7**
+
+```bash
+npm install @ionic/core@latest @ionic/angular@latest
+```
+
+### **Release 6**
+
+```bash
+npm install @ionic/core@v6-lts @ionic/angular@v6-lts
+```
+
+> `src/index.html`
+
+```html
+<html class="templarios-6"></html>
+```
+
+## **Configuration**
+
+> `src/main.ts`
+
+```ts
+import { defineCustomElements } from 'templarios/core/loader';
+defineCustomElements();
+```
+
+> `src/styles.scss`
+
+```scss
+/* ionic */
+@import '@ionic/angular/css/core.css';
+@import '@ionic/angular/css/normalize.css';
+@import '@ionic/angular/css/structure.css';
+@import '@ionic/angular/css/typography.css';
+@import '@ionic/angular/css/display.css';
+@import '@ionic/angular/css/padding.css';
+@import '@ionic/angular/css/float-elements.css';
+@import '@ionic/angular/css/text-alignment.css';
+@import '@ionic/angular/css/text-transformation.css';
+@import '@ionic/angular/css/flex-utils.css';
+
+/* templarios */
+@import 'templarios/angular/styles/css/templarios.css';
+```
+
+> `src/app/app.module.ts`
+
+```ts
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { TemplariosModule } from 'templarios/angular';
+import { RouteReuseStrategy } from '@angular/router';
+import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
+
+@NgModule({
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  imports: [IonicModule.forRoot(), TemplariosModule],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+})
+export class AppModule {}
+```
+
+> `tsconfig.json`
+
+```json
+{
+  "compilerOptions": {
+    "types": ["./node_modules/templarios/core/dist/types/interfaces.d.ts"]
+  }
+}
+```
+
+> `angular.json`
+
+```json
+{
+  "projects": {
+    "app-angular": {
+      "architect": {
+        "build": {
+          "options": {
+            "assets": [
+              {
+                "glob": "**/*.svg",
+                "input": "node_modules/templarios/angular/assets",
+                "output": "./assets"
+              }
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": ["node_modules"]
+            }
+          }
+        },
+        "test": {
+          "options": {
+            "assets": [
+              {
+                "glob": "**/*.svg",
+                "input": "node_modules/templarios/angular/assets",
+                "output": "./assets"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
+```

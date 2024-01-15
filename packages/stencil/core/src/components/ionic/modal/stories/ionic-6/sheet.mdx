@@ -1,0 +1,53 @@
+import { Canvas, Controls, Meta } from '@storybook/blocks';
+import * as sheetStories from '../ionic-6/sheet.stories';
+
+<Meta of={sheetStories} />
+
+# ion-modal (sheet)
+
+**Documentação Adicional:**
+
+- **[`Ionic v7`](https://ionicframework.com/docs/api/modal)**
+- **[`Ionic v6`](https://ionicframework.com/docs/v6/api/modal)**
+
+## Atributos
+
+<Canvas of={sheetStories.Default} />
+<Controls of={sheetStories.Default} />
+
+## Usage
+
+### Desktop
+
+```ts
+// sheet-example.ts
+import { BreakpointUtils } from '???';
+import {
+  sheetEnterAnimationDesktop,
+  sheetEnterAnimationMobile,
+  sheetLeaveAnimationDesktop,
+} from '???';
+
+async function openModal() {
+  const modal = await modalController.create({
+    component: 'sheet-example',
+    cssClass: 'tp-sheet',
+    enterAnimation: BreakpointUtils.mediaQueryDown(BreakPointPixelEnum.LG)
+      ? sheetEnterAnimationMobile
+      : sheetEnterAnimationDesktop,
+    leaveAnimation: BreakpointUtils.mediaQueryDown(BreakPointPixelEnum.LG)
+      ? sheetEnterAnimationMobile
+      : sheetLeaveAnimationDesktop,
+  });
+
+  await modal.present();
+}
+
+async function closeModal() {
+  await modal.dismiss();
+}
+```
+
+```html
+<!-- sheet-example.html -->
+```

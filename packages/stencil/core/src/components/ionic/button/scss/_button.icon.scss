@@ -1,0 +1,113 @@
+@use 'sass:map';
+
+$tp-button-sizes: (
+  xxs: (
+    properties: (
+      padding-top: 0,
+      padding-bottom: 0,
+      padding-start: 0,
+      padding-end: 0,
+    ),
+    rules: (
+      width: 16px,
+      height: 16px,
+    ),
+  ),
+  xs: (
+    properties: (
+      padding-top: 4px,
+      padding-bottom: 4px,
+      padding-start: 4px,
+      padding-end: 4px,
+    ),
+    rules: (
+      width: 16px,
+      height: 16px,
+    ),
+  ),
+  sm: (
+    rules: (
+      width: 24px,
+      height: 24px,
+    ),
+  ),
+  s: (
+    properties: (
+      padding-top: 4px,
+      padding-bottom: 4px,
+      padding-start: 4px,
+      padding-end: 4px,
+    ),
+    rules: (
+      width: 24px,
+      height: 24px,
+    ),
+  ),
+  lg: (
+    rules: (
+      width: 48px,
+      height: 48px,
+    ),
+  ),
+);
+
+ion-button.button-clear.button-has-icon-only {
+  --padding-top: 8px;
+  --padding-bottom: 8px;
+  --padding-start: 8px;
+  --padding-end: 8px;
+  --background-hover-opacity: 0.08;
+  --background-hover: var(--tp-color-neutral-10);
+  --background-activated-opacity: 0.16;
+  --background: transparent;
+  --color-hover: var(--tp-color-neutral-10);
+  height: initial;
+  min-height: initial;
+  color: var(--tp-color-neutral-10);
+
+  ion-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+//
+// disabled
+//
+ion-button.button-clear.button-has-icon-only.button-disabled {
+  color: var(--tp-color-neutral-5);
+
+  ion-icon {
+    opacity: 0.5;
+
+    &.ion-color {
+      --ion-color-base: var(--tp-color-neutral-5) !important;
+    }
+  }
+}
+
+//
+// sizes
+//
+ion-button.button-has-icon-only {
+  @each $size-name, $size-value in $tp-button-sizes {
+    &.button-#{$size-name} {
+      $properties-map: map.get($size-value, properties);
+      $rules-map: map.get($size-value, rules);
+
+      @if ($properties-map) {
+        @each $properties-name, $properties-value in $properties-map {
+          --#{$properties-name}: #{$properties-value};
+        }
+      }
+
+      @if ($rules-map) {
+        ion-icon {
+          @each $rules-name, $rules-value in $rules-map {
+            #{$rules-name}: #{$rules-value};
+          }
+        }
+      }
+    }
+  }
+}

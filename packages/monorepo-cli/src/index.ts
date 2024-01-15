@@ -8,9 +8,9 @@ const program = new Command();
 program
   .name('templarios')
   .description(`${chalk.hex(ThemeColors.base).bold('Templários Monorepo CLI')}`)
-  .option('-s, --start', 'executa o Templários Monorepo CLI')
+  .option('-start, --start', 'executa o Templários Monorepo CLI')
   .option(
-    '-d, --development',
+    '-dev, --development',
     'executa os pacotes escolhidos em modo de desenvolvimento.',
   )
   .action((option: any) => {

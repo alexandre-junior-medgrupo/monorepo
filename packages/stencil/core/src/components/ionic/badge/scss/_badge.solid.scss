@@ -1,0 +1,62 @@
+@use 'sass:map';
+
+$badge-sizes: (
+  md: (
+    properties: (
+      padding-top: 8px,
+      padding-bottom: 8px,
+      padding-start: 12px,
+      padding-end: 12px,
+    ),
+    rules: (
+      font-size: 14px,
+      line-height: 16px,
+    ),
+  ),
+);
+
+ion-badge {
+  --background: var(--tp-color-brand-3);
+  --color: var(--tp-color-contrast-fixed);
+  --width: fit-content;
+  --padding-top: 6px;
+  --padding-bottom: 6px;
+  --padding-start: 8px;
+  --padding-end: 8px;
+}
+
+ion-badge {
+  width: var(--width);
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 12px;
+  border: 1px solid transparent;
+}
+
+//
+// size
+//
+ion-badge {
+  @each $size-name, $size-value in $badge-sizes {
+    &[tp-size='#{$size-name}'] {
+      $properties-map: map.get($size-value, properties);
+      $rules-map: map.get($size-value, rules);
+
+      @each $properties-name, $properties-value in $properties-map {
+        --#{$properties-name}: #{$properties-value};
+      }
+
+      @each $rules-name, $rules-value in $rules-map {
+        #{$rules-name}: #{$rules-value};
+      }
+    }
+  }
+}
+
+//
+// color
+//
+ion-badge.ion-color {
+  --background: var(--ion-color-base);
+  --color: var(--ion-color-contrast);
+}

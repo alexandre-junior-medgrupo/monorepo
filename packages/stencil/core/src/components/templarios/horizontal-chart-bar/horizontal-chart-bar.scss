@@ -1,0 +1,115 @@
+/**
+  * @prop --tp-fill-percentage: Propriedade definida dinamicamente no tsx. Define o progresso do componente.
+  * @prop --tp-track-color: Define a cor do track.
+*/
+
+@import './scss/horizontal-chart-bar.util';
+
+:host {
+  display: block;
+  width: 100%;
+}
+
+:host(.tp-horizontal-chart-bar--spill) .tp-horizontal-chart-bar__progress {
+  @include progress-bg-image(--tp-color-brand-4);
+  background-size: 24px 24px;
+  animation:
+    load-horizontal-chart-bar 1s forwards ease-in-out,
+    progress-spill 15s linear infinite;
+}
+
+.tp-horizontal-chart-bar {
+  &__container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__track {
+    width: 100%;
+    height: 8px;
+    background-color: var(--tp-track-color, var(--tp-color-neutral-15));
+    border-radius: 4px;
+
+    &--skeleton {
+      --background-rgb: var(
+        --tp-skeleton-background-rgb,
+        var(--tp-color-neutral-10-rgb)
+      );
+      margin: 0;
+    }
+  }
+
+  &__progress {
+    width: 0%;
+    min-width: 8px;
+    height: 100%;
+    background-color: var(--tp-color-brand-4);
+    border-radius: 4px;
+    animation: load-horizontal-chart-bar 1s forwards ease-in-out;
+  }
+
+  &__label-container {
+    display: flex;
+    margin-left: 12px;
+
+    &--skeleton {
+      --border-radius: 2px;
+      --background-rgb: var(
+        --tp-skeleton-background-rgb,
+        var(--tp-color-neutral-10-rgb)
+      );
+      width: var(--tp-skeleton-label-width, 36px);
+      height: 12px;
+      margin: 0 0 0 12px;
+    }
+  }
+}
+
+//
+// color
+//
+:host(.tp-color.tp-horizontal-chart-bar--spill)
+  .tp-horizontal-chart-bar__progress {
+  @include progress-bg-image(--tp-color-base);
+}
+
+:host(.tp-color) .tp-horizontal-chart-bar__progress {
+  background-color: var(--tp-color-base);
+}
+
+//
+// size
+//
+:host(.tp-horizontal-chart-bar--md) .tp-horizontal-chart-bar__track {
+  height: 12px;
+  border-radius: 6px;
+}
+
+:host(.tp-horizontal-chart-bar--md) .tp-horizontal-chart-bar__progress {
+  min-width: 12px;
+  border-radius: 6px;
+}
+
+//
+// animations
+//
+@keyframes load-horizontal-chart-bar {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: var(--tp-fill-percentage);
+  }
+}
+
+@keyframes progress-spill {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  100% {
+    background-position: 100% 0%;
+  }
+}

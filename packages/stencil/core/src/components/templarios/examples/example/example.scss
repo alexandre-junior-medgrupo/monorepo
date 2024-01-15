@@ -1,0 +1,44 @@
+:host {
+  --background: var(--tp-color-neutral-2);
+  --color: var(--tp-color-neutral-10);
+  --icon-stroke: var(--tp-color-neutral-10);
+  --background-hover: var(--tp-color-neutral-2-shade);
+  --background-focus: var(--tp-color-neutral-2-tint);
+}
+
+:host {
+  display: block;
+  padding: 1rem 2rem;
+  color: var(--color);
+  background: var(--background);
+  transition: background-color 250ms;
+}
+
+.tp-example {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__icon {
+    --stroke: var(--icon-stroke);
+  }
+}
+
+:host(:hover) {
+  background: var(--background-hover);
+}
+
+:host(:focus) {
+  background: var(--background-focus);
+}
+
+:host(.tp-color) {
+  --background: var(--tp-color-base);
+  --color: var(--tp-color-contrast);
+  --icon-stroke: var(--tp-color-contrast);
+
+  --background-hover: var(--tp-color-shade);
+  --background-focus: var(--tp-color-tint);
+}

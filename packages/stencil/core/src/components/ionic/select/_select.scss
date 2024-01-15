@@ -1,0 +1,30 @@
+@import './scss/popover';
+
+.tp-input-container {
+  ion-select {
+    --highlight-color-focused: transparent;
+    --placeholder-color: var(--tp-color-neutral-10);
+    --placeholder-opacity: 1;
+    width: 100%;
+    max-width: calc(100% - 32px); // 24px ícone seta + 8px padding
+    min-height: 40px;
+    padding: 0 8px 0 16px;
+    color: var(--tp-color-neutral-10);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+
+    &::part(icon) {
+      display: none;
+    }
+  }
+
+  &.tp-input-container--error,
+  &.tp-input-container--success {
+    ion-select {
+      max-width: calc(
+        100% - 72px
+      ); // 24px ícone seta + 8px padding + 24px ícone state + 16px margin
+    }
+  }
+}
